@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <swsk.cn.rgyxtq.main.Common.Topbar
+        android:id="@+id/userManageTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        custom:leftButtonText="@string/text_return"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonBackground="#20000000"
+
+        custom:rightButtonText="@string/text_done"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonBackground="#20000000"
+
+        custom:titleColor="#fff"
+        custom:titleSize="@dimen/lbl_title_text_size"
+        custom:titleText="用户管理" />
+
+    <RelativeLayout
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_gravity="center">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="历史指令"
+            android:padding="15dp"
+            android:id="@+id/btn_history_command"
+            android:background="#ffffff"
+            android:layout_marginTop="16dip"
+            android:textSize="18sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="退 出"
+            android:layout_below="@+id/btn_history_command"
+            android:padding="15dp"
+            android:id="@+id/btn_exit"
+            android:background="#ffffff"
+            android:layout_marginTop="10dip"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settingsMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+        custom:titleColor="#555"
+        custom:titleSize="6sp"
+        custom:titleText="添加联系人" />
+
+    <LinearLayout android:background="@color/color_txt_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/white"
+            android:hint="姓名"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_black"></View>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/white"
+            android:hint="手机号码"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_black"></View>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/white"
+            android:hint="邮箱"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/contact_search_frag2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginBottom="10dp"
+        android:text="备注"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textarea"
+        android:enabled="true"
+        android:gravity="top"
+        android:maxLines="5"
+        android:minLines="3"
+        android:scrollbars="vertical"
+        android:singleLine="false" />
+</LinearLayout>

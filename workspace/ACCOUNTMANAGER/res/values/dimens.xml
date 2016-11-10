@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tab_font_size">10sp</dimen>
+    <dimen name="font_size_sminus">12sp</dimen>
+    <dimen name="font_size_ss">11sp</dimen>
+	<dimen name="font_size_s">13sp</dimen>
+	<dimen name="font_size_normal">14sp</dimen>
+	<dimen name="font_size_m">15sp</dimen>
+	<dimen name="font_size_mplus">16sp</dimen>
+	<dimen name="font_size_l">17sp</dimen>
+	<dimen name="font_size_xl">19sp</dimen>
+	<dimen name="font_size_xxl">22sp</dimen>
+	<dimen name="font_size_xxxl">29sp</dimen>
+	<dimen name="dp_100">100dp</dimen>
+	<dimen name="dp_300">300dp</dimen>
+	<dimen name="dp_320">320dp</dimen>
+	<dimen name="dp_350">350dp</dimen>
+	<dimen name="dp_50">50dp</dimen>
+		<dimen name="dp_55">55dp</dimen>
+	<dimen name="dp_45">45dp</dimen>
+	<dimen name="dp_40">40dp</dimen>
+	<dimen name="dp_35">35dp</dimen>
+	<dimen name="dp_30">30dp</dimen>
+	<dimen name="dp_20">20dp</dimen>
+	<dimen name="dp_120">120dp</dimen>
+	<dimen name="dp_110">110dp</dimen>
+</resources>

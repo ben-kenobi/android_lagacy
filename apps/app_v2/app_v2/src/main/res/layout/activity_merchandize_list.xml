@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+     android:id="@+id/relativeLayout2"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000" >
+    
+    <FrameLayout
+        style="@style/uniform_titlebar_style02"
+        >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+             style="@style/title_button_style_backbutton" />
+	<FrameLayout
+	    android:id="@+id/frameLayout1"
+	    android:clickable="true"
+	    android:layout_gravity="right|center_vertical"
+             style="@style/title_button_style">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+              android:src="@drawable/shoppingcart" 
+             android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:minWidth="22dp"
+            android:layout_height="22dp"
+            style="@style/title_text_style"
+            android:background="@drawable/shape_orange_oval"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_m"
+            android:text="3" />
+
+</FrameLayout>
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/title_text_style_center"
+            android:text="云宝便利体验店" 
+            android:textSize="@dimen/font_size_l"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            />
+
+    </FrameLayout>
+</FrameLayout>
+		<View
+        style="@style/dividerViewStyle02"/>
+
+        <View
+            style="@style/shadowViewStyle00"
+            />
+
+    <RelativeLayout  android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp" >
+
+        <ListView
+            android:id="@+id/listView1"
+            style="@style/scrollStyle02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:divider="@drawable/divider_lv" >
+			
+        </ListView>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_alignBottom="@id/listView1"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_stereo_button_layer"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/shoppingcart"
+            android:visibility="gone" 
+            />
+
+</RelativeLayout>
+
+</LinearLayout>
+
+<ImageView
+    android:id="@+id/imageView1"
+    android:layout_width="wrap_content"
+    android:layout_height="75dp"
+    android:adjustViewBounds="true"
+    android:maxWidth="75dp"
+    android:scaleType="centerInside" />
+
+</RelativeLayout>

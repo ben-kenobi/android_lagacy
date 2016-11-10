@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#88000000"
+                android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/dismiss"
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="@dimen/mapitemh"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:background="@drawable/selector_lightblue_radius"
+        android:onClick="onClick"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/deletered"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_white_radius_bg"
+        android:layout_below="@+id/dismiss"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:layout_marginLeft="@dimen/mapitemmargin"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <fj.swsk.cn.eqapp.main.V.InnerGV2
+            android:id="@+id/gv01"
+            android:cacheColorHint="@null"
+            android:numColumns="4"
+            android:verticalSpacing="12dp"
+            android:horizontalSpacing="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            />
+        <View
+            android:background="#ddd"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <!--<Button-->
+            <!--android:id="@+id/save"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="44dp"-->
+            <!--android:text="确定"-->
+            <!--android:textColor="#07f"-->
+            <!--android:textSize="18sp"-->
+            <!--android:layout_marginBottom="0dp"-->
+            <!--android:background="@drawable/selector_white_bottom_radius"/>-->
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+        >
+
+    <RelativeLayout
+            android:id="@+id/bs_share_top_bar"
+            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bshare_top_bar"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <TextView
+                android:id="@+id/tv_title_Recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/bshare_editor_topbar_title"
+                android:textColor="@android:color/white"
+                android:textSize="20sp">
+        </TextView>
+
+        <Button
+                android:id="@+id/bs_button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bshare_button_back"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_below="@+id/bs_share_top_bar"
+            android:id="@+id/bs_editor_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="240dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+
+            android:orientation="vertical">
+
+        <EditText
+                android:minHeight="50dp"
+                android:id="@+id/bs_share_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/bshare_editor_panel_first_half"
+                android:gravity="top|left"
+                android:hint="@string/bshare_editor_hint"
+                android:paddingLeft="2dp"
+                android:paddingTop="2dp">
+        </EditText>
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bshare_editor_panel_sec_half">
+
+            <ImageView
+                    android:id="@+id/bs_share_pic"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"/>
+
+            <TextView
+                    android:id="@+id/bs_share_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/bs_share_pic"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="2dp"
+                    android:text="0/140"
+                    android:textColor="#919191"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/bs_share_pic"
+                    android:layout_alignLeft="@+id/bs_share_text_count"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="-10dp"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:id="@+id/bs_share_button_mention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@drawable/bshare_button_mention"
+                        android:contentDescription="@null"/>
+
+                <ImageButton
+                        android:id="@+id/bs_share_button_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bshare_button_topic"
+                        android:contentDescription="@null"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/bs_pt_panel"
+            android:layout_below="@+id/bs_editor_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            >
+
+        <RelativeLayout
+                android:id="@+id/bs_pt_title_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bshare_platform_panel_first_half">
+
+            <TextView
+                    android:id="@+id/bs_share_platform_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="@string/bshare_share_list_title"
+                    android:textColor="#535353"/>
+        </RelativeLayout>
+
+        <GridView
+                android:id="@+id/bs_share_platform_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/bs_pt_title_bar"
+                android:paddingTop="5dp"
+                android:background="@drawable/bshare_platform_panel_sec_half"
+                android:numColumns="4">
+        </GridView>
+    </RelativeLayout>
+
+    <Button
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/bs_pt_panel"
+            android:id="@+id/bs_button_share"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bshare_button_share"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/bshare_button_share_text"
+            android:textColor="#535353"/>
+
+</RelativeLayout>

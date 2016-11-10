@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg"
+    android:orientation="vertical"
+    android:paddingBottom="12dp" >
+
+    <View style="@style/dividerViewStyle02" />
+
+    <View style="@style/shadowViewStyle00" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/background" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="12dp"
+         >
+
+    <RelativeLayout
+        style="@style/rlRimEditTextStyle01"
+        android:layout_height="45dp" >
+
+ 		  <ImageView
+ 		      android:id="@+id/imageView1"
+ 		      android:layout_width="55dp"
+ 		      android:layout_height="match_parent"
+ 		      android:layout_marginRight="12dp"
+ 		      android:scaleType="fitCenter"
+ 		    />
+
+            <EditText
+                android:id="@+id/editText1"
+                style="@style/registerEditTextStyle"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageView1"
+                android:hint="@string/filename" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_alignRight="@id/editText1"
+                style="@style/textDisposerStyle" />
+
+            
+
+        </RelativeLayout>
+
+    <View
+        style="@style/horizonDividerViewStyle01"
+       />
+
+    <RelativeLayout
+       style="@style/textRimStyle00" >
+            <TextView
+                android:id="@+id/textViewLeft1"
+  	    style="@style/verticalParallelTextViewStyle06"
+  	    android:layout_centerVertical="true"
+  	    android:text="@string/filetype" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textViewLeft1"
+                android:layout_centerVertical="true"
+                />
+            
+            <TextView
+        android:id="@+id/dropdown"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_lightblue_button"
+        android:drawableRight="@drawable/triangle_down_blue"
+        style="@style/moneyStyle"
+        android:paddingRight="7dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:text="@string/openas"
+        android:textColor="#55a" />
+
+    </RelativeLayout>
+    <LinearLayout
+           style="@style/textRimStyle00" >
+            <TextView
+  	    style="@style/verticalParallelTextViewStyle06"
+  	    android:text="@string/filelocation" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/file/etc/aa.txt" />
+    </LinearLayout>
+    <LinearLayout
+         style="@style/textRimStyle00" >
+            <TextView
+  	    style="@style/verticalParallelTextViewStyle06"
+  	    android:text="@string/filesize" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1452 KB   ( 123 , 123 , 213 B ) " />
+    </LinearLayout>
+     <LinearLayout
+         style="@style/textRimStyle00" >
+            <TextView
+  	    style="@style/verticalParallelTextViewStyle06"
+  	    android:text="@string/modifytime" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1973-10-10 15:20" />
+    </LinearLayout>
+
+   <View
+        style="@style/horizonDividerViewStyle01"
+       />
+  <LinearLayout
+         style="@style/textRimStyle00" >
+            <TextView
+  	    style="@style/verticalParallelTextViewStyle06"
+  	    android:text="@string/properties" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView1"
+                    style="@style/checkableTextStyle01"
+                    android:text="@string/readable" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView4"
+                   style="@style/checkableTextStyle01"
+                    android:text="@string/writeable"
+                   />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView3"
+                   style="@style/checkableTextStyle01"
+                    android:text="@string/executable"
+                    />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="35dp" >
+      <Button
+                    android:id="@+id/md5sum"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                  android:background="@drawable/selector_lightblue_button"
+                    android:text="@string/md5sum"
+                    android:textColor="#444"
+                    android:textSize="17sp" />      
+      
+       <EditText
+                android:id="@+id/editText2"
+                style="@style/registerEditTextStyle"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                  android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/md5sum"
+                android:visibility="gone"
+                 />
+           <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+             android:layout_toLeftOf="@id/md5sum"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:max="10"
+            android:visibility="gone"
+            android:progress="5" />
+  </RelativeLayout>
+
+  </LinearLayout>
+
+  </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/buttonStyle_appv2_blue"
+        android:layout_width="260dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:text="@string/apply"
+        android:textSize="@dimen/font_size_xl" />
+
+</LinearLayout>

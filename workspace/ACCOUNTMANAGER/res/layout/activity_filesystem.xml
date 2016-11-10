@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background" >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_golden_framelayout"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_levelup" />
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_golden_framelayout"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/moneyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/more"
+            android:layout_toRightOf="@id/back"
+            android:gravity="center"
+            android:background="@drawable/selector_golden_framelayout"
+            android:singleLine="true"
+            />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/ankle"
+        style="@style/divider_green_horizontal_style"
+        android:layout_above="@id/footer" />
+
+    <GridView
+        android:id="@+id/gridView1"
+        style="@style/gvCommonStyle"
+        android:layout_above="@id/ankle"
+        android:numColumns="5"
+        android:paddingBottom="5dp" >
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/gridView1"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/clipBoard"
+                style="@style/floatbarStyle1"
+                android:background="@drawable/selector_title_button_lefttopcircle"
+                android:src="@drawable/clipboard" />
+              <ImageButton
+                android:id="@+id/mkdir"
+                style="@style/floatbarStyle1"
+                android:background="@drawable/selector_title_button"
+                android:src="@drawable/mkdir" />
+
+              <ImageButton
+                  android:id="@+id/newfile"
+                  style="@style/floatbarStyle1"
+                  android:background="@drawable/selector_title_button"
+                  android:src="@drawable/new_file" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/refresh"
+                style="@style/floatbarStyle"
+                android:background="@drawable/selector_title_button"
+                android:src="@drawable/refresh" />
+
+            <ImageButton
+                android:id="@+id/toggleMode"
+                style="@style/floatbarStyle"
+                android:background="@drawable/selector_title_button"
+                android:src="@drawable/multiselector" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+    
+    <LinearLayout
+    android:id="@+id/linearLayout2"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@id/gridView1"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal" >
+ 		
+            <ImageButton
+	            android:id="@+id/delete"
+	        	  style="@style/floatbarStyle"
+	            android:background="@drawable/selector_title_button"
+	            android:src="@drawable/delete" />
+           <ImageButton
+                android:id="@+id/move"
+                style="@style/floatbarStyle"
+                 android:background="@drawable/selector_title_button"
+                android:src="@drawable/cut" />
+           
+
+  	<ImageButton
+            android:id="@+id/copy"
+         	 style="@style/floatbarStyle"
+            android:background="@drawable/selector_title_button_righttopcircle"
+            android:src="@drawable/copy" />
+<!--   	<ImageButton -->
+<!--             android:id="@+id/zip" -->
+<!--          	 style="@style/floatbarStyle" -->
+<!--             android:background="@drawable/selector_title_button_righttopcircle" -->
+<!--             android:src="@drawable/zip" /> -->
+        </LinearLayout>
+
+</RelativeLayout>

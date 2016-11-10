@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="contentassistsize">
+	</section>
+	<section name="org.eclipse.wst.sse.ui.quick_outline">
+		<item value="202" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_Y_ORIGIN"/>
+		<item value="true" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_USE_PERSISTED_LOCATION"/>
+		<item value="579" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_X_ORIGIN"/>
+		<item value="450" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_WIDTH"/>
+		<item value="true" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="540" key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_HEIGHT"/>
+	</section>
+</section>

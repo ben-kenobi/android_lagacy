@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="workType">
+        <item>增雨</item>
+        <item>防雹</item>
+    </string-array>
+    <string-array name="eqlevel">
+        <item>1级</item>
+        <item>2级</item>
+        <item>3级</item>
+        <item>4级</item>
+        <item>5级</item>
+        <item>6级</item>
+        <item>7级</item>
+        <item>8级</item>
+    </string-array>
+    <string-array name="eqsummary">
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>无人员伤亡，无建筑物损坏</item>
+    </string-array>
+</resources>

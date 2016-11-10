@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="defaultAddress_01">福州</string>
+    <string name="main">首页</string>
+    <string name="derivative">周边</string>
+    <string name="home">我的</string>
+    <string name="rest">其他</string>
+    <string-array name="address_01">
+        <item  >福州</item>
+        <item>厦门</item>
+        <item>泉州</item><item> 长乐</item>
+    </string-array>
+    <string-array name="manualMenuString">
+        <item >首页</item>
+        <item >周边</item>
+        <item >我的</item>
+        <item >更多</item>
+    </string-array>
+<string-array name="home_items_name">
+    	<item>二手物品</item>
+    	<item>房产</item>
+    	<item>团购</item>
+    	<item>二手车</item>
+    	<item>全职招聘</item><item>兼职招聘</item>
+    	<item >宠物</item><item>票务/卡券</item>
+    	<item >生活服务</item><item>其他服务</item>
+    </string-array>
+    
+    <string-array  name="community_order_category">
+        <item>默认排序</item>
+         <item>离我最近</item>
+          <item>评价最高</item>
+           <item>最新发布</item>
+            <item>人气最高</item>
+             <item>价格最低</item>
+              <item>价格最高</item>
+    </string-array>
+</resources>

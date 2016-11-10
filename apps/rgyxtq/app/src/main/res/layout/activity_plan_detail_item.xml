@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView_showMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/tl_fack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_famc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="方案名称："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_famcV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginLeft="5dp"
+                    android:layout_span="2"
+                    android:width="100dp"
+                    android:gravity="left"
+                    android:text="晋安区宦溪镇恩顶村20151014080101"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_fazzsj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="方案制作时间："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_fazzsjV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+
+                    android:gravity="left"
+                    android:text="2015-10-19 18:00"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_zjyj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="发射仰角(度)："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_zjyjV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:gravity="left"
+                    android:text="45°"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_zjfwj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="发射方位角(度)："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_zjfwjV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:gravity="left"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_ydl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="用弹量(枚)："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_ydlV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:gravity="left"
+                    android:text="3"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_aqsj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="安全射界(度)："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_aqsjV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:gravity="left"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_yjzysj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="预计："
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_yjzysjV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:gravity="left"
+                    android:text="30分钟后可作业"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

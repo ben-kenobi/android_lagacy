@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+      <item
+        android:id="@+id/edit"
+        android:icon="@android:drawable/ic_menu_edit"
+         android:showAsAction="always"
+        android:title="@string/edit"/>
+        <item
+        android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="always"
+        android:title="@string/save" >
+        <menu >
+            <item android:title="@string/save"
+                android:id="@+id/save"/>
+            <item 
+                android:title="@string/saveas"
+                	android:id="@+id/saveas"
+                />
+        </menu>
+        </item>
+      
+       <item
+        android:id="@+id/find"
+         android:showAsAction="always"
+          android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/find"/>
+        <item
+        android:id="@+id/textsize"
+        android:icon="@drawable/textsize"
+        android:showAsAction="never"
+        android:title="@string/textsize"/>
+        
+          <item
+        android:id="@+id/pagesize"
+        android:showAsAction="never"
+        android:title="@string/pagesize">
+        <menu >
+             <item  android:id="@+id/kb_4"
+                 android:title="@string/kb_4"
+                 />
+               <item  android:id="@+id/kb_8"
+                 android:title="@string/kb_8"
+                 />
+                <item  android:id="@+id/kb_16"
+                 android:title="@string/kb_16"
+                 />
+        </menu>
+        </item>
+        
+        <item
+        android:id="@+id/decoding"
+         android:showAsAction="never"
+        android:title="@string/decoding">
+        <menu>
+			<item android:id="@+id/utf8"  
+			    android:title="@string/utf8"/> 
+			    <item android:id="@+id/gbk"  
+			    android:title="@string/gbk"/>  
+			    <item android:id="@+id/hextext"  
+			    android:title="@string/hextext"/>   
+        </menu>
+        </item>
+        
+</menu>

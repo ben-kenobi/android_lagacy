@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/selector_bg_radius"
+            android:orientation="vertical"
+        >
+
+				<RadioButton
+				    android:id="@+id/radio0"
+				    style="@style/payOptionsStyle"
+				    android:checked="true"
+				    android:text="信用卡支付" />
+
+				 <View
+        style="@style/dividerViewStyle02"/>
+
+               <RadioButton
+                    android:id="@+id/radio1"
+                    style="@style/payOptionsStyle"
+                    android:text="储蓄卡支付" />
+
+			 <View
+        style="@style/dividerViewStyle02"/>
+
+               <RadioButton
+                    android:id="@+id/radio2"
+                    style="@style/payOptionsStyle"
+                    android:textColor="#aaa"
+                    android:text="支付宝客户端支付" />
+
+ 			  <View
+        style="@style/dividerViewStyle02"/>
+
+               <RadioButton
+                   android:id="@+id/radio3"
+                   style="@style/payOptionsStyle"
+                   android:textColor="#aaa"
+                   android:text="支付宝网页支付" />
+
+           </RadioGroup>

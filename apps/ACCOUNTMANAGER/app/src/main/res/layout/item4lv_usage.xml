@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/selector_golden"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp">
+    <LinearLayout android:layout_width="80dp"
+                  android:layout_height="match_parent"
+                  android:background="@drawable/selector_golden"
+                  android:orientation="vertical"
+                  android:padding="1dp" >
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/aticon" />
+        <com.yf.accountmanager.ui.AutoSplitTextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:duplicateParentState="false"
+            android:gravity="center_horizontal"
+            android:background="@drawable/selector_multistate_tv"
+            android:text="bluetooth" />
+</LinearLayout>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:padding="0.5dp"
+
+        >
+
+
+        <!--<View-->
+            <!--android:id="@+id/view1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="@dimen/dp_100"-->
+            <!--android:layout_margin="1dp"-->
+
+            <!--android:background="#e11"-->
+            <!--/>-->
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#e11"
+            android:progress="10"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            />
+        <com.yf.accountmanager.ui.AutoSplitTextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:duplicateParentState="false"
+            style="@style/moneyStyle"
+            android:gravity="center"
+            android:textColor="#0ae"
+            android:textSize="13sp"
+            android:background="@drawable/selector_multistate_tv"
+            android:text="已使用：512M / 1024M   50%" />
+    </FrameLayout>
+
+</LinearLayout>

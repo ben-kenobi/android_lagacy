@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="6dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/selector_white_fg"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+             android:layout_toRightOf="@id/imageView1"
+             android:drawableRight="@android:drawable/presence_audio_online"
+             android:textSize="@dimen/font_size_m"
+            android:text="便利体验店" />
+
+       <com.icanit.app_v2.ui.MarqueeTextView
+            android:id="@+id/textView2"
+            style="@style/textView_single_line_marquee01"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imageView1"
+            android:drawableLeft="@android:drawable/presence_audio_online"
+            android:drawableRight="@drawable/ic_arrow_small"
+            android:text="六一北路264号附近" />
+
+       <com.icanit.app_v2.ui.MarqueeTextView
+            android:id="@+id/textView3"
+             style="@style/textView_single_line_marquee01"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/imageView1"
+            android:drawableLeft="@android:drawable/presence_audio_online"
+            android:text="388米" />
+
+    </RelativeLayout>
+
+</FrameLayout>

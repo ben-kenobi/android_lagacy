@@ -1,0 +1,63 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:background="@android:drawable/editbox_background_normal"
+      android:padding="10dp" >
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:orientation="vertical" >
+
+          <TextView
+              android:id="@+id/tv_good_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="南京香烟"
+              android:textColor="@android:color/black" />
+
+          <TextView
+              android:id="@+id/tv_totalPrice"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="价格：11.0"
+              android:textColor="@android:color/black" />
+      </LinearLayout>
+
+      <RelativeLayout
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:background="@android:drawable/presence_online" android:id="@+id/relativeLayout1">
+
+          <TextView
+              android:id="@+id/tv_quantity"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:text="2"
+              android:textColor="@android:color/white" />
+      </RelativeLayout>
+
+      <TextView
+          android:id="@+id/tv_good_id"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="GOOD_ID" 
+          android:visibility="gone"/>
+
+      <TextView
+          android:id="@+id/tv_merchant_id"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/relativeLayout1"
+          android:layout_toRightOf="@+id/tv_good_id"
+          android:text=" MERCHANT_ID" 
+          android:visibility="gone"/>
+
+</RelativeLayout>

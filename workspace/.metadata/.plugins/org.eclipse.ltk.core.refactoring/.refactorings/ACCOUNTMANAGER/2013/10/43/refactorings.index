@@ -1,0 +1,47 @@
+1382343696968	Rename resource 'dialog_progress.xml'
+1382413818765	Delete element
+1382413995875	Rename package 'com.yf.accountmanager.filesystem'
+1382435771765	Copy compilation unit
+1382435824437	Rename type 'FileListAdapter'
+1382438235265	Delete element
+1382444973375	Copy file
+1382445589750	Copy file
+1382451698375	Copy compilation unit
+1382452137437	Rename type 'OptionListAdapter'
+1382452722781	Rename type 'OperationListAdapter'
+1382531961093	Delete element
+1382532941593	Rename resource 'blue-folder.png'
+1382532958390	Rename resource 'folder_stuffed.png'
+1382532981921	Rename resource 'blue-doc.png'
+1382533805421	Delete elements
+1382533850546	Rename resource 'folder_empty.png'
+1382533865046	Rename resource 'folder_stuffed.png'
+1382533890562	Move file
+1382533892703	Move file
+1382594598421	Delete element
+1382600192953	Copy file
+1382712888457	Rename type 'ContactDetail'
+1382712953067	Rename resource 'contact_detail.xml'
+1382713573832	Copy file
+1382715269348	Rename field 'mailBox'
+1382715290942	Rename field 'password'
+1382715296192	Rename field 'username'
+1382715303504	Rename field 'passport'
+1382715307692	Rename field 'sitename'
+1382715327129	Rename field 'phoneNum'
+1382715371895	Rename field 'mailBoxDisposer'
+1382715383582	Rename field 'passwordDisposer'
+1382715393551	Rename field 'usernameDisposer'
+1382715402426	Rename field 'passportDisposer'
+1382715412270	Rename field 'sitenameDisposer'
+1382715423817	Rename field 'phoneNumDisposer'
+1382715430895	Rename field 'websiteDisposer'
+1382715441004	Rename field 'identifyingCodeDisposer'
+1382715475879	Rename field 'pickMailBox'
+1382715491332	Rename field 'pickPassword'
+1382715505379	Rename field 'pickUsername'
+1382715516582	Rename field 'pickPassport'
+1382715526004	Rename field 'pickSite'
+1382715540489	Rename field 'pickPhoneNum'
+1382715548254	Rename field 'pickWebsite'
+1382715560270	Rename field 'pickIdentifyingCode'

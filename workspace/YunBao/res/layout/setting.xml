@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical" >
+	 <RelativeLayout 
+          android:layout_width="match_parent"
+          android:layout_height="46dp"
+          android:background="@drawable/top_bar_shape">
+
+        <ImageButton
+            android:id="@+id/ib_setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/onclick_button_selector"
+            android:src="@android:drawable/ic_menu_revert" />
+
+         <TextView
+             android:id="@+id/textView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:textColor="@android:color/white"
+             android:textSize="21sp"
+             android:text="更多" />
+ 
+	</RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/tv_setting_account_manager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="43dp"
+	    android:layout_marginBottom="4dp"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:layout_marginTop="4dp"
+	    android:background="@drawable/onclick_layout_selector" >
+
+	    <ImageView
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:src="@drawable/app_arrow_small"/>
+	
+	    <TextView	        
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/setting_item_height"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:paddingBottom="8dp"
+	        android:paddingLeft="8dp"
+	        android:paddingTop="10dp"
+	        android:text="帐号管理"
+	        android:textColor="#000000"
+	        android:textSize="16sp" />
+	
+	</RelativeLayout>
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:background="@android:color/white">
+		<LinearLayout
+		    android:orientation="vertical"
+		    android:id="@+id/setting"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+		</LinearLayout>
+	    
+	</ScrollView>
+	
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="workType">
+        <item>增雨</item>
+        <item>防雹</item>
+    </string-array>
+
+</resources>

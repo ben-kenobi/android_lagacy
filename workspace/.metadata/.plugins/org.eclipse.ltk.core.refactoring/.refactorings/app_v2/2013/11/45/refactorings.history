@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;ACCOUNTMANAGER/src/com.yf.accountmanager.action&apos;&#x0D;&#x0A;- Original project: &apos;app_v2&apos;&#x0D;&#x0A;- Destination element: &apos;ACCOUNTMANAGER/src/com.yf.accountmanager.action&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.icanit.app_v2.action.BasePopAction.java&#x0D;&#x0A;     com.icanit.app_v2.action.BaseAction.java" description="Copy compilation units" destination="=ACCOUNTMANAGER/src&lt;com.yf.accountmanager.action" element1="/src&lt;com.icanit.app_v2.action{BasePopAction.java" element2="/src&lt;com.icanit.app_v2.action{BaseAction.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1383658373359" units="2" version="1.0"/>
+</session>

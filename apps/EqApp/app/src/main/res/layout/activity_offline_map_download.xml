@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <fj.swsk.cn.eqapp.main.Common.Topbar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topbarh"
+            android:background="#feee"
+            custom:leftButtonSize="@dimen/btn_text_size"
+            custom:leftButtonText="@string/text_return"
+
+            custom:rightButtonSize="@dimen/btn_text_size"
+            custom:rightButtonText="@string/text_add"
+
+            custom:titleColor="#555"
+            custom:titleSize="6sp"
+            custom:titleText="离线地图下载" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+
+        <LinearLayout
+            android:id="@+id/downloadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/listviewbg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+
+            <TextView
+                android:id="@+id/downloadingListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="下载中"
+                android:textColor="@color/color_lighterText"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notDownloadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/listviewbg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+
+            <TextView
+                android:id="@+id/notDownloadTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="未下载"
+                android:textColor="@color/color_lighterText"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/downloadedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/listviewbg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+
+            <TextView
+                android:id="@+id/downloadedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="下载完成"
+                android:textColor="@color/color_lighterText"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_black"></View>
+        </LinearLayout>
+
+        <include layout="@layout/vector_setting_item"></include>
+
+    </LinearLayout>
+</ScrollView>
+

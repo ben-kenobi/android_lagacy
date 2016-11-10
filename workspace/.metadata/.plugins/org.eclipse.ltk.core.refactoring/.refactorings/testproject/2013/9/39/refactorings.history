@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;WXEntryActivity.java&apos; to &apos;testproject/bshare_src/com.example.testproject.wxapi&apos;&#x0D;&#x0A;- Original project: &apos;testproject&apos;&#x0D;&#x0A;- Destination element: &apos;testproject/bshare_src/com.example.testproject.wxapi&apos;&#x0D;&#x0A;- Original element: &apos;com.bshare.activity.WXEntryActivity.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/bshare_src&lt;com.example.testproject.wxapi" element1="/bshare_src&lt;com.bshare.activity{WXEntryActivity.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1380012228390" units="1" version="1.0"/>
+</session>

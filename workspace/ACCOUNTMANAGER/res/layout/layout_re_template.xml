@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_lightblue_button"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="3dp" >
+
+    <TextView
+        style="@style/moneyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/editRETemplateDetail" />
+
+    <View style="@style/horizonDividerViewStyle01" />
+    
+    <LinearLayout
+           style="@style/horizontalLLStyle"
+         >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keyWord" />
+
+            <EditText
+                android:id="@+id/et1"
+                style="@style/smallEditTextStyle"
+                 android:hint="@string/keyWordHint"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                />
+            <CheckedTextView
+            android:id="@+id/nosuffix"
+            style="@style/checkableTextStyle04"
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:text="@string/noSuffix" />
+
+</LinearLayout>
+    
+     <View style="@style/horizonDividerViewStyle01" />
+     
+       <LinearLayout
+            style="@style/horizontalLLStyle"
+         >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/extension_" />
+
+            <EditText 
+                android:id="@+id/et2"
+                style="@style/smallEditTextStyle"
+                android:hint="@string/suffix_hint"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="top|left"
+                android:minHeight="80dp"
+                android:paddingTop="3dp"
+                android:singleLine="false" 
+                />
+          
+
+</LinearLayout>
+    
+     <View style="@style/horizonDividerViewStyle01" />
+
+      <LinearLayout
+       style="@style/horizontalLLStyle" 
+     >
+    <CheckedTextView
+        android:id="@+id/ct0"
+            style="@style/checkableTextStyle04"
+            android:text="@string/docsFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/docsSuffix" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/horizontalLLStyle_marginLeft">
+
+        <CheckedTextView
+             android:id="@+id/ct01"
+            style="@style/checkableTextStyle04_weight"
+            android:text="txt" />
+         <CheckedTextView
+              android:id="@+id/ct02"
+            style="@style/checkableTextStyle04_weight"
+            android:text="xml" />
+          <CheckedTextView
+                android:id="@+id/ct03"
+            style="@style/checkableTextStyle04_weight"
+            android:text="x?html" />
+            <CheckedTextView
+                 android:id="@+id/ct04"
+            style="@style/checkableTextStyle04_weight"
+            android:text="pdf" />
+    </LinearLayout>
+
+     <LinearLayout
+        style="@style/horizontalLLStyle_marginLeft">
+<CheckedTextView
+     android:id="@+id/ct05"
+            style="@style/checkableTextStyle04"
+            android:text="docx?" />
+        <CheckedTextView
+             android:id="@+id/ct06"
+            style="@style/checkableTextStyle04"
+            android:layout_marginLeft="5dp"
+            android:text="xlsx?" />
+         <CheckedTextView
+              android:id="@+id/ct07"
+            style="@style/checkableTextStyle04"
+             android:layout_marginLeft="15dp"
+            android:text="pptx?" />
+    </LinearLayout>
+    
+    <View style="@style/horizonDividerViewStyle01" />
+
+     <LinearLayout
+         
+       style="@style/horizontalLLStyle"
+      >
+    <CheckedTextView
+         android:id="@+id/ct1"
+            style="@style/checkableTextStyle04"
+            android:text="@string/imgFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/imgSuffix" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        
+        style="@style/horizontalLLStyle_marginLeft">
+
+        <CheckedTextView
+             android:id="@+id/ct08"
+            style="@style/checkableTextStyle04_weight"
+            android:text="jpg" />
+         <CheckedTextView
+              android:id="@+id/ct09"
+            style="@style/checkableTextStyle04_weight"
+            android:text="jpeg" />
+          <CheckedTextView
+               android:id="@+id/ct10"
+            style="@style/checkableTextStyle04_weight"
+            android:text="gif" />
+           <CheckedTextView
+                android:id="@+id/ct11"
+            style="@style/checkableTextStyle04_weight"
+            android:text="png" />
+    </LinearLayout>
+     <LinearLayout
+         
+        style="@style/horizontalLLStyle_marginLeft">
+
+        <CheckedTextView
+             android:id="@+id/ct12"
+            style="@style/checkableTextStyle04"
+            android:text="bmp" />
+         <CheckedTextView
+              android:id="@+id/ct13"
+            style="@style/checkableTextStyle04"
+            android:layout_marginLeft="22dp"
+            android:text="wbmp" />
+    </LinearLayout>
+
+    <View style="@style/horizonDividerViewStyle01" />
+      <LinearLayout
+          
+       style="@style/horizontalLLStyle" >
+    <CheckedTextView
+         android:id="@+id/ct21"
+            style="@style/checkableTextStyle04"
+            android:text="@string/videoFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/videoSuffix" />
+
+    </LinearLayout>
+
+   
+
+    <View style="@style/horizonDividerViewStyle01" />
+      <LinearLayout
+       style="@style/horizontalLLStyle" >
+    <CheckedTextView
+         android:id="@+id/ct22"
+            style="@style/checkableTextStyle04"
+            android:text="@string/audioFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/audioSuffix" />
+
+    </LinearLayout>
+
+   
+
+    <View style="@style/horizonDividerViewStyle01" />
+      <LinearLayout
+       style="@style/horizontalLLStyle" >
+    <CheckedTextView
+          android:id="@+id/ct23"
+            style="@style/checkableTextStyle04"
+            android:text="@string/installationFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/installationSuffix" />
+
+    </LinearLayout>
+
+   
+
+    <View style="@style/horizonDividerViewStyle01" />
+      <LinearLayout
+       style="@style/horizontalLLStyle" 
+       >
+    <CheckedTextView
+          android:id="@+id/ct5"
+            style="@style/checkableTextStyle04"
+            android:text="@string/compressedFile" />
+
+    <TextView
+       style="@style/filetypeHintTextStyle"
+        android:text="@string/compresssionSuffix" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/horizontalLLStyle_marginLeft">
+
+        <CheckedTextView
+               android:id="@+id/ct14"
+            style="@style/checkableTextStyle04_weight"
+            android:text="xzip" />
+         <CheckedTextView
+                android:id="@+id/ct15"
+            style="@style/checkableTextStyle04_weight"
+            android:text="zip" />
+          <CheckedTextView
+                 android:id="@+id/ct16"
+            style="@style/checkableTextStyle04_weight"
+            android:text="rar" />
+           <CheckedTextView
+                  android:id="@+id/ct17"
+            style="@style/checkableTextStyle04_weight"
+            android:text="gzip" />
+    </LinearLayout>
+    
+     <LinearLayout
+        style="@style/horizontalLLStyle_marginLeft">
+
+        <CheckedTextView
+               android:id="@+id/ct18"
+            style="@style/checkableTextStyle04"
+            android:text="bzip2" />
+         <CheckedTextView
+                android:id="@+id/ct19"
+            style="@style/checkableTextStyle04"
+            android:layout_marginLeft="20dp"
+            android:text="tar" />
+          <CheckedTextView
+                 android:id="@+id/ct20"
+            style="@style/checkableTextStyle04"
+             android:layout_marginLeft="30dp"
+            android:text="jar" />
+    </LinearLayout>
+
+    <View style="@style/horizonDividerViewStyle01" />
+    
+
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="swsk.cn.rgyxtq">
+<!--
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+//推送
+&lt;!&ndash;<uses-permission android:name="android.permission.INTERNET" />&ndash;&gt;
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+-->
+<uses-sdk
+    android:minSdkVersion="15"
+    android:targetSdkVersion="17" />
+
+<permission
+    android:name="swsk.cn.rgyxtq.permission.JPUSH_MESSAGE"
+    android:protectionLevel="signature" />
+
+<!-- Required  一些系统要求的权限，如访问网络等 -->
+<uses-permission android:name="cn.swsk.rgyxtqapp.permission.JPUSH_MESSAGE" />
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+<!-- Optional for location -->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+<application
+    android:name=".conf.MyApplication"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AppCompat.Light">
+    <activity
+        android:name=".main.C.MenuActivity"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:windowSoftInputMode="adjustPan">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".main.C.LoginActivity"
+        android:launchMode="singleTask"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".main.C.MainActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.work.C.WorkStatusActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.work.C.WorkInfoUploadActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.work.C.WorkPlanReadActivity"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".main.C.SettingActivity"
+        android:launchMode="singleTask"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.work.C.AddWorkPointActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.security.C.SafeManagerActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.user.C.UserManageActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity
+        android:name=".subs.work.C.WorkPlanSelListActivity"
+        android:theme="@android:style/Theme.NoTitleBar" />
+    <activity android:name=".main.C.WorkPlanSelListItemActivity" />
+    <!-- Required SDK核心功能 -->
+    <activity
+        android:name="cn.jpush.android.ui.PushActivity"
+        android:configChanges="orientation|keyboardHidden"
+        android:exported="false"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <intent-filter>
+            <action android:name="cn.jpush.android.ui.PushActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="cn.swsk.rgyxtqapp" />
+        </intent-filter>
+    </activity>
+    <!-- Required  SDK核心功能 -->
+    <service
+        android:name="cn.jpush.android.service.DownloadService"
+        android:enabled="true"
+        android:exported="false" />
+
+    <!-- Required SDK 核心功能 -->
+    <!-- 可配置android:process参数将PushService放在其他进程中 -->
+    <service
+        android:name="cn.jpush.android.service.PushService"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="cn.jpush.android.intent.REGISTER" />
+            <action android:name="cn.jpush.android.intent.REPORT" />
+            <action android:name="cn.jpush.android.intent.PushService" />
+            <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+        </intent-filter>
+    </service>
+
+    <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+    <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+    <service
+        android:name="cn.jpush.android.service.DaemonService"
+        android:enabled="true"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="cn.jpush.android.intent.DaemonService" />
+
+            <category android:name="cn.swsk.rgyxtqapp" />
+        </intent-filter>
+    </service>
+
+    <!-- Required SDK核心功能 -->
+    <receiver
+        android:name="cn.jpush.android.service.PushReceiver"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter android:priority="1000">
+            <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+            <!-- Required  显示通知栏 -->
+            <category android:name="cn.swsk.rgyxtqapp" />
+        </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.USER_PRESENT" />
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        </intent-filter>
+        <!-- Optional -->
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+            <data android:scheme="package" />
+        </intent-filter>
+    </receiver>
+
+    <!-- Required SDK核心功能 -->
+    <receiver
+        android:name="cn.jpush.android.service.AlarmReceiver"
+        android:exported="false" />
+
+    <!-- User defined.  For test only  用户自定义的广播接收器 -->
+    <receiver
+        android:name=".main.Common.MyReceiver"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="cn.jpush.android.intent.REGISTRATION" />
+            <!-- Required  用户注册SDK的intent -->
+            <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+            <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+            <!-- Required  用户接收SDK消息的intent -->
+            <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+            <!-- Required  用户接收SDK通知栏信息的intent -->
+            <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+            <!-- Required  用户打开自定义通知栏的intent -->
+            <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+            <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+            <action android:name="cn.jpush.android.intent.CONNECTION" />
+            <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+            <category android:name="cn.swsk.rgyxtqapp" />
+        </intent-filter>
+    </receiver>
+
+    <!-- Required  . Enable it you can get statistics data with channel -->
+    <meta-data
+        android:name="JPUSH_CHANNEL"
+        android:value="developer-default" />
+    <meta-data
+        android:name="JPUSH_APPKEY"
+        android:value="71f1a456586a7dbcc45fdde9" />
+    <!--
+         ATTENTION: This was auto-generated to add Google Play services to your project for
+         App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+    -->
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    <!--&lt;!&ndash; </>值来自开发者平台取得的AppKey &ndash;&gt;-->
+
+    <activity android:name=".subs.work.C.InstructionsListActivity" />
+    <activity android:name=".subs.work.C.InstructionsListItemActivity"></activity>
+
+
+
+    <!--  new added activities by yf @2016-->
+    <!--<activity-->
+        <!--android:name=".ImportManagementActivity"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar" />-->
+    <!--<activity-->
+        <!--android:name=".ManualInputActivity"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar"-->
+        <!--android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />-->
+    <!--<activity-->
+        <!--android:name=".ScanQRCode"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar" />-->
+    <!--<activity-->
+        <!--android:name=".ExportManageActivity"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar" />-->
+    <!--<activity-->
+        <!--android:name=".DrawActivity"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar" />-->
+
+
+
+</application>
+
+</manifest>

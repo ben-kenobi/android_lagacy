@@ -1,0 +1,187 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="25dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="25dp"
+    android:background="@drawable/address_add_layout_shape"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名：" 
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/et_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:background="@android:drawable/editbox_background" 
+            android:hint="需填写"
+            android:textColor="@android:color/black">
+			
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_address_name_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="3"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_address_name_info" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/blue">         
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话："
+            android:textSize="18sp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/et_address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="需填写"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:maxLength="13"
+            android:phoneNumber="true"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_address_phone_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="3"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_address_phone_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/blue">         
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址：" 
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/et_address_addr"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="需填写"	            
+            android:maxLength="50"
+            android:maxLines="3"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="18sp"
+            android:layout_height="85dp"
+                android:ems="10"
+                android:inputType="textMultiLine" 
+                android:gravity="top|left"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_address_addr_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="3"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_address_addr_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/blue">         
+        </TextView>
+
+    </LinearLayout>
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/btn_address_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/address_add_negative_selector"
+            android:text="取消"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_address_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/address_add_positive_selector"
+            android:text="确定"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+	   
+</LinearLayout>

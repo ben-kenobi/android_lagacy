@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/uniform_titlebar_style"
+        android:layout_width="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                style="@style/title_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/appMap"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="100dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/bg_radius_m_transparent"
+                android:clickable="true"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:background="#8ddd" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/imageButton2"
+            android:background="#8ddd" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/title_back_style"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8bbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/search_container_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/editText1"
+            style="@style/edittext_style"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="输入查找范围，单位m" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            style="@style/textDisposerStyle" 
+          />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_toLeftOf="@+id/imageButton1"
+          style="@style/textConfirmStyle"
+         />
+
+    </RelativeLayout>
+
+    <com.baidu.mapapi.MapView
+        android:id="@+id/mapView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" >
+
+    </com.baidu.mapapi.MapView>
+
+</LinearLayout>

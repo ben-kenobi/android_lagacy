@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/conf/PropertiesConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/BaseUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/CustomizedDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/DeviceInfoUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/FileUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/IOUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/MD5Util.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/ResUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/SharePrefUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/StringUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/swsk/cn/rgyxtq/util/SystemUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_radius_bigwhite.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_top_blue_dialog.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_blue_radius_button.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_checkable_text.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_rowbg.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_white_radius_button.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_customized.xml" charset="GBK" />
+  </component>
+</project>

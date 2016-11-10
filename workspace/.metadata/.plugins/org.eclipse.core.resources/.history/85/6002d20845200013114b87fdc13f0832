@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/uniform_titlebar_style01"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:text="门口店"
+            android:textSize="@dimen/font_size_l" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dp"
+            android:layout_toRightOf="@id/textView1"
+            android:drawableLeft="@android:drawable/arrow_up_float"
+            android:text="福州" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_transparent_fg"
+            android:text="MY社区" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/selector_transparent_fg"
+            android:padding="3dp"
+            android:src="@android:drawable/ic_dialog_map" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/selector_cart_button_left" >
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_transparent_fg"
+            android:padding="3dp"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_text"
+            android:ems="10" />
+       </LinearLayout>
+ </RelativeLayout>
+
+    <View style="@style/shadowViewStyle03" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/fragment4main_textviewNormalStyle"
+            android:text="全部" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#aaa" />
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/textView5" -->
+        <!-- style="@style/fragment4main_textviewNormalStyle" -->
+        <!-- android:text="社区" /> -->
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#aaa" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/fragment4main_textviewNormalStyle"
+            android:drawableLeft="@android:drawable/ic_menu_set_as"
+            android:text="默认排序" />
+    </LinearLayout>
+
+    <View style="@style/shadowViewStyle03" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#fff" >
+
+    </FrameLayout>
+
+    <View style="@style/shadowViewStyle03" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true" >
+        </ListView>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_stereo_button_layer3"
+            android:text="筛选"
+            android:textColor="#eee"
+            android:textSize="@dimen/font_size_mplus" />
+    </FrameLayout>
+
+</LinearLayout>

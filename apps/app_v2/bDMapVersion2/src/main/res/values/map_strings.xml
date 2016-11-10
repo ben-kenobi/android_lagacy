@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BDMapVersion2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="str_tv_map">地图</string>
+    <string name="str_rb_normal">普通</string>
+	<string name="str_rb_satellite">卫星</string>
+	<string name="str_rb_terrain">交通</string>
+	<string name="str_btn_enter">进入</string> 
+	<string name="str_btn_loc">定位</string>
+	<string name="str_btn_afresh">重新获取</string>
+	<string name="str_tv_loading">正在为您努力加载，请稍候..</string>
+	<string name="str_btn_select_commu">选择社区</string>
+	<string name="str_btn_get_route">获取线路</string>
+	<string name="str_btn_show_view">显示视图</string>
+</resources>

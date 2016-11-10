@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AddCSV2GraphicsLayer/AddCSV2GraphicsLayer.iml" filepath="$PROJECT_DIR$/AddCSV2GraphicsLayer/AddCSV2GraphicsLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AttributeEditor/AttributeEditor.iml" filepath="$PROJECT_DIR$/AttributeEditor/AttributeEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basemaps/Basemaps.iml" filepath="$PROJECT_DIR$/Basemaps/Basemaps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BasicLicense/BasicLicense.iml" filepath="$PROJECT_DIR$/BasicLicense/BasicLicense.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClassBreaksRenderer/ClassBreaksRenderer.iml" filepath="$PROJECT_DIR$/ClassBreaksRenderer/ClassBreaksRenderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClosestFacilities/ClosestFacilities.iml" filepath="$PROJECT_DIR$/ClosestFacilities/ClosestFacilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Convert2MGRSGrid/Convert2MGRSGrid.iml" filepath="$PROJECT_DIR$/Convert2MGRSGrid/Convert2MGRSGrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CreateRuntimeGeodatabase/CreateRuntimeGeodatabase.iml" filepath="$PROJECT_DIR$/CreateRuntimeGeodatabase/CreateRuntimeGeodatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicLayerRenderer/DynamicLayerRenderer.iml" filepath="$PROJECT_DIR$/DynamicLayerRenderer/DynamicLayerRenderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicSubLayerReorder/DynamicSubLayerReorder.iml" filepath="$PROJECT_DIR$/DynamicSubLayerReorder/DynamicSubLayerReorder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExportTileCacheTask/ExportTileCacheTask.iml" filepath="$PROJECT_DIR$/ExportTileCacheTask/ExportTileCacheTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FeatureServiceTableQuery/FeatureServiceTableQuery.iml" filepath="$PROJECT_DIR$/FeatureServiceTableQuery/FeatureServiceTableQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FeatureUserGroup/FeatureUserGroup.iml" filepath="$PROJECT_DIR$/FeatureUserGroup/FeatureUserGroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FragmentManagement/FragmentManagement.iml" filepath="$PROJECT_DIR$/FragmentManagement/FragmentManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeoJSONEarthquakeMap/GeoJSONEarthquakeMap.iml" filepath="$PROJECT_DIR$/GeoJSONEarthquakeMap/GeoJSONEarthquakeMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeometryEditor/GeometryEditor.iml" filepath="$PROJECT_DIR$/GeometryEditor/GeometryEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeometrySample/GeometrySample.iml" filepath="$PROJECT_DIR$/GeometrySample/GeometrySample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdentifyTask/IdentifyTask.iml" filepath="$PROJECT_DIR$/IdentifyTask/IdentifyTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocalMBTiles/LocalMBTiles.iml" filepath="$PROJECT_DIR$/LocalMBTiles/LocalMBTiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocalRasterData/LocalRasterData.iml" filepath="$PROJECT_DIR$/LocalRasterData/LocalRasterData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapLegend/MapLegend.iml" filepath="$PROJECT_DIR$/MapLegend/MapLegend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapRotation/MapRotation.iml" filepath="$PROJECT_DIR$/MapRotation/MapRotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Measure/Measure.iml" filepath="$PROJECT_DIR$/Measure/Measure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MilSym2525c/MilSym2525c.iml" filepath="$PROJECT_DIR$/MilSym2525c/MilSym2525c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nearby/Nearby.iml" filepath="$PROJECT_DIR$/Nearby/Nearby.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OAuth2/OAuth2.iml" filepath="$PROJECT_DIR$/OAuth2/OAuth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OfflineAnalysis/OfflineAnalysis.iml" filepath="$PROJECT_DIR$/OfflineAnalysis/OfflineAnalysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OfflineEditor/OfflineEditor.iml" filepath="$PROJECT_DIR$/OfflineEditor/OfflineEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OfflineRoutingAndGeocoding/OfflineRoutingAndGeocoding.iml" filepath="$PROJECT_DIR$/OfflineRoutingAndGeocoding/OfflineRoutingAndGeocoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OsmLayer/OsmLayer.iml" filepath="$PROJECT_DIR$/OsmLayer/OsmLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PlaceSearch/PlaceSearch.iml" filepath="$PROJECT_DIR$/PlaceSearch/PlaceSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PopupInWebMapForEditing/PopupInWebMapForEditing.iml" filepath="$PROJECT_DIR$/PopupInWebMapForEditing/PopupInWebMapForEditing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PopupInWebMapForViewing/PopupInWebMapForViewing.iml" filepath="$PROJECT_DIR$/PopupInWebMapForViewing/PopupInWebMapForViewing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PopupUICustomization/PopupUICustomization.iml" filepath="$PROJECT_DIR$/PopupUICustomization/PopupUICustomization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QueryCloudFeatureService/QueryCloudFeatureService.iml" filepath="$PROJECT_DIR$/QueryCloudFeatureService/QueryCloudFeatureService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QueryTask/QueryTask.iml" filepath="$PROJECT_DIR$/QueryTask/QueryTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Routing/Routing.iml" filepath="$PROJECT_DIR$/Routing/Routing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServiceArea/ServiceArea.iml" filepath="$PROJECT_DIR$/ServiceArea/ServiceArea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleMap/SimpleMap.iml" filepath="$PROJECT_DIR$/SimpleMap/SimpleMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StandardLicense/StandardLicense.iml" filepath="$PROJECT_DIR$/StandardLicense/StandardLicense.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StandardLicenseOffline/StandardLicenseOffline.iml" filepath="$PROJECT_DIR$/StandardLicenseOffline/StandardLicenseOffline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SwitchMaps/SwitchMaps.iml" filepath="$PROJECT_DIR$/SwitchMaps/SwitchMaps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UniqueValueRenderer/UniqueValueRenderer.iml" filepath="$PROJECT_DIR$/UniqueValueRenderer/UniqueValueRenderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewShed/ViewShed.iml" filepath="$PROJECT_DIR$/ViewShed/ViewShed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WmsLayer/WmsLayer.iml" filepath="$PROJECT_DIR$/WmsLayer/WmsLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arcgis-runtime-samples-android.iml" filepath="$PROJECT_DIR$/arcgis-runtime-samples-android.iml" />
+    </modules>
+  </component>
+</project>

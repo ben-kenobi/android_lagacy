@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_shadow_radius"
+    android:padding="12dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_eee_radius"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                style="@style/verticalParallelTextViewStyle02"
+                android:text="姓名：" />
+
+            <EditText
+                android:id="@+id/editText1"
+                 style="@style/editTextStyle_02"
+                android:inputType="text"
+                android:ems="10" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                style="@style/verticalParallelTextViewStyle02"
+                android:text="电话：" />
+
+            <EditText
+                android:id="@+id/editText2"  style="@style/editTextStyle_02"
+                android:inputType="phone" android:maxLength="11"
+                android:ems="10" >
+
+            </EditText>
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="95dp" >
+
+            <TextView
+               style="@style/verticalParallelTextViewStyle02"
+                android:text="地址：" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_height="85dp"
+                android:ems="10"
+                style="@style/editTextStyle_02"
+                android:gravity="top|left"
+                android:inputType="textMultiLine" >
+
+            </EditText>
+
+        </LinearLayout>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="3dp"
+           android:textSize="@dimen/font_size_mplus"
+           android:text="或从以下列表中选择收货地址" />
+
+       <FrameLayout
+           android:id="@+id/frameLayout1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"  
+           android:visibility="gone">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="是否登录记录您的收货地址？"
+               android:textColor="#e88"
+               android:textSize="@dimen/font_size_l"
+               android:visibility="visible" />
+
+           <TextView
+               android:id="@+id/textView1"
+                 style="@style/textView_clickable_style"
+               android:layout_gravity="center"
+               android:padding="8dp"
+               android:textColor="#66e"
+               android:text="登录" />
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_gravity="center_vertical|right"
+               android:padding="8dp"
+                 android:textColor="#66e"
+             style="@style/textView_clickable_style"
+               android:text="免费注册" />
+
+       </FrameLayout>
+
+       <ListView
+           android:id="@+id/listView1"
+           style="@style/scrollStyle"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:background="@drawable/bg_white_right_radius"
+           android:divider="@drawable/divider_stronger_horizontal" 
+           >
+
+       </ListView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginTop="10dp" >
+
+           <Button
+               android:id="@+id/button1"
+                style="@style/buttonStyle_appv2_white"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginRight="7dp"
+               android:layout_weight="1"
+                 android:textSize="@dimen/font_size_xl"
+               android:text="取消" />
+
+           <Button
+               android:id="@+id/button2"
+                style="@style/buttonStyle_appv2_blue"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="7dp"
+               android:layout_weight="1"
+               android:textSize="@dimen/font_size_xl"
+               android:text="提交订单" />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

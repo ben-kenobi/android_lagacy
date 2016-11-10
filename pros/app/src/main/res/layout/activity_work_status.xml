@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <cn.swsk.rgyxtqapp.custom.topbar
+        android:id="@+id/workPlanTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        custom:leftButtonBackground="#20000000"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonBackground="#20000000"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#fff"
+        custom:titleSize="@dimen/lbl_title_text_size" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#fff">
+
+        <TableRow android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_work_place"
+                android:text="目的地："
+                android:textColor="@color/colorFont"
+                android:gravity="right"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_work_place_V"
+                android:textColor="@color/colorFont"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_work_type"
+                android:text="作业类型："
+                android:textColor="@color/colorFont"
+                android:gravity="right"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_work_type_V"
+                android:textColor="@color/colorFont"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <GridView
+        android:id="@+id/dgWorkStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="0dp"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:verticalSpacing="5dp"></GridView>
+</LinearLayout>

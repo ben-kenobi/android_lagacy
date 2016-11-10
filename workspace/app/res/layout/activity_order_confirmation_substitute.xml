@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aafffacd"
+    android:orientation="vertical" >
+
+    <LinearLayout
+       style="@style/uniform_titlebar_style"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+           style="@style/title_back_style"/>
+			<View
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:background="#3fff" />
+
+        <TextView
+            style="@style/title_text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingRight="50dp"
+            android:text="@string/orderConfirmation"
+            android:textSize="@dimen/font_size_l" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8bbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/bg_extremely_low_grey_gradient" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_bigwhite"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/listView1"
+                style="@style/scrollStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cacheColorHint="@null"
+                android:divider="@null"
+                android:listSelector="@null" >
+
+            </ListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7888" />
+
+            <com.icanit.app.ui.AlwaysFocusedTextView
+                android:id="@+id/textView1"
+                style="@style/payInfoListStyle"
+                android:layout_height="40dp"
+                android:paddingTop="3dp"
+                android:textColor="#ee7600"
+				/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/choosePayWay"
+            android:textColor="#555"
+            android:textSize="@dimen/font_size_mplus" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_radius_white"
+            android:divider="@drawable/divider_horizontal"
+            android:dividerPadding="1dp"
+            android:orientation="vertical"
+            android:showDividers="middle" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/payOptionsStyle"
+                    android:background="@drawable/selector_transparent_tv"
+                    android:text="@string/payWithAlipayAccount" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/payOptionsStyle"
+                    android:background="@drawable/selector_transparent_tv"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/creditCardConvenient" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/payOptionsStyle"
+                    android:background="@drawable/selector_transparent_tv"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/bankCardConvenient" />
+
+            </RelativeLayout>
+         </LinearLayout>
+
+
+
+ </LinearLayout>

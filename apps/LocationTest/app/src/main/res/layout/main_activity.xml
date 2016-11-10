@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </ImageView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:text="Scanning..."
+        android:textColor="#000"
+        android:layout_height="44dp"
+        android:layout_width="match_parent">
+    </TextView>
+
+    <Button
+        android:id="@+id/ScanButton"
+        android:text="Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        />
+</LinearLayout>

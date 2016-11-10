@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bs_platform_grid_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/bs_layout_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <ImageView
+            android:id="@+id/bs_platform_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/white"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/bs_platform_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bs_platform_logo"
+            android:layout_alignRight="@+id/bs_platform_logo"
+            android:contentDescription="@null"
+            android:src="@drawable/bshare_platform_selected_ico" >
+        </ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bs_platfrom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_layout_pic"
+        android:layout_centerHorizontal="true"
+        android:text="platfrom" />
+
+</RelativeLayout>

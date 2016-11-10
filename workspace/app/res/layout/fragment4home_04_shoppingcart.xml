@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aafffacd"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/uniform_titlebar_style"
+        android:orientation="horizontal"
+        android:paddingRight="10dp" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            style="@style/title_back_style"/>
+			<View
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:background="#3fff" />
+
+        <TextView
+            style="@style/title_text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/myshoppingcart"
+            android:textSize="@dimen/font_size_xl" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="80dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_top_button"
+            android:text="@string/clearShoppingCart"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8bbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/bg_extremely_low_grey_gradient" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_bigwhite"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" >
+
+            </ListView>
+
+ </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="7dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 style="@style/moneyStyle"
+                />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                style="@style/title_text_style"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/selector_orange_button_gradient"
+                android:text="@string/orderConfirmationNpay" />
+
+        </FrameLayout>
+
+ </LinearLayout>

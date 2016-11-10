@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="6dp" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/scrollStyle"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="1"
+        android:background="#fff" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="1"
+        style="@style/scrollStyle"  android:background="#eee"
+        >
+
+    </ListView>
+<FrameLayout  android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="1">
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+          style="@style/scrollStyle"
+        android:background="#ddd" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/listView4"
+        style="@style/scrollStyle"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" >
+
+    </ListView>
+
+</FrameLayout>
+</LinearLayout>
+</LinearLayout>

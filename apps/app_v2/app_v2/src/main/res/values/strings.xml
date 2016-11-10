@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tvgo商城</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="close">关闭</string>
+	<string name="exit">退 出</string>
+	<string name="choosecitytitle">切换城市</string>
+	<string name="choosecommunity">社区选择</string>
+	<string name="myshoppingcart">我的购物车</string>
+	<string name="enablelocator">开启定位城市</string>
+	<string name="locatecity">定位城市</string>
+	<string name="locatecommunity">定位社区</string>
+	<string name="hotcity">热门城市</string>
+	<string name="communities">社区列表</string>
+	<string name="intelligencelife">智慧生活</string>
+	<string name="stores">周边店</string>
+	<string name="hint01">输入城市名称</string>
+		<string name="hint_community">输入社区名称</string>
+	<string name="hint02">请输入类别名称或关键字</string>
+	<string name="hint03">请输入要查找的内容</string>
+	<string name="usernameHint">手机/邮箱/用户名</string>
+	<string name="passwordHint">密码</string>
+	<string name="homepage">首页</string>
+	<string name="surround">周边</string>
+	<string name="merchandize">商品</string>
+	<string name="cart">购物车</string>
+	<string name="mine">我的</string>
+	<string name="other">其他</string>
+	<string name="more">更多</string>
+	<string name="communityConvenient">社区便利</string>
+	<string name="all">全部</string>
+	<string name="wholecity">全城</string>
+	<string name="defaultorder">默认排序</string>
+	<string name="search">搜索</string>
+	<string name="notLoginYet">您还没有登录哦~</string>
+	<string name="loginnow">马上登录</string>
+	<string name="login">登录</string>
+	<string name="userRegister">用户注册</string>
+	<string name="submit">提  交</string>
+	<string name="forgotpsw">忘记密码</string>
+	<string name="freeRegister">免费注册</string>
+	<string name="userOtherAccount">使用合作网站账号登录</string>
+	<string name="buyNow">立即抢购</string>
+	<string name="checkDetail">查看详情</string>
+	<string name="cashierAlipay">收银台-高端版-支付宝</string>
+	<string name="cashier">收银台</string>
+	<string name="prodName">商品名称：</string>
+	<string name="from">来自：</string>
+	<string name="boundToPay">应付总价：</string>
+	<string name="$">元</string>
+	<string name="recommendUseAlipay">如果您还没有支付宝，推荐您使用</string>
+	<string name="bankCardConvenient">储蓄卡快捷支付</string>
+	<string name="creditCardConvenient">信用卡快捷支付</string>
+	<string name="payWithAlipayAccount">支付宝账号支付</string>
+	<string name="alipayAccount">支付宝账户名</string>
+	<string name="payCombination">支付密码</string>
+	<string name="retrieveCombination">找回密码</string>
+	<string name="recommend">( 推荐 )</string>
+	<string name="pay">确认支付</string>
+	<string name="cancel">取消</string>
+	<string name="orderConfirmation">确认订单</string>
+	<string name="orderConfirmationNpay">确认订单，付款</string>
+	<string name="purchaseQuantity">购买数量</string>
+	<string name="useFavor">使用优惠</string>
+	<string name="finalPay">最终应付</string>
+	<string name="cellPhoneNum">手机号码</string>
+	<string name="packageChoose">套餐选择</string>
+	<string name="pleaseChoose">请选择您需要的套餐：</string>
+	<string name="choosePayWay">选择支付方式</string>
+	<string name="myAccount">我的账户</string>
+	<string name="myCollection">我的收藏</string>
+	<string name="comingSoon">即将到来</string>
+	<string name="inputYourPhoneNum">输入手机号</string>
+	<string name="setupPasswor">设置密码</string>
+	<string name="pwdHint">由6到18位数字,字母或组成</string>
+	<string name="pwdConfirmation">确认密码</string>
+	<string name="repwdHint">与密码一致</string>
+	<string name="rememberMe">记住我</string>
+	<string name="autoLogin">自动登录</string>
+	<string name="registerVerify">注册验证</string>
+	<string name="veriCode">验证码</string>
+	<string name="inputVeriCode">输入收到的验证码</string>
+	<string name="inputPhoneNum">输入手机号</string>
+	<string name="inputNewPwd">输入新密码</string>
+	<string name="inputNewPwdAgain">再次输入新密码</string>
+	<string name="affirmative">确 定</string>
+	<string name="retrievePassword_step1">找回密码 1</string>
+	<string name="retrievePassword_step2">找回密码 2</string>
+	<string name="retrievePassword_step3">找回密码 3</string>
+	<string name="resendVeriCode">重新发送</string>
+	<string name="modifyPassword">修改密码</string>
+	<string name="oldPassword">原密码</string>
+	<string name="inputOldPassword">输入您原先密码</string>
+	<string name="appMap">地图</string>
+	<string name="clearShoppingCart">清空购物车</string>
+	<string name="detail">详情</string>
+	<string name="delete">删除</string>
+	<string name="forwardtopay">前去支付</string>
+	<string name="serviceContract">注:本条款是用户（您）与海康科技旗下应用开发网站“Apps123.cn”之间的协议。
+一、 重要须知
+　　1、 海康科技在此特别提醒，用户（您）欲使用“Apps123.cn”网站开发应用模式开发手机应用必须事先认真阅读本服务条款中的各项条款。请您审阅并接受本服务条款（未成年人审阅时应得到法定监护人的陪同）。您的使用行为将被视为您对本服务条款全部的完全接受，包括接受我们对服务条款随时所做的任何修改。如用户不同意本服务条款任意内容，请不要注册或使用“Apps123.cn”网站的手机应用开发服务。如用户通过进入注册程序并勾选“我同意服务条款”，即表示用户与海康科技已达成协议，自愿接受本服务条款的所有内容。此后，用户不得以未阅读本服务条款内容作任何形式的抗辩。
+　　2、 用户通过“Apps123.cn”网站自建或定制模式生成的作品（包括但不限于模板、主题）除特殊注明以外，其使用权归用户拥有（不包括知识产权和版权），用户对其自行上传的内容承担法律责任。
+二、 服务简介
+　　“Apps123.cn”网站是海康科技推出的手机应用开发网站，提供应用自建、应用定制、应用发布、应用管理一站式的服务平台。用户通过注册成为会员之后，可以通过网站的自建模式制，通过简单4步操作「选择模版>选择功能>生成应用>添加内容」，即可完成应用的开发，真正实现“会打字就会开发应用”。定制模式为用户提供更多的个性化选择，用户只需填写定制申请表，把自己想法告诉我们，我们有专人为您完成设计、建设、发布一站式服务；并可为您提供应用内容管理托管服务，为您管理、更新您的内容。
+三、 服务条款的确认、修改、中断和终止
+　　本服务条款按照海康科技的章程、操作规则和服务条款严格执行。您在使用“Apps123”网站提供的服务之前，请认真阅读本服务条款，当您使用“Apps23.cn”网站提供的服务时，视为您已完全同意所有服务条款。“Apps23.cn”网站有权在必要时修改本服务条款，请您随时关注网站服务条款的修改。如果您不同意所改动的内容，您可以主动取消所有在“Apps123.cn”网站的服务。
+　　当服务条款发生变化的时候，用户要继续使用“Apps123.cn”各项服务需要两方面的确认：
+　　1、首先确认“Apps123.cn”服务条款及其变动；
+　　2、 同意接受所有的服务条款限制。“Apps23.cn”网站保留随时变更或终止服务的权利。用户同意“Apps123.cn”网站有权使用上述权利，且不需对用户承担责任。
+四、 用户的隐私保护
+　　本网站重视对用户隐私的保护，保护隐私是本网站的一项基本政策。您提供的登记资料及本网站保留的有关您的若干其他个人资料将受到中国有关隐私的法律和本网站《隐私条款》之规范。
+　　您使用本网站服务时，本网站有可能利用所得信息对服务的使用进行总体性及匿名的数据统计及分析，所得数据可供本网站或其合作人使用。计算机识别技术也会用于执行相关的服务条款。
+　　本网站注重对用户信息资源的保护，会使用各种安全技术和程序来保护用户信息资源不被未经授权的访问、使用和泄漏。除法律或政府要求或用户同意等原因外， “Apps123.cn”未经用户同意不向除合作单位以外的第三方公开、 透露用户信息资源。 但因下列原因而披露给第三方的除外：
+　　（1）基于国家法律法规的规定而对外披露；
+　　（2）应国家司法机关及其他有关机关基于法定程序的要求而披露；
+　　（3）为保护本网站或您的合法权益而披露；
+　　（4）在紧急情况下，为保护其他用户及第三方人身安全而披露；
+　　（5）用户本人或用户监护人授权披露的；
+　　（6）应用户监护人合法要求而提供用户个人身份信息时。
+五、 用户责任
+　　您通过 “Apps123.cn”享受开发应用的服务时必须保证：
+　　（1）遵守中国有关法律法规的规定。
+　　（2）不利用服务作非法用途。
+　　（3）不干扰服务的正常进行。
+　　（4）遵守所有与使用服务有关的网络协议、规定、程序和惯例。
+　　（5）不得以任何形式侵犯“Apps23.cn”的知识产权。
+　　您通过“Apps123.cn”享受开发应用服务时必须保证：
+　　（1）如用户违反国家法律法规或本服务条款，本网站和合作公司将有权停止向用户提供服务而不需承担任何责任，如导致本网站或合作公司遭受任何损害或遭受任何来自第三方的纠纷、诉讼、索赔要求等，用户须向本网站或合作公司赔偿相应的损失，用户并需对其违反服务条款所产生的一切后果负全部法律责任。
+　　（2）依本服务条款所取得的服务权利不可转让。
+　　（3）若您违反有关法律法规及本服务条款的规定须自行承担完全的法律责任，并承担因此给本网站造成的损失的法律责任。
+六、 风险承担
+　　用户须明白，使用“Apps123.cn”网站提供的服务涉及到Internet服务和其他增值服务，可能会受到各个环节不稳定因素影响。因此服务存在因不可抗力、计算机病毒或黑客攻击、国家相关行业主管部门及电信运营商的调整、系统不稳定、用户所在位置、用户关机以及其他任何技术、互联网络、通信线路原因等造成的服务中断或不能满足用户要求的风险。用户须承担以上风险，“Apps123.cn”网站不作任何担保。对因此导致用户不能发送、上传和接受阅读消息、或接发错消息，或无法实现其他通讯条件，“Apps123.cn”网站不承担任何责任。同时，用户同意保障和维护“Apps123.cn”网站全体成员的利益，负责支付由用户违反本服务条款或因违反服务条款的引起损害赔偿费用，承担产生的一切责任和后果。
+七、责任限制
+　　海康科技的“Apps123.cn”网站只是为您与服务提供商的网络行为和网络服务提供平台和通道。 您以服务提供商发布的信息为依据而进行任何交易或者其他行为，均视为已经充分知悉并自愿承担网络交易、网上行为的风险，并应对网上交易或行为进行事前辨别和采取谨慎的预防措施，并承担因进行网上交易或行为所产生的一切法律后果。
+　　您与服务提供商因通过“Apps123.cn”进行网络交易或网上行为产生的任何争议或纠纷，是您与提供争议服务服务提供商之间的争议或纠纷，与“Apps123.cn”及海康科技无关。“Apps123.cn”及海康科技对您与服务提供商发生的交易和行为不承担任何直接、间接、附带或衍生的损失和责任。
+　　对于任何第三方的行为造成您的任何损害或损失，“Apps123.cn”不承担任何责任，不论这些损害或损失来自不正当使用服务、在网上购买商品或进行同类型服务、在网上进行交易、非法使用服务或您传送的信息有所变动，或其它非“Apps123.cn”原因造成的营业中断。
+八、通知
+　　“Apps123.cn”所有发给您的通知，都可通过重要页面的公告或电子邮件、短消息或常规的信件传送。
+九、其他
+　　如本服务条款中的任何条款无论因何种原因完全或部分无效或不具有执行力，本服务条款的其余条款仍应有效且具有约束力，并且努力使该规定反映之意向具备效力。</string>
+</resources>

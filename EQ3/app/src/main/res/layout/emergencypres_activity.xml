@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/listviewbg"
+              android:layout_height="match_parent">
+
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="评估报告"
+        custom:titleSize="6sp" />
+<ListView
+        android:id="@+id/pinnedlv"
+        style="@style/scrollStyle02"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@drawable/divider_padding_left_gray2"
+        >
+
+</ListView>
+
+</LinearLayout>

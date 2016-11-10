@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8000"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_centerInParent="true"
+        >
+<TextView
+    android:layout_width="match_parent"
+    android:text="手动选择位置"
+    android:gravity="center"
+    android:textColor="#36f"
+    android:textSize="18dp"
+    android:layout_height="44dp"/>
+<View
+    android:layout_width="match_parent"
+    android:background="#35f"
+    android:layout_height="2dp"/>
+ <LinearLayout
+     android:layout_marginTop="18dp"
+
+     android:layout_width="match_parent"
+     android:layout_height="44dp"
+     android:orientation="horizontal">
+     <TextView
+         android:layout_width="80dp"
+         android:layout_height="match_parent"
+         android:gravity="right|center_vertical"
+         android:text="市："/>
+
+
+     <Spinner
+         android:id="@+id/city"
+         android:layout_gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         >
+
+     </Spinner>
+ </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="18dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text="县："/>
+
+
+        <Spinner
+            android:id="@+id/county"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="18dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text="乡/镇："/>
+
+
+        <Spinner
+            android:id="@+id/town"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </Spinner>
+    </LinearLayout>
+        <View
+            android:layout_marginTop="18dp"
+
+            android:layout_width="match_parent"
+            android:background="#aaa"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/lcconfirm"
+                android:layout_width="0dp"
+                android:text="确定"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:textSize="16dp"
+                android:textColor="#25f"
+                android:background="@drawable/selector_transparent"
+                android:layout_height="match_parent"/>
+            <View
+
+                android:layout_width="1dp"
+                android:background="#aaa"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/lccancel"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="取消"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:onClick="onClick"
+                android:background="@drawable/selector_transparent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

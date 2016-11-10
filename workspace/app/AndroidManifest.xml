@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.icanit.app"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+<supports-screens android:largeScreens="true"/>
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> 
+      <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->      
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+	<uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->      
+    <application 
+        android:name="com.icanit.app.MapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+       android:theme="@style/baseTheme"  >
+       
+           <activity android:name="com.icanit.app.WelcomePageActivity"   android:icon="@drawable/ic_launcher" >
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.icanit.app.HomePageActivity"  android:launchMode="singleTop"
+          >
+        </activity>
+        <activity android:name="com.icanit.app.HomeActivity"  android:launchMode="singleTop" >
+        </activity>
+         <activity android:name="com.icanit.app.MerchandiseListActivity"  android:launchMode="singleTop" >
+        </activity>
+        <activity android:name="com.icanit.app.ChangeCommunityActivity" android:launchMode="singleTop">
+        </activity>
+         <activity android:name="com.icanit.app.SearchPageActivity" android:launchMode="singleTop">
+         </activity>
+         <activity android:name="com.icanit.app.LoginActivity">
+         </activity>
+         <activity android:name="com.icanit.app.RegisterActivity">
+         </activity>
+          <activity android:name="com.icanit.app.VerifyUserAccountActivity">
+         </activity>
+         <activity android:name="com.icanit.app.ModifyPasswordActivity"></activity>
+         <activity android:name="com.icanit.app.RetrievePasswordActivity1"></activity>
+          <activity android:name="com.icanit.app.RetrievePasswordActivity2"></activity>
+          <activity android:name="com.icanit.app.bmap.BMapActivity"></activity>
+         <activity android:name="com.icanit.app.OrderConfirmationActivity_substitute"></activity>
+           <activity android:name="com.icanit.app.AlipayCashierActivity">
+         </activity>
+         <activity android:name="com.baidu.mapapi.PlaceCaterActivity"
+          android:configChanges="orientation|keyboardHidden"> </activity>
+         
+         <!--   ==================    divider    ==================  -->  
+          
+        	
+		<activity android:name="com.icanit.bdmapversion2.update.LoadingActivity" android:configChanges="orientation|keyboardHidden"
+			android:label="@string/app_name" >
+		</activity>  
+		<receiver android:name="com.icanit.bdmapversion2.AppBroadcastReceiver">
+		    <intent-filter >
+		        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+		    </intent-filter>
+		</receiver>
+		<service android:name="com.icanit.bdmapversion2.update.AppUpgradeService"></service>
+		
+		<service android:name="com.baidu.location.f" android:enabled="true"
+			android:process=":remote">
+		</service>		
+		<activity android:name="com.icanit.bdmapversion2.activity.LocationActivity" android:theme="@style/MapTheme"></activity>
+        
+<!--   =======================       unipay       =========================                -->
+          <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.SplashActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.IndexActivityGroup"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.HomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.PayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.AccountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.BankCardInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.SupportCardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.UserProtocolActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.AboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--  =========================   unipay     ===========================   -->
+    </application>
+    
+</manifest>

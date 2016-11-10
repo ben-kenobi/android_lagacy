@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/normal_header"  android:id="@+id/lo01"/>
+    <RadioGroup
+        android:id="@+id/rg01"
+        android:layout_width="match_parent"
+        android:layout_below="@id/lo01"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:checkedButton="@+id/rb01"
+        >
+        <RadioButton
+            android:id="@+id/rb01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:linksClickable="false"
+            android:textColor="#000"
+
+            android:text="新增"/>
+        <RadioButton
+            android:id="@+id/rb02"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:layout_height="match_parent"
+            android:linksClickable="false"
+            android:text="归还"/>
+        <RadioButton
+            android:id="@+id/rb03"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:layout_height="match_parent"
+            android:linksClickable="false"
+            android:text="调拨"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="二维码扫描"
+        android:textColor="#fff"
+        android:layout_below="@id/rg01"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:background="@drawable/selector_blue_button"/>
+
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="手动输入"
+        android:textColor="#65c0f4"
+        android:layout_below="@id/scan"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+
+        android:textSize="18sp"
+        android:background="@drawable/selector_white_radius_button"/>
+
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="取   消"
+        android:textColor="#65c0f4"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:background="@drawable/selector_white_radius_button"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="保   存"
+        android:textColor="#fff"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:layout_above="@id/cancel"
+        android:background="@drawable/selector_blue_button"/>
+
+<LinearLayout
+    android:layout_marginLeft="@dimen/pagemarginH"
+    android:layout_marginRight="@dimen/pagemarginH"
+    android:layout_above="@id/save"
+    android:layout_marginBottom="@dimen/pagemarginV"
+    android:background="@drawable/d_recbg"
+    android:padding="1dp"
+    android:layout_below="@id/input"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/item4lv_anquanitem" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divider001"/>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_divider001"
+        android:dividerHeight="1dp"
+        android:cacheColorHint="@null"
+        />
+</LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="#5c5" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="电话：我矿务局开房间\n姓名：杨峰\n地址：风口浪尖我看见俄方就网科技飞\n"
+        android:textColor="#888"
+        android:textSize="17sp" android:drawableRight="@drawable/ic_arrow_small"/>
+
+</LinearLayout>

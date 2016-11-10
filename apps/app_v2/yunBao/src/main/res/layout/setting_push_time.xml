@@ -1,0 +1,187 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".push.PushSettingActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:paddingBottom="43dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@android:drawable/bottom_bar"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/Push_time_textView"
+                    android:textSize="18sp"
+                    android:text="选择星期" />
+            </LinearLayout>
+            <!--  -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/cb_monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="周一" />
+
+                    <CheckBox
+                        android:id="@+id/cb_tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="周二" />
+
+                    <CheckBox
+                        android:id="@+id/cb_wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="周三" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/cb_thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="周四" />
+
+                    <CheckBox
+                        android:id="@+id/cb_friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="周五" />
+
+                    <CheckBox
+                        android:id="@+id/cb_saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="六" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="日" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@android:drawable/bottom_bar"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/Push_time_textView"
+                    android:textSize="18sp"
+                    android:text="选择时间" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="开始时间" />
+
+                    <TimePicker
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Push_time_textView"
+                        android:text="结束时间" />
+
+                    <TimePicker
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/bu_setTime"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="确定" 
+            android:background="@drawable/address_add_positive_selector"/>
+    </RelativeLayout>
+
+</FrameLayout>

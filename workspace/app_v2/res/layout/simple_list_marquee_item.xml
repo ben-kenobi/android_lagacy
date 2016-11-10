@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.icanit.app_v2.ui.AlwaysFocusedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/marqueeTextStyle_nofocus"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:gravity="center_vertical|left"
+    android:paddingLeft="5dp"
+    tools:ignore="MissingRegistered" >
+
+</com.icanit.app_v2.ui.AlwaysFocusedTextView>

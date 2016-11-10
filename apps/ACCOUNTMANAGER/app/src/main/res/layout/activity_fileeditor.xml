@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yf.accountmanager.ui.ListenInterceptTouchEventRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+    
+    
+   
+<LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c8ce"
+        android:orientation="vertical"
+        android:visibility="visible" >
+<include  layout="@layout/layout_find_n_replace"  android:id="@+id/findNreplace"/>
+ <FrameLayout
+     android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:paddingTop="7dp"
+		android:paddingBottom="7dp"    
+         >
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+		    
+        android:layout_height="wrap_content" />
+</FrameLayout>
+
+    <View style="@style/shadowViewStyle00"
+       />
+
+    </LinearLayout>
+    
+<RelativeLayout
+    android:id="@+id/relativeLayout2"
+     android:layout_width="match_parent"
+     android:layout_height="45dp"
+      android:background="#c8ce"
+      android:orientation="horizontal"
+     android:layout_alignParentBottom="true" >
+
+     <ImageButton
+         android:id="@+id/imageButton5"
+         android:layout_width="75dp"
+         android:layout_height="match_parent"
+         android:background="@drawable/selector_background"
+         android:scaleType="fitCenter"
+         android:src="@drawable/back" />
+
+     <ImageButton
+         android:id="@+id/imageButton6"
+         android:layout_width="75dp"
+         android:layout_height="match_parent"
+         android:layout_toRightOf="@id/imageButton5"
+         android:background="@drawable/selector_background"
+         android:scaleType="fitCenter"
+         android:src="@drawable/rotate_back" />
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:padding="9dp"
+          />
+
+ <ImageButton
+     android:id="@+id/imageButton3"
+     style="@style/rightcircle_button_style"
+     android:layout_width="45dp"
+     android:layout_height="41dp"
+     android:layout_centerVertical="true"
+     android:layout_marginRight="12dp"
+     android:padding="3dp"
+     android:layout_toLeftOf="@id/textView1"
+     android:src="@drawable/ic_launcher" />
+
+            <EditText
+                android:id="@+id/editText3"
+                style="@style/registerEditTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:inputType="phone"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:maxLength="8"
+                android:layout_toLeftOf="@id/imageButton3"
+                 />
+
+ </RelativeLayout>
+
+
+ <ScrollView
+      android:id="@+id/scrollView1"
+     android:layout_above="@id/relativeLayout2"
+     android:layout_below="@id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.yf.accountmanager.ui.FocusedEditText
+                android:id="@+id/editText1"
+                style="@style/editTextAreaStyle"
+                android:paddingBottom="12dp" />
+<!--              <EditText -->
+<!--                 android:id="@+id/editText1" -->
+<!--                 style="@style/editTextAreaStyle" -->
+<!--                 android:paddingBottom="12dp" /> -->
+            
+        </LinearLayout>
+    </ScrollView>
+
+ 
+
+</com.yf.accountmanager.ui.ListenInterceptTouchEventRelativeLayout>

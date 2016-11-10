@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/botton_bg"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                style="@style/home_bottom_tab"
+                android:checked="true"
+          		     android:drawableTop="@drawable/primeter"/>
+
+            <RadioButton
+                android:id="@+id/radio1"
+                style="@style/home_bottom_tab"
+                android:drawableTop="@drawable/merchandiselist"
+                />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                style="@style/home_bottom_tab"
+                android:drawableTop="@drawable/usercentral"
+                />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                style="@style/home_bottom_tab"
+                   android:drawableTop="@drawable/shoppingcart"
+                android:text="@string/cart" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

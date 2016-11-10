@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="13dp"
+    android:paddingTop="5dp" 
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="6dp"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </FrameLayout>
+	
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="3dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="3dp"
+                android:text="商品名称"
+                android:textColor="#222222"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@android:drawable/presence_offline"
+                android:paddingLeft="2dp"
+                android:text="热度" />
+            
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/textView5"
+                android:layout_alignParentLeft="true"
+                android:text="￥现价"
+                android:textColor="#ee9a00"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/textView6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="14dp"
+                android:paddingLeft="16dp"
+                android:text="￥现价"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@android:drawable/presence_offline"
+                android:text="库存" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                style="@style/addButtonStyle"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/button1"
+                style="@style/minusButtonStyle"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:text="我饿金融界我饿今日看我家二级为家人立刻为监控软件为空科沃基恩客人问哦软件"
+        android:textSize="12sp" />
+
+</LinearLayout>

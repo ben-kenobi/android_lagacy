@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 普通的选择点击变蓝色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape >            
+            <gradient android:startColor="@color/skyblue" android:endColor="@color/skyblue"/>
+        </shape> 
+    </item>
+    <item>      
+        <shape android:shape="rectangle">
+		    <gradient android:angle="180" android:startColor="@android:color/white" android:centerColor="@android:color/white" android:endColor="@android:color/white" />		    
+		</shape> 
+    </item>
+</selector>

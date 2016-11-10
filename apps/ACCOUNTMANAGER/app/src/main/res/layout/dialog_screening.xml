@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="280dp"
+    android:orientation="vertical" 
+    android:padding="12dp"
+    android:background="@drawable/bg_radius_bigwhite"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/on_off_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#555"
+            android:textSize="@dimen/font_size_mplus" />
+
+        <ImageButton
+            android:id="@+id/on_off_icon1"
+            style="@style/on_off_imageButtonStyle"
+           />
+	
+    </FrameLayout>
+
+    <View style="@style/dividerViewStyle01" 
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+             android:id="@+id/on_off_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#555"
+            android:textSize="@dimen/font_size_mplus" />
+
+        <ImageButton
+            android:id="@+id/on_off_icon2"
+            style="@style/on_off_imageButtonStyle"
+            />
+
+    </FrameLayout>
+
+    <View style="@style/dividerViewStyle01" 
+         android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/positiveButton"
+        style="@style/buttonStyle_appv2_blue"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:textSize="17sp"
+        android:text="@string/confirm" />
+
+</LinearLayout>
+

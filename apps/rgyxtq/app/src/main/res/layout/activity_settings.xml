@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <swsk.cn.rgyxtq.main.Common.Topbar
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        custom:leftButtonBackground="#20000000"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonBackground="#20000000"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#fff"
+        custom:titleSize="@dimen/lbl_title_text_size" />
+
+    <ScrollView
+        android:id="@+id/scrollView_showMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/tl_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:stretchColumns="1">
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_fwdip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="服务端IP端口"
+                    android:textColor="@color/colorFont"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/tv_fwdipV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/edittext_selector"
+                    android:gravity="left"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_Quite"
+                android:text="退出系统"
+                android:visibility="gone"
+                />
+           <!-- <Button
+                android:id="@+id/btn_update"
+                android:text="系统更新"
+                />-->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

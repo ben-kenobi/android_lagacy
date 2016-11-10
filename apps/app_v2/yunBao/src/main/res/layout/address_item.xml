@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/listview_item_addr_selector">
+	
+    <RelativeLayout
+        android:id="@+id/iv_address_distinguish"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/mediumaquamarine" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="10dp"
+    	android:paddingBottom="10dp"
+        android:orientation="vertical" >
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:text="姓名： " />
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:text="电话：" />
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:text="地址：" />
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="860dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:paddingTop="10dp"
+    	android:paddingBottom="10dp"
+        android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/tv_address_list_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:text="梓豪" />
+	
+	    <TextView
+	        android:id="@+id/tv_address_list_phone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:text="18305123456" />
+	
+	    <TextView
+	        android:id="@+id/tv_address_list_addr"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:maxLines="2"
+	        android:ellipsize="end"
+	        android:text="福建福州鼓楼区纱帽井3号" />
+	</LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_address_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/app_arrow_small" />
+    <CheckBox
+        android:id="@android:id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:clickable="false"/>
+
+</LinearLayout>

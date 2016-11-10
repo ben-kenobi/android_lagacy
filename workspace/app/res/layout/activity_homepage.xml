@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linearLayoutStyle_hp"
+    android:background="#000"
+    android:orientation="vertical"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp" >
+
+    <LinearLayout
+        style="@style/linearLayoutStyle_hp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+           style="@style/largeItemStyle_hp"
+            android:layout_weight="1"  
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:src="@drawable/homepage_icon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="门口店"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_size_xxl" />
+
+
+        </FrameLayout>
+        
+        <LinearLayout
+            style="@style/linearLayoutStyle_hp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+               style="@style/subtextView03_hp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@drawable/divider_transparent_6dp"
+                android:showDividers="middle" >
+
+                <TextView
+                  style="@style/subtextView01_hp"
+                  android:background="@drawable/scene2"/>
+ 		<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+                <TextView
+                   style="@style/subtextView02_hp"
+                   />
+                <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/homepage_icon2" />
+		</FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linearLayoutStyle_hp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            style="@style/linearLayoutStyle_hp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+ 		<TextView
+                style="@style/subtextView02_hp"
+               />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/homepage_icon3" />
+		</FrameLayout>
+            <TextView
+               style="@style/subtextView01_hp"
+               android:background="@drawable/scene1"
+                />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            style="@style/largeItemStyle1_hp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/homepage_icon4" />
+
+ 	 <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:textColor="#fff"
+                android:text="店家推荐" 
+                android:textSize="@dimen/font_size_xxl"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#00bfee" >
+
+           <SurfaceView
+               android:id="@+id/surfaceView1"
+               android:layout_width="match_parent"
+               android:layout_height="55dp"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="23dp"
+            android:textColor="#FFF"
+            android:textSize="@dimen/font_size_mplus" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="23dp"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size_mplus" />
+
+     
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        style="@style/largeItemStyle_hp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title_text_style"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size_xxxl"
+            android:textColor="#3344bb"
+            android:textStyle="bold|italic"
+            android:text="@string/exit" />
+
+    </FrameLayout>
+
+</LinearLayout>

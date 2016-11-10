@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <swsk.cn.rgyxtq.main.Common.Topbar
+        android:id="@+id/workPlanTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        custom:leftButtonBackground="#20000000"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonBackground="#20000000"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#fff"
+        custom:titleSize="@dimen/lbl_title_text_size" />
+
+    <GridView
+        android:id="@+id/gv_plan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/workPlanTopbar"
+        android:layout_marginRight="0dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="1"
+        android:verticalSpacing="5dp"></GridView>
+
+    <RelativeLayout
+        android:id="@+id/al_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ee000000"
+        android:clipChildren="true"
+        ></RelativeLayout>
+
+</RelativeLayout>

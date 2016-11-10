@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- listView 中item选择框 + 选择蓝色 for Address-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape >            
+            <gradient android:startColor="@color/skyblue" android:endColor="@color/skyblue"/>
+            <stroke android:width="6dp" android:color="#00000000"/>
+            <corners android:radius="6dp"/>
+        </shape> 
+    </item>
+<!--     <item android:drawable="@android:drawable/editbox_background">      -->
+    <item android:drawable="@drawable/background">   
+    </item>
+</selector>

@@ -1,0 +1,126 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From WeiBo:
+* ic_launcher-web.png
+* proguard-project.txt
+From YunBao:
+* proguard-project.txt
+From app_v2:
+* proguard-project.txt
+From upomp:
+* proguard.cfg
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In BDMapVersion2:
+* AndroidManifest.xml => bDMapVersion2/src/main/AndroidManifest.xml
+* assets/ => bDMapVersion2/src/main/assets/
+* libs/baidumapapi_v2_1_1.jar => bDMapVersion2/libs/baidumapapi_v2_1_1.jar
+* libs/locSDK_3.3.jar => bDMapVersion2/libs/locSDK_3.3.jar
+* lint.xml => bDMapVersion2/lint.xml
+* res/ => bDMapVersion2/src/main/res/
+* src/ => bDMapVersion2/src/main/java/
+In WeiBo:
+* AndroidManifest.xml => weiBo/src/main/AndroidManifest.xml
+* assets/ => weiBo/src/main/assets/
+* lint.xml => weiBo/lint.xml
+* res/ => weiBo/src/main/res/
+* src/ => weiBo/src/main/java
+In YunBao:
+* AndroidManifest.xml => yunBao/src/main/AndroidManifest.xml
+* assets/ => yunBao/src/main/assets/
+* lint.xml => yunBao/lint.xml
+* res/ => yunBao/src/main/res/
+* src/ => yunBao/src/main/java
+In upomp:
+* AndroidManifest.xml => upomp/src/main/AndroidManifest.xml
+* assets/ => upomp/src/main/assets
+* libs/armeabi/liblthj_unipaybusiness20130328.so => upomp/src/main/jniLibs/armeabi/liblthj_unipaybusiness20130328.so
+* res/ => upomp/src/main/res/
+* src/ => upomp/src/main/java/
+In app_v2:
+* AndroidManifest.xml => app_v2/src/main/AndroidManifest.xml
+* assets/ => app_v2/src/main/assets/
+* bshare_src/ => app_v2/src/main/java/
+* libs/android_sdk_v1.4.1.jar => app_v2/libs/android_sdk_v1.4.1.jar
+* libs/armeabi/libapp_BaiduMapApplib_v2_1_1.so => app_v2/src/main/jniLibs/armeabi/libapp_BaiduMapApplib_v2_1_1.so
+* libs/armeabi/libbspatch.so => app_v2/src/main/jniLibs/armeabi/libbspatch.so
+* libs/armeabi/liblocSDK3.so => app_v2/src/main/jniLibs/armeabi/liblocSDK3.so
+* libs/armeabi/libsys.so => app_v2/src/main/jniLibs/armeabi/libsys.so
+* libs/armeabi/libvi_voslib.so => app_v2/src/main/jniLibs/armeabi/libvi_voslib.so
+* libs/baidumapapi_v2_1_1.jar => app_v2/libs/baidumapapi_v2_1_1.jar
+* libs/com_unionpay_upomp_lthj_lib.jar => app_v2/libs/com_unionpay_upomp_lthj_lib.jar
+* libs/commons-httpclient-3.0.1.jar => app_v2/libs/commons-httpclient-3.0.1.jar
+* libs/jpush-sdk-release1.4.0.jar => app_v2/libs/jpush-sdk-release1.4.0.jar
+* libs/libammsdk.jar => app_v2/libs/libammsdk.jar
+* libs/locSDK_3.3.jar => app_v2/libs/locSDK_3.3.jar
+* libs/pinyin4j-2.5.0.jar => app_v2/libs/pinyin4j-2.5.0.jar
+* libs/sina_weibo_api.jar => app_v2/libs/sina_weibo_api.jar
+* libs/sina_weibo_sdk2.1_130712.jar => app_v2/libs/sina_weibo_sdk2.1_130712.jar
+* libs/tecent_weibo_common.jar => app_v2/libs/tecent_weibo_common.jar
+* libs/umeng_sdk.jar => app_v2/libs/umeng_sdk.jar
+* lint.xml => app_v2/lint.xml
+* res/ => app_v2/src/main/res/
+* src/ => app_v2/src/main/java/
+* src/app.properties => app_v2/src/main/resources/app.properties
+* weibo_src/ => app_v2/src/main/java/
+* yunbao_src/ => app_v2/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <CheckBox
+        android:id="@+id/usesrc"
+        android:layout_width="match_parent"
+        android:text="使用原图"
+        android:layout_alignParentBottom="true"
+        android:layout_height="32dp"/>
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="信息采集"
+        custom:titleSize="6sp" />
+
+    <fj.swsk.cn.eqapp.main.Common.CScrollV
+        android:id="@+id/sv01"
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:layout_above="@+id/usesrc"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="1dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        >
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#888"
+            android:text="地点 2011-11-11 11:11:11"
+            android:textSize="15dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="地震标识："/>
+
+
+            <TextView
+                android:id="@+id/eventid"
+                android:layout_gravity="left|center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                >
+            </TextView>
+            <Button
+                android:id="@+id/chooseevenid"
+                android:layout_width="65dp"
+                android:layout_height="38dp"
+                android:background="@drawable/selector_white_radius_button"
+                android:layout_marginLeft="8dp"
+                android:onClick="onClick"
+                android:textSize="14dp"
+                android:textColor="#15f"
+                android:text="手动选择"/>
+        </LinearLayout>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="44dp"
+     android:orientation="horizontal">
+     <TextView
+         android:layout_width="80dp"
+         android:layout_height="match_parent"
+         android:gravity="right|center_vertical"
+         android:text="烈度等级："/>
+
+
+     <Spinner
+         android:id="@+id/level"
+         android:layout_gravity="left|center_vertical"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="match_parent"
+         >
+     </Spinner>
+     <Button
+         android:id="@+id/densitydescription"
+         android:layout_width="65dp"
+         android:layout_height="38dp"
+         android:background="@drawable/selector_white_radius_button"
+         android:layout_marginLeft="8dp"
+         android:onClick="onClick"
+         android:textSize="14dp"
+         android:textColor="#15f"
+         android:text="详细描述"/>
+ </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="简要描述："/>
+
+
+            <Spinner
+                android:id="@+id/summary"
+                android:layout_gravity="left|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="详细描述："/>
+
+
+            <EditText
+                android:id="@+id/detail"
+                android:layout_gravity="left|top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="92dp"
+                android:background="@drawable/edittext_blackbg_selector"
+                android:gravity="top|left"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:textColor="#555"
+
+                >
+
+            </EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/operationbar"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/pick"
+                android:layout_width="wrap_content"
+                android:text="照片选取"
+                android:background="@drawable/selector_white_radius_button"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:drawableLeft="@android:drawable/ic_menu_crop"
+                android:onClick="onClick"
+                android:textSize="16dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/shoot"
+                android:layout_width="wrap_content"
+                android:text="照相"
+                android:drawableLeft="@android:drawable/ic_menu_camera"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:textSize="16dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/selector_white_radius_button"
+                android:onClick="onClick"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/record"
+                android:textSize="16dp"
+
+                android:layout_width="wrap_content"
+                android:text="视频"
+                android:gravity="left|center"
+                android:background="@drawable/selector_white_radius_button"
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@android:drawable/presence_video_online"
+                android:onClick="onClick"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+
+
+        <fj.swsk.cn.eqapp.main.V.InnerGV2
+            android:id="@+id/gv01"
+             android:cacheColorHint="@null"
+             android:numColumns="4"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+    </fj.swsk.cn.eqapp.main.Common.CScrollV>
+
+</RelativeLayout>

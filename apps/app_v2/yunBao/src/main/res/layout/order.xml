@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/lightgray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/top_bar_shape" >
+
+        <ImageButton
+            android:id="@+id/ib_order_back"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/onclick_button_selector"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <ImageButton
+            android:id="@+id/ib_order_home"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/onclick_button_selector"
+            android:src="@android:drawable/ic_menu_myplaces" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的订单"
+            android:textColor="@android:color/white"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_order" 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="3dp">
+        
+        <ListView
+            android:id="@+id/lv_order_list"
+            style="@style/Universal_listView"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@drawable/banner_dian_focus" >
+
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/pb_load_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+	    android:id="@+id/relativeLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="46dp"
+	    android:layout_gravity="bottom"
+	    android:background="@drawable/selector_greyrectangle"
+	    android:clickable="true"
+	    android:visibility="gone"
+	     >
+
+		<ImageView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:src="@android:drawable/ic_menu_delete" />
+	</RelativeLayout>
+</LinearLayout>

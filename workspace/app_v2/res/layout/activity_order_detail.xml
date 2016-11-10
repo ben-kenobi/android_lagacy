@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+   >
+	 <FrameLayout
+	     android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+         >
+    <FrameLayout
+        style="@style/uniform_titlebar_style02"
+         >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+             style="@style/title_button_style_backbutton"/>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_gravity="right|center_vertical"
+             style="@style/title_button_style"
+            android:src="@android:drawable/ic_menu_call" />
+
+        <TextView
+            style="@style/title_text_style_center"
+            android:text="订单详情"
+            />
+
+    </FrameLayout>
+    </FrameLayout>
+
+	<LinearLayout
+	    android:id="@+id/linearLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/frameLayout1"
+	    android:background="#fff"
+	    android:orientation="vertical" >
+
+		<View
+        style="@style/dividerViewStyle02"/>
+        <View
+           style="@style/shadowViewStyle00" />
+		</LinearLayout>
+    
+<FrameLayout
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    android:background="#fff"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/font_size_mplus"
+            style="@style/moneyStyle"
+            android:text="总金额：11.5 元" />
+
+        <Button
+            android:id="@+id/button1"
+             style="@style/buttonStyle_appv2_blue"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|right"
+            android:text="取消订单"
+            android:textSize="@dimen/font_size_l" />
+
+    </FrameLayout>
+
+    <com.icanit.app_v2.ui.OuterListView
+        android:id="@+id/listView1"
+        style="@style/scrollStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/frameLayout3"
+        android:layout_below="@id/linearLayout1"
+        android:background="#eee"
+        android:divider="@drawable/divider_grey_white_hor"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp" >
+		
+    </com.icanit.app_v2.ui.OuterListView>
+
+</RelativeLayout>

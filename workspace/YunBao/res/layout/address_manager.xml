@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/lightgray"
+	    android:orientation="vertical" >
+	
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:background="@drawable/top_bar_shape">
+	
+	        <ImageButton
+	            android:id="@+id/ib_address_back"
+	            android:layout_width="wrap_content"
+	            android:layout_height="32dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="14dp"
+	            android:background="@drawable/onclick_button_selector"
+	            android:src="@android:drawable/ic_menu_revert" />
+	 
+	         <ImageButton
+	             android:id="@+id/ib_address_edit"
+	             android:layout_width="wrap_content"
+	             android:layout_height="32dp"
+	             android:layout_alignParentRight="true"
+	             android:layout_centerVertical="true"
+	             android:layout_marginRight="14dp"
+	             android:background="@drawable/onclick_button_selector"
+	             android:src="@android:drawable/ic_menu_edit" />
+	
+	         <TextView
+	             android:id="@+id/textView1"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_centerInParent="true"
+	             android:textColor="@android:color/white"
+	             android:textSize="21sp"
+	             android:text="收货信息" />
+	 
+	    </RelativeLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/rl_address_add"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"   
+	        android:background="@android:drawable/picture_frame" >
+	
+	        <TextView
+	            android:id="@+id/textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:layout_marginLeft="49dp"
+	            android:drawableLeft="@android:drawable/ic_input_add"
+	            android:gravity="center_vertical"
+	            android:textColor="@android:color/darker_gray"
+	            android:text="添加收货信息" />
+	         
+	    </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_address_list"
+            style="@style/Universal_listView"
+            android:layout_height="match_parent" >
+
+        </ListView>
+
+	
+	</LinearLayout>
+
+	<RelativeLayout
+	    android:id="@+id/what"
+	    android:layout_width="match_parent"
+	    android:layout_height="46dp"
+	    android:layout_gravity="bottom"
+	    android:background="#99000000"
+	    android:visibility="gone" >
+
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:src="@android:drawable/ic_menu_delete" />
+		
+
+	</RelativeLayout>
+
+</FrameLayout>

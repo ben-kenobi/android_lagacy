@@ -1,0 +1,286 @@
+package com.icanit.app_v2.activity;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.icanit.app_v2.adapter.OrderListAdapter;
+import com.icanit.app_v2.common.IConstants;
+import com.icanit.app_v2.entity.AppOrder;
+import com.icanit.app_v2.exception.AppException;
+import com.icanit.app_v2.ui.CustomizedDialog;
+import com.icanit.app_v2.util.AppUtil;
+import com.icanit.app_v2.util.DialogUtil;
+import com.what.yunbao.R;
+import com.what.yunbao.test.TestActivity;
+
+public class OrderListActivity extends Activity implements OnScrollListener,Runnable ,OnItemLongClickListener,OnClickListener{
+	private ListView orderLv;
+	private RelativeLayout orderRl;
+	private ImageButton goHome;
+	private ImageButton backButton;
+	private ProgressBar loadingPd;
+	private OrderListAdapter orderListadapter;
+	private TextView footerTip;
+	private LinearLayout footer;
+	private RelativeLayout orderDeleteButton;
+	private int loadOrderCountOfOnce = 10;
+	private TextView emptyTip;
+	private boolean isloading = false;
+	private List<AppOrder> orderList;
+	
+	public static final int ORDERDETAIL_REQUESTCODE=1,
+							
+								ORDERDETAIL_RESPONSEODE=2;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.order);
+		init();
+		bindListeners();
+		LoadOrder();
+	}
+
+	private void LoadOrder() {
+		synchronized (this) {
+			if (isloading)
+				return;
+			isloading = true;
+		}
+		final int index = orderListadapter == null ? 0 : orderListadapter
+				.getCount();
+		IConstants.THREAD_POOL.execute(new Runnable() {
+			public void run() {
+				try {
+					 orderList = AppUtil.getServiceFactory().getDataServiceInstance(OrderListActivity.this)
+							.getOrdersByPhoneNStatusFromIndex(AppUtil.getLoginPhoneNum(), -1, index,
+									loadOrderCountOfOnce);
+					IConstants.MAIN_HANDLER.post(OrderListActivity.this);
+				} catch (AppException e) {
+					e.printStackTrace();
+					isloading = false;
+				}
+			}
+		});
+	}
+	public void run(){
+		if(loadingPd!=null){
+			orderRl.removeView(loadingPd);
+			loadingPd=null;
+		}
+		if (orderList == null || orderList.isEmpty()) {
+			if(footer!=null){
+				 orderLv.removeFooterView(footer);
+				 footer=null;
+				 orderLv.setOnScrollListener(null);
+			}
+		} else {
+			 if(orderListadapter==null){
+				initLv(orderList.size()==loadOrderCountOfOnce);
+			 }
+			 orderListadapter.appendOrderList(orderList);
+			 if(orderList.size()<loadOrderCountOfOnce&&footer!=null){
+				 orderLv.removeFooterView(footer);
+				 footer=null;
+				 orderLv.setOnScrollListener(null);
+			 }
+		}
+		if(orderListadapter==null){
+			showEmptyTip();
+		}
+		
+		isloading = false;
+	}
+	private void initLv(boolean addFooter) {
+		orderLv.setOnScrollListener(this);
+		 orderLv.setOnItemClickListener(new OnItemClickListener() {
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					if(orderListadapter.isChoiceMode){
+						OrderListAdapter.ViewHolder holder=((OrderListAdapter.ViewHolder)view.getTag());
+						holder.checkBox.setChecked(!holder.checkBox.isChecked());
+					}else{
+						if(position>=orderListadapter.getCount()) return ;
+						startActivityForResult(1,new Intent(OrderListActivity.this,
+								OrderDetailActivity.class).putExtra(IConstants.ORDER_INFO,
+								orderListadapter.getOrderList().get(position)));
+					}
+				}
+			});
+		 orderLv.setOnItemLongClickListener(this);
+		 if(addFooter){
+			 footer = new LinearLayout(this);
+				footer.setMinimumHeight(60);
+				footer.setGravity(Gravity.CENTER);
+				footer.setOrientation(LinearLayout.HORIZONTAL);
+				ProgressBar mProgressBar = new ProgressBar(this);
+				mProgressBar.setPadding(0, 0, 15, 0);
+				footer.addView(mProgressBar, -2, -2);
+				footerTip = new TextView(this);
+				footerTip.setText("加载中...");
+				footer.addView(footerTip, -2, -2);
+				orderLv.addFooterView(footer);
+		 }
+		orderLv.setAdapter(orderListadapter=new OrderListAdapter(this));
+	}
+	public void showEmptyTip() {
+		if(emptyTip!=null) {
+			emptyTip.setVisibility(View.VISIBLE);return;
+		}
+		RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+				ViewGroup.LayoutParams.WRAP_CONTENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT);
+		lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+		emptyTip = new TextView(this);
+		emptyTip.setText("您暂无订单记录\n去逛逛吧～");
+		emptyTip.setTextSize(17);
+		emptyTip.setTextColor(Color.rgb(0xff, 0xff, 0xff));
+		emptyTip.setClickable(true);
+		emptyTip.setPadding(18, 8, 18, 8);
+		emptyTip.setTextAppearance(this, android.R.attr.textAppearanceMedium);
+		emptyTip.setGravity(Gravity.CENTER);
+		emptyTip.setCompoundDrawablesWithIntrinsicBounds(0,
+				android.R.drawable.ic_menu_report_image, 0, 0);
+		emptyTip.setBackgroundResource(com.icanit.app_v2.R.drawable.selector_blue_radius_button);
+		orderRl.addView(emptyTip, lp);
+		emptyTip.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				startActivity(new Intent(OrderListActivity.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+						.setAction(IConstants.LEAD_TO_MERCHANT_LIST));
+			}
+		});
+	}
+
+		
+
+	private void bindListeners() {
+		OnClickListener mClickListener = new OnClickListener(){
+			public void onClick(View v) {
+				if (v.getId() == R.id.ib_order_home) {
+					startActivity(new Intent(OrderListActivity.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+							.setAction(IConstants.LEAD_TO_MERCHANT_LIST));
+				} else if (v.getId() == R.id.ib_order_back) {
+					finish();
+					overridePendingTransition(R.anim.anim_fromleft_toup6,
+							R.anim.anim_down_toright6);
+				}
+			}
+		};
+		goHome.setOnClickListener(mClickListener);
+		backButton.setOnClickListener(mClickListener);
+		orderDeleteButton.setOnClickListener(this);
+	}
+	
+	public void onScrollStateChanged(AbsListView view, int scrollState) {
+		if (scrollState == OnScrollListener.SCROLL_STATE_FLING) {
+		} else if (scrollState == OnScrollListener.SCROLL_STATE_IDLE) {
+			if (view.getLastVisiblePosition() == view.getCount() - 1&&footer!=null&&footer.isShown()) {
+				LoadOrder();
+			}
+		} else if (scrollState == OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
+		}
+
+	}
+
+
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+			if(orderListadapter!=null&&orderListadapter.isChoiceMode){
+				orderListadapter.toggleChoiceMode(orderDeleteButton);
+			}else{
+				finish();
+				overridePendingTransition(R.anim.anim_fromleft_toup6,
+						R.anim.anim_down_toright6);
+			}
+			return true;
+		} else {
+			return super.dispatchKeyEvent(event);
+		}
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
+
+	@Override
+	public void onScroll(AbsListView view, int firstVisibleItem,
+			int visibleItemCount, int totalItemCount) {
+	}
+
+	private void init() {
+		loadingPd = (ProgressBar) findViewById(R.id.pb_load_order);
+		orderLv = (ListView) findViewById(R.id.lv_order_list);
+		goHome = (ImageButton) findViewById(R.id.ib_order_home);
+		backButton = (ImageButton) findViewById(R.id.ib_order_back);
+		orderRl = (RelativeLayout) findViewById(R.id.rl_order);
+		orderDeleteButton=(RelativeLayout)findViewById(R.id.relativeLayout1);
+		orderDeleteButton.setVisibility(View.GONE);
+	}
+
+
+	public boolean onItemLongClick(AdapterView<?> parent, View self, int position,
+			long id) {
+		return !orderListadapter.toggleChoiceMode(orderDeleteButton);
+	}
+
+	@Override
+	public void onClick(View view) {
+		if(orderListadapter==null||orderListadapter.getCount()==0||orderListadapter.selectedOrderId.isEmpty()){
+			AppUtil.toast("没有可删除的项");
+		}else{
+			CustomizedDialog dialog=CustomizedDialog.initDialog("删除提示", "删除后将不可恢复!!\n确认删除？", null, 0, OrderListActivity.this);
+			dialog.setPositiveButton("确定删除", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+					final ProgressDialog pd=DialogUtil.createProgressDialogNshow(null, "正在提交信息。。", false, OrderListActivity.this);
+					IConstants.THREAD_POOL.submit(new Runnable(){
+						public void run(){
+							try {
+								final boolean success=AppUtil.getServiceFactory().getDataServiceInstance(OrderListActivity.this).
+								batchDeleteOrder(orderListadapter.selectedOrderId);
+								IConstants.MAIN_HANDLER.post(new Runnable(){
+									public void run(){
+										try {
+											orderListadapter.refreshAfterBatchDelete(success,orderDeleteButton,
+													OrderListActivity.class.getMethod("showEmptyTip", new Class[]{}),OrderListActivity.this);
+										} catch (Exception e) {
+											e.printStackTrace();
+										} 
+									}
+								});
+							} catch (AppException e) {
+								e.printStackTrace();
+							}
+							pd.dismiss();
+						}
+					});
+				}
+			});
+			dialog.setNegativeButton("取消", null);
+			dialog.show();
+		}
+	}
+
+}

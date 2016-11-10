@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/normal_header"  android:id="@+id/lo01"/>
+
+
+
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="确    认"
+        android:textColor="#fff"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_blue_button"/>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll01"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:layout_below="@id/lo01"
+        android:layout_height="@dimen/draw_lv_H"
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:background="@drawable/d_recbg"
+        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/item4lv_drawpersonlv" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_divider001"/>
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_divider001"
+            android:dividerHeight="1dp"
+            android:cacheColorHint="@null"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/ll01"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="@dimen/draw_input_H"
+        android:fillViewport="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="1dp"
+        android:background="@drawable/d_recbg_bold"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
+
+        <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:background="@drawable/selector_rowbg"
+                        android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:gravity="left|center_vertical"
+                android:text="手动输入领用人" android:textColor="#777"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:background="#eee"/>
+
+
+        <RelativeLayout android:id="@+id/name"
+                        style="@style/rl_row_style"
+
+            >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:gravity="left|center_vertical"
+                android:text="名称:" android:textColor="#333"/>
+            <EditText
+                android:id="@+id/nametv"
+                style="@style/rl_row_et_style"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:background="#eee"/>
+
+
+        <RelativeLayout android:id="@+id/identity"
+                        style="@style/rl_row_style"
+            android:onClick="onClick"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:gravity="left|center_vertical"
+                android:text="身份:" android:textColor="#333"/>
+            <TextView
+                android:id="@+id/identitytv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/color_lighterText"
+                android:text=""
+                android:drawableRight="@drawable/ic_arrow"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:background="#eee"/>
+
+
+        <RelativeLayout android:id="@+id/phone"
+                        style="@style/rl_row_style"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:gravity="left|center_vertical"
+                android:text="电话:" android:textColor="#333"/>
+            <EditText
+                android:id="@+id/phonetv"
+                android:inputType="phone"
+                style="@style/rl_row_et_style"
+
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

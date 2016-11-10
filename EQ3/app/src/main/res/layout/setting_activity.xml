@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/listviewbg"
+              android:layout_height="match_parent">
+
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="系统设置"
+        custom:titleSize="6sp" />
+<ListView
+    android:layout_marginTop="10dp"
+        android:id="@+id/pinnedlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+    android:layout_weight="1"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:dividerHeight="0.5dp"
+        >
+
+</ListView>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="账号注销"
+        android:textColor="#fff"
+        android:background="@drawable/selector_red_radius_button3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        android:visibility="visible"
+        android:enabled="true"
+
+        />
+
+
+</LinearLayout>

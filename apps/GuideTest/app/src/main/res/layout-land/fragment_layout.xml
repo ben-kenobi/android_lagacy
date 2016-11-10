@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="fj.swsk.cn.guidetest.ReadActivity">
+
+   <fragment
+       class="fj.swsk.cn.guidetest.TileFrag"
+       android:id="@+id/tiles"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/detail"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="?android:attr/detailsElementBackground"
+        android:layout_height="match_parent"/>
+</LinearLayout>

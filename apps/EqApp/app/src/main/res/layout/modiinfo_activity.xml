@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/listviewbg"
+              android:layout_height="match_parent">
+
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="个人设置"
+        custom:titleSize="6sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:textColor="#555"
+        android:typeface="serif"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="3dp"
+        android:text="输入修改信息"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
+    <fj.swsk.cn.eqapp.main.V.ClearEditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColorHint="#aaa"
+        android:background="#fff"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
+    
+    <Button
+
+        android:id="@+id/submit"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="13dp"
+        android:text="确定"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:background="@drawable/selector_blue_radius_button2"
+        />
+</LinearLayout>

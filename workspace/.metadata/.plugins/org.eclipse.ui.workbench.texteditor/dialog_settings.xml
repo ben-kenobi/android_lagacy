@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="275" key="DIALOG_WIDTH"/>
+		<item value="381" key="DIALOG_Y_ORIGIN"/>
+		<item value="355" key="DIALOG_HEIGHT"/>
+		<item value="854" key="DIALOG_X_ORIGIN"/>
+		<item value="1|宋体|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|宋体" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="count" key="selection"/>
+		<list key="findhistory">
+			<item value="count"/>
+			<item value="findNreplaceContainer"/>
+			<item value="FindOptionsContainer"/>
+			<item value="findOptionsContainer"/>
+			<item value="android:visibility=&quot;gone&quot;"/>
+			<item value="FileSearcherDialog"/>
+			<item value="fileSearcherDialog"/>
+			<item value="gv"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="aa"/>
+			<item value="ee"/>
+			<item value="conflictNoticeDialog"/>
+			<item value="&quot;&quot;"/>
+			<item value="cursorAdapter"/>
+			<item value="lv"/>
+			<item value="contactListAdapter"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="264" key="DIALOG_Y_ORIGIN"/>
+		<item value="448" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

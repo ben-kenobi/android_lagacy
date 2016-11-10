@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/listviewbg"
+              android:orientation="vertical">
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleSize="6sp"
+        custom:titleText="烈度详细描述"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:nestedScrollingEnabled="true"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix"
+                android:src="@mipmap/description_00"/>
+
+
+            <ListView
+                android:id="@+id/pinnedlv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:dividerHeight="0.5dp"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true"
+                >
+
+            </ListView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

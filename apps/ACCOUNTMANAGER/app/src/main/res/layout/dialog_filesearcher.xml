@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_extremely_low_radius_white"
+    android:minWidth="320dp" >
+
+<RelativeLayout
+    android:id="@+id/header"
+    android:background="@drawable/selector_golden_framelayout"
+    android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="3dp"
+    android:layout_height="40dp" >
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#55c"
+        style="@style/boldFontStyle"
+        android:text="@string/searchScope" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        style="@style/moneyStyle"
+         android:maxLines="2"
+         
+        android:layout_toRightOf="@id/label" />
+
+    
+
+    </RelativeLayout>
+
+      <View
+        android:id="@+id/neck"
+        android:layout_below="@id/header"
+       style="@style/divider_green_horizontal_style" />
+      
+      <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateOnly="true"
+         style="?android:attr/progressBarStyleHorizontal"
+           android:layout_below="@id/neck"
+         />
+
+<RelativeLayout
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_below="@id/progressBar1"
+    android:layout_height="45dp" >
+    
+     <TextView
+         android:layout_width="80dp"
+        style="@style/dropdown_tv_style"
+        android:text="@string/advanced"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="3dp"
+        />
+
+    <EditText
+        android:id="@+id/editText1"
+      		 style="@style/registerEditTextStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:hint="@string/searchKeyword"
+                android:layout_toLeftOf="@id/dropdown"/>
+
+  				<Button
+                android:id="@+id/button1"
+                 android:layout_alignRight="@id/editText1"
+                style="@style/textDisposerStyle" />
+   
+    
+</RelativeLayout>
+
+  
+    <View style="@style/shadowViewStyle00"
+        android:layout_below="@id/relativeLayout1"
+       />
+
+<LinearLayout
+    android:id="@+id/footer"
+    android:layout_width="280dp"
+    android:layout_height="38dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="7dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal" >
+ 
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/selector_blue_radius_button"
+            android:singleLine="true"
+            android:text="@string/startSearch"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size_l" />
+ 
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+              style="?android:attr/buttonBarStyle"
+            android:background="@drawable/selector_white_radius_button"
+            android:singleLine="true"
+            android:textColor="#558"
+            android:text="@string/cancel"
+            android:textSize="@dimen/font_size_l" />
+ 
+    </LinearLayout>
+
+<View
+    android:id="@+id/ankle"
+    style="@style/divider_green_horizontal_style" 
+    android:layout_above="@id/footer"
+   />
+
+    <GridView
+        android:id="@+id/gridView1"
+        style="@style/gvCommonStyle"
+        android:layout_above="@id/ankle"
+        android:layout_below="@id/relativeLayout1"
+        android:numColumns="5" >
+
+    </GridView>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@id/gridView1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal" >
+ 		
+           <ImageButton
+            android:id="@+id/sort"
+            android:background="@drawable/selector_title_button_lefttopcircle"
+            style="@style/floatbarStyle"
+            android:src="@android:drawable/ic_menu_sort_by_size" />
+            <ImageButton
+            android:id="@+id/screen"
+          style="@style/floatbarStyle"
+            android:background="@drawable/selector_title_button_righttopcircle"
+            android:src="@android:drawable/ic_menu_view" />
+        </LinearLayout>
+        
+        <LinearLayout
+    android:id="@+id/linearLayout1"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@id/gridView1"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal" >
+ 		
+            <ImageButton
+	            android:id="@+id/delete"
+	        	  style="@style/floatbarStyle"
+	            android:background="@drawable/selector_title_button"
+	            android:src="@drawable/delete" />
+           <ImageButton
+                android:id="@+id/move"
+                style="@style/floatbarStyle"
+                 android:background="@drawable/selector_title_button"
+                android:src="@drawable/cut" />
+           
+
+  	<ImageButton
+            android:id="@+id/copy"
+         	 style="@style/floatbarStyle"
+            android:background="@drawable/selector_title_button_righttopcircle"
+            android:src="@drawable/copy" />
+<!--   	<ImageButton -->
+<!--             android:id="@+id/zip" -->
+<!--          	 style="@style/floatbarStyle" -->
+<!--             android:background="@drawable/selector_title_button_righttopcircle" -->
+<!--             android:src="@drawable/zip" /> -->
+        </LinearLayout>
+
+</RelativeLayout>

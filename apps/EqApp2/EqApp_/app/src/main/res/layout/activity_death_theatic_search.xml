@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fj.swsk.cn.eqapp.map.DeathTheaticSearchActivity">
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_vertical"
+        android:onClick="onExit"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:text="@string/pre"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_columnSpan="4"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="搜索半径(单位:KM):"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/distanceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edittext"
+            android:inputType="numberDecimal"
+            android:numeric="decimal"
+            android:singleLine="true"
+            android:text="1" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:numColumns="3"></GridView>
+</LinearLayout><!--<GridLayout--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--tools:context=".map.DeathTheaticSearchActivity"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:columnCount="4"--><!--android:rowCount="5"--><!-->--><!--<TextView android:layout_columnSpan="4"--><!--android:id="@+id/exit"--><!--android:gravity="center_vertical"--><!--android:layout_width="match_parent"--><!--android:layout_height="48dp"--><!--android:paddingLeft="10dp"--><!--android:onClick="onExit"--><!--android:background="@android:color/darker_gray"--><!--android:textColor="@android:color/white"--><!--android:text="@string/pre"--><!--android:textSize="16sp" />--><!--<LinearLayout--><!--android:background="@android:color/white"--><!--android:layout_width="match_parent"--><!--android:layout_height="48dp"--><!--android:orientation="horizontal"--><!--android:layout_columnSpan="4">--><!--<TextView android:layout_gravity="center_vertical"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16dp"--><!--android:text="搜索半径(单位:KM):" />--><!--<EditText  android:layout_gravity="center_vertical"--><!--android:id="@+id/distanceEditText"--><!--android:layout_width="match_parent"--><!--android:layout_height="32dp"--><!--android:background="@drawable/editTextStyle"--><!--android:numeric="decimal"--><!--android:inputType="numberDecimal"--><!--android:text="1"--><!--android:singleLine="true"   />--><!--</LinearLayout>--><!--&lt;!&ndash;第一行&ndash;&gt;--><!--<TextView--><!--android:layout_columnWeight="1"--><!--android:id="@+id/road"--><!--android:layout_gravity="center"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="交通道路" />--><!--<LinearLayout  android:layout_columnWeight="1"--><!--android:layout_gravity="center"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal">--><!--<View android:layout_gravity="center_vertical"--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2dp"--><!--android:layout_height="32dp"></View>--><!--<TextView--><!--android:id="@+id/gas_station"--><!--android:layout_gravity="center"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="加油站" />--><!--<View android:layout_gravity="left"--><!--android:background="@color/lighter_gray"--><!--android:layout_width="1px"--><!--android:layout_height="match_parent"></View>--><!--</LinearLayout>--><!--<LinearLayout  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_width="wrap_content"--><!--android:layout_height="48dp"--><!--android:orientation="horizontal">--><!--<View--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2px"--><!--android:layout_height="match_parent"></View>--><!--<TextView--><!--android:id="@+id/hydr_station"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="水电站" />--><!--<View--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2px"--><!--android:layout_height="match_parent"></View>--><!--</LinearLayout>--><!--<TextView  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:id="@+id/natgas_station"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="燃气站" />--><!--&lt;!&ndash;第二行&ndash;&gt;--><!--<TextView  android:layout_columnWeight="1"--><!--android:id="@+id/school"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="学校" />--><!--<LinearLayout  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_height="48dp"--><!--android:layout_width="wrap_content"--><!--android:orientation="horizontal">--><!--<View--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2px"--><!--android:layout_height="match_parent"></View>--><!--<TextView--><!--android:id="@+id/hospital"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="医院" />--><!--<View--><!--android:background="@color/lighter_gray"--><!--android:layout_width="1px"--><!--android:layout_height="match_parent"></View>--><!--</LinearLayout>--><!--<LinearLayout  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_height="48dp"--><!--android:layout_width="wrap_content"--><!--android:orientation="horizontal">--><!--<View--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2px"--><!--android:layout_height="match_parent"></View>--><!--<TextView--><!--android:id="@+id/shelter"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:text="避难场所" />--><!--<View android:layout_gravity="left"--><!--android:background="@color/lighter_gray"--><!--android:layout_width="2px"--><!--android:layout_height="match_parent"></View>--><!--</LinearLayout>--><!--<TextView  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:id="@+id/resettlement_region"--><!--android:textSize="16sp"--><!--android:onClick="onClick"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="安置区域" />--><!--<TextView  android:layout_columnWeight="1"--><!--android:layout_gravity="center_horizontal"--><!--android:id="@+id/allDeathThematic"--><!--android:onClick="onClick"--><!--android:textSize="16sp"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="所有类型" />--><!--</GridLayout>-->
+

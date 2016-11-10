@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rootrl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fj.swsk.cn.eqapp.main.C.MainActivity">
+
+
+    <com.esri.android.map.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+    <LinearLayout
+        android:id="@+id/barid"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topBarH"
+        android:background="@drawable/selector_white_radius_button"
+        android:layout_marginLeft="@dimen/mapitemmargin"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:orientation="horizontal"
+        android:layout_marginTop="22dp"
+        >
+        <ImageButton
+            android:id="@+id/user_manage"
+            android:layout_width="@dimen/topBarH"
+            android:layout_height="@dimen/topBarH"
+            android:src="@mipmap/user_manage"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:onClick="onClick"
+            android:background="@drawable/selector_trans_radius_button3"
+
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#8aaa"
+            android:layout_height="30dp"/>
+        <fj.swsk.cn.eqapp.main.V.ClearEditText
+            android:id="@+id/searchet"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClearEditTextClick"
+
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="@dimen/topBarH"
+            android:layout_height="@dimen/topBarH"
+            android:padding="10dp"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:scaleType="fitCenter"
+            android:onClick="onSearch"
+            android:src="@mipmap/search"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#8aaa"
+            android:layout_height="30dp"/>
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="@dimen/topBarH"
+            android:layout_height="@dimen/topBarH"
+            android:padding="10dp"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:src="@mipmap/nav"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/barid"
+        android:layout_marginTop="@dimen/mapitemmargin"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:orientation="vertical"
+        >
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:background="@drawable/selector_white_radius_button2"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:layout_marginBottom="@dimen/mapitemgap"
+            android:src="@drawable/selector_deldrawable"/>
+        <ImageButton
+        android:id="@+id/cam"
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="@dimen/mapitemh"
+        android:padding="5dp"
+        android:background="@drawable/selector_white_radius_button2"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_marginBottom="@dimen/mapitemgap"
+        android:src="@mipmap/cam"/>
+        <ImageButton
+            android:id="@+id/controlflow"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:background="@drawable/selector_white_radius_button2"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:layout_marginBottom="@dimen/mapitemgap"
+            android:src="@drawable/selector_deldrawable_workflow"/>
+        <ImageButton
+            android:id="@+id/message"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:background="@drawable/selector_white_radius_button2"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:layout_marginBottom="@dimen/mapitemgap"
+            android:src="@mipmap/message"/>
+        <ImageButton
+            android:id="@+id/distribution"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:background="@drawable/selector_white_radius_button2"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:layout_marginBottom="@dimen/mapitemgap"
+            android:src="@drawable/selector_deldrawable_distribution"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/measurell"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mapitemh"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:elevation="2dp"
+        android:translationZ="2dp"
+        android:background="@drawable/selector_white_radius_button2"
+        android:layout_marginLeft="@dimen/mapitemmargin">
+        <ImageButton
+            android:id="@+id/measure"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:src="@mipmap/scale"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="26dp"
+            android:background="#8aaa"
+            android:layout_gravity="center_vertical"
+/>
+        <ImageButton
+            android:id="@+id/aspectmeasure"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:src="@mipmap/aspectmeasure"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:elevation="2dp"
+        android:background="@drawable/selector_white_radius_button2"
+        android:layout_marginLeft="@dimen/mapitemmargin">
+        <!--<ImageButton-->
+            <!--android:id="@+id/location"-->
+            <!--android:layout_width="@dimen/mapitemh"-->
+            <!--android:layout_height="@dimen/mapitemh"-->
+            <!--android:padding="5dp"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:onClick="onClick"-->
+            <!--android:background="@drawable/selector_trans_radius_button3"-->
+            <!--android:src="@mipmap/location"/>-->
+        <!--<View-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_width="26dp"-->
+            <!--android:background="#8aaa"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--/>-->
+        <ImageButton
+            android:id="@+id/locationing"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:src="@mipmap/locationing"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/samplelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:elevation="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="#0000"
+        android:layout_marginLeft="@dimen/mapitemmargin">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:textColor="#555"
+            android:background="#8fff"
+            android:text="烈度"
+            android:id="@+id/samplename"
+
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/sampleimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:alpha="0.7"
+            android:src="@mipmap/density"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/hideView"
+        android:layout_width="match_parent"
+        android:layout_height="0sp" />
+</RelativeLayout>

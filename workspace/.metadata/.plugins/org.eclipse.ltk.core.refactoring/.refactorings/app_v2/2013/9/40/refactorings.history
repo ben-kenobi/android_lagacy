@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;app_v2&apos;&#x0D;&#x0A;- Original project: &apos;app_v2&apos;&#x0D;&#x0A;- Original element: &apos;com.what.yunbao.util.Constants.java&apos;" description="Delete element" element1="/yunbao_src&lt;com.what.yunbao.util{Constants.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1380455758313" subPackages="false" version="1.0"/>
+</session>

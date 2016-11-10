@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="12dp">
+
+    <TextView android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gas_station_name"
+        android:textColor="@color/light_black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="32dp"
+        android:text="@string/download_state1"
+        android:textColor="@color/light_black"
+        android:textSize="12sp" />
+
+    <ImageView android:id="@+id/ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_find_next_holo_light" />
+
+    <LinearLayout
+        android:id="@+id/vector_download_btn_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_alignBaseline="@id/state"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/download_btn"
+            android:layout_width="120dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:layout_height="wrap_content"
+            android:onClick="onDownloadVectorData"
+            android:text="下载" />
+
+        <Button android:layout_marginLeft="12dp"
+            android:id="@+id/delete_btn"
+            android:layout_width="120dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:onClick="onDeleteVectorData"
+            android:text="刪除" />
+    </LinearLayout>
+
+</RelativeLayout>

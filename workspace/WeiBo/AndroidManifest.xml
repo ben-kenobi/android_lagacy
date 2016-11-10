@@ -1,0 +1,88 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.what.weibo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/WeiboAppTheme" >
+        <activity
+            android:name="com.what.weibo.WeiboMainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" ></action>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+        
+        <activity
+            android:name="com.what.weibo.WeiBoRequestMessageActivity" 
+            android:configChanges="keyboardHidden|orientation" 
+            android:screenOrientation="portrait">       
+        </activity>  
+
+        <activity 
+            android:name="com.what.weibo.Authorize" 
+            android:screenOrientation="portrait"/>
+        
+         <activity 
+            android:name="com.what.weibo.TestShareActivity" 
+            android:screenOrientation="portrait"/>
+ <activity
+                android:name="com.bshare.activity.BShareEditor"
+                android:configChanges="keyboardHidden|orientation"
+                android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="bshare.share.editor"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.bshare.activity.BShareMore"
+                android:configChanges="keyboardHidden|orientation"
+                android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="bshare.share.more"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.bshare.activity.AuthorizationActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="bshare.authorization.action"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.bshare.activity.BShareBrowser"
+                android:configChanges="keyboardHidden|orientation"
+                android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="bshare.browser.action"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+        android:name="com.what.weibo.wxapi.WXEntryActivity"
+        android:exported="true"></activity>
+        
+    </application>
+    
+   
+    </uses-permission>
+
+</manifest>

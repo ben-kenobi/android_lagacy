@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg"
+    tools:context=".AccountListActivity" >
+ <View style="@style/dividerViewStyle02" 
+     android:id="@+id/view1"/>
+
+    <View style="@style/shadowViewStyle00"
+        android:layout_below="@id/view1" 
+        android:id="@+id/view2"/>
+
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/scrollStyle02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view2"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:divider="#0fff"
+        android:dividerHeight="3dp" >
+
+    </ListView>
+<RelativeLayout
+	    android:id="@+id/relativeLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="46dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/selector_grey_rect"
+	    android:clickable="true"
+	    android:visibility="gone"
+	     >
+
+		<ImageView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:src="@android:drawable/ic_menu_delete" />
+	</RelativeLayout>
+</RelativeLayout>

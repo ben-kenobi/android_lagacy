@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/normal_header"  android:id="@+id/lo01"/>
+    <cn.swsk.rgyxtqapp.custom.CScrollV
+        android:layout_marginTop="-20dp"
+        android:layout_below="@id/lo01"
+        android:id="@+id/sc01"
+
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="1dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
+
+        <Button
+            android:layout_marginBottom="@dimen/pagemarginV"
+            android:id="@+id/scan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pagebuttonh"
+            android:text="二维码扫描"
+            android:textColor="#fff"
+            android:layout_below="@id/lo01"
+            android:textSize="18sp"
+            android:background="@drawable/selector_blue_button"/>
+
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/pagemarginV"
+            android:background="@drawable/d_recbg"
+            android:padding="1dp"
+            android:layout_below="@id/scan"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical">
+            <include layout="@layout/item4lv_anquanitem" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divider001"/>
+            <cn.swsk.rgyxtqapp.custom.InnerLV
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/color_divider001"
+                android:dividerHeight="1dp"
+                android:cacheColorHint="@null"
+                />
+        </LinearLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="left"
+    android:text="状态变更："/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_recbg_bold"
+
+    android:orientation="vertical">
+        <RadioButton
+
+            android:id="@+id/rb02"
+            style="@style/rb_row_style"
+            android:tag="2"
+            android:checked="true"
+            android:clickable="false"
+            android:text="领用"
+            />
+    <!--<RadioButton-->
+        <!--android:id="@+id/rb03"-->
+        <!--style="@style/rb_row_style"-->
+        <!--android:tag="3"-->
+        <!--android:clickable="false"-->
+        <!--android:checked="false"-->
+        <!--android:text="移库"-->
+        <!--/>-->
+</LinearLayout>
+        <RadioGroup
+    android:id="@+id/rg01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_recbg_bold"
+    android:orientation="vertical"
+    android:divider="@drawable/divider_lv_001"
+    android:showDividers="middle"
+    android:checkedButton="@+id/rb01"
+    android:layout_marginBottom="20dp"
+    >
+
+   <RadioButton
+    android:id="@+id/rb04"
+    style="@style/rb_row_style"
+    android:tag="12"
+    android:text="正常归还"
+    />  <RadioButton
+    android:tag="5"
+    android:id="@+id/rb05"
+    style="@style/rb_row_style"
+    android:text="正常发射"
+    android:checked="false"/>  <RadioButton
+    android:id="@+id/rb06"
+    android:tag="6"
+    style="@style/rb_row_style"
+    android:onClick="onClick"
+    android:text="故障损毁"
+    />  <RadioButton
+    android:id="@+id/rb07"
+    android:tag="7"
+    style="@style/rb_row_style"
+    android:onClick="onClick"
+    android:text="故障归还"
+    />
+
+</RadioGroup>
+
+    <Button
+        android:layout_marginBottom="30dp"
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="保存"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:background="@drawable/selector_blue_button"/>
+
+
+
+    </LinearLayout>
+    </cn.swsk.rgyxtqapp.custom.CScrollV>
+</RelativeLayout>

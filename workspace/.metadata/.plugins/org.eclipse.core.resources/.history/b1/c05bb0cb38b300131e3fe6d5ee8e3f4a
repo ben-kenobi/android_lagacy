@@ -1,0 +1,146 @@
+
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+public class StringUtil {
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		byte[] bytes = "熊娃，说啥呢，还用上了敬语，滚粗".getBytes("GBK");
+		
+//			System.out.print(bytesToHexStr(bytes,bytes.length," "));
+//		File file = new File("D://ipte.aa");
+//		System.out.println(file.renameTo(new File("c:/ipte.aa")));
+//		System.out.println(file.exists()+":"+  file.getName());
+//		Pattern p=Pattern.compile("(?i)^[^/\\\\]*a2b[^/\\\\]*\\.(?:jpg|png|bmp)$",0);
+//		Pattern p2=Pattern.compile("(?i)^[^/\\\\]*a2b[^/\\\\\\.]*$",0);
+//		System.out.println(p2.matcher("11.a2bc342").matches());
+		
+		
+		System.out.println("werer".matches("(?i)^wer[afc]/w+$"));
+		
+	}
+	
+	public static final char[] HEXCHAR = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+	
+	public static final Map<Character,Byte>  hexCharMap=new HashMap<Character,Byte>();
+	
+	static{
+		for(int i=0;i<16;i++){
+			if(i<10)
+				hexCharMap.put((char)('0'+i), (byte)i);
+			else{
+				hexCharMap.put((char)('a'+i-10), (byte)i);
+				hexCharMap.put((char)('A'+i-10), (byte)i);
+			}
+		}
+	}
+	
+	public static final char[] tempChary=new char[2];
+	
+	public static int ignoreCaseLastIndexOf(String content,int startOffset,String tar){
+		if(content==null||content.length()==0||tar==null||tar.length()==0) return 0;
+		char c=tar.charAt(tar.length()-1);
+		for(int i=startOffset-1;i>=0;i--){
+			if(equalsIgnoreCase(content.charAt(i), c)){
+				int j;
+				for(j=tar.length()-2;j>=0;j--){
+					if(!equalsIgnoreCase(content.charAt(i+j-tar.length()+1), tar.charAt(j)))
+						break;
+				}
+				if(j==-1){
+					System.out.println(i);
+					return i-tar.length()+1;
+				}
+			}
+		}
+		return -1;
+	}
+	public static int ignoreCaseIndexOf(String content,String tar){
+		if(content==null||content.length()==0||tar==null||tar.length()==0) return 0;
+		char c=tar.charAt(0);
+		int length=content.length();
+		for(int i=0;i<length;i++){
+			if(equalsIgnoreCase(content.charAt(i), c)){
+				int j;
+				for(j=1;j<tar.length();j++){
+					if(!equalsIgnoreCase(content.charAt(i+j), tar.charAt(j)))
+						break;
+				}
+				if(j==tar.length())
+					return i;
+			}
+		}
+		return -1;
+	}
+	
+	public static boolean equalsIgnoreCase(char c1,char c2){
+		if(c1==c2) return true;
+		if(isLetter(c1)&&isLetter(c2)){
+			int delta=c1-c2;
+			if(delta==32||delta==-32)
+				return true;
+		}
+		return false;
+	}
+	
+	public static boolean isLetter(char c){
+		return c>=65&&c<=90||c>=97&&c<=122;
+	}
+	
+	
+	public static String bytesToHexStr(byte[] bytes,int count ,String space) {
+		if(count<0) count=0;
+		if(count>bytes.length) count = bytes.length;
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < count; i++) {
+			sb.append(byteToHexStr(bytes[i])+space);
+		}
+		return sb.toString();
+	}
+	
+	public static byte[] hexStrToBytes(String hexStr){
+		hexStr=trimSpaces(hexStr);
+		if(!isHexStr(hexStr)) return null;
+		int b1,i;
+		byte b2;
+		int length=hexStr.length()/2;
+		byte[] bytes = new byte[hexStr.length()%2==0?length:length+1];
+		for(i=1;i<hexStr.length();i+=2){
+			b2=hexCharMap.get(hexStr.charAt(i));
+			b1=(hexCharMap.get(hexStr.charAt(i-1))<<4);
+			bytes[(i-1)/2]=(byte)(b1|b2);
+		}
+		
+		if(i==hexStr.length()){
+			//TODO
+			bytes[bytes.length-1]=hexCharMap.get(hexStr.charAt(hexStr.length()-1));
+		}
+		return bytes;
+	}
+	
+	public static boolean isHexStr(String hexStr){
+		for(int i=0;i<hexStr.length();i++){
+			if(!hexCharMap.containsKey(hexStr.charAt(i)))
+				return false;
+		}
+		return true;
+	}
+	
+	public static String trimSpaces(String str){
+		return str.replaceAll("\\s", "");
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param mByte
+	 * @return
+	 */
+	public static String byteToHexStr(byte mByte) {
+		tempChary[0] = HEXCHAR[(mByte >>> 4)&0x0F ];
+		tempChary[1] = HEXCHAR[mByte & 0X0F];
+		String s = new String(tempChary);
+		return s;
+	}
+}

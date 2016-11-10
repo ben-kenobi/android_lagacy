@@ -1,0 +1,5 @@
+include ':bDMapVersion2'
+include ':weiBo'
+include ':yunBao'
+include ':upomp'
+include ':app_v2'

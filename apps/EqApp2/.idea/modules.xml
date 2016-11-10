@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/0.11.0.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/0.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/0.11.0.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/0.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/0.11.0.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/0.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/0.11.0.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/0.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/0.11.0.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/0.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.esri.arcgis.android/arcgis-android/10.2.8/10.2.8.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.esri.arcgis.android/arcgis-android/10.2.8/10.2.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/23.1.1.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/23.1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/23.1.1.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/23.1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/23.2.1.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/23.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/generated/source/buildConfig/androidTest/androidTest.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/generated/source/buildConfig/androidTest/androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/src/androidTest/androidTest1.iml" filepath="$PROJECT_DIR$/EqApp_/app/src/androidTest/androidTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/manifest/androidTest/debug/debug.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/manifest/androidTest/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/intermediates/manifests/full/debug/debug.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/intermediates/manifests/full/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/src/main/main.iml" filepath="$PROJECT_DIR$/EqApp_/app/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/build/generated/source/r/r.iml" filepath="$PROJECT_DIR$/EqApp_/app/build/generated/source/r/r.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqApp_/app/src/test/test.iml" filepath="$PROJECT_DIR$/EqApp_/app/src/test/test.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,131 @@
+<resources>
+    <string name="shareTo">share2</string>
+
+
+    <string name="app_name">地震系统</string>
+    <string name="text_toast">设置成功，免打扰时段为：\n%1$s - %2$s</string>
+    <string name="text_return">&#060;返回</string>
+    <string name="text_done">完成</string>
+    <string name="text_add">添加</string>
+    <string name="text_edit">编辑</string>
+    <string name="workpoint_search">搜索作业点</string>
+    <string name="write_date">填写日期</string>
+    <string name="work_date">作业日期</string>
+    <string name="begin_work">作业开始时间</string>
+    <string name="end_work">作业结束时间</string>
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+    <string name="lbl_work_status_submit">作业状态上报</string>
+    <string name="lbl_work_info_submit">作业信息上报</string>
+    <string name="download_state1">已下载</string>
+    <string name="download_state2">未下载</string>
+
+    <string name="gas_station_name">加油站</string>
+    <string name="hydr_station_name">水电站</string>
+    <string name="natgas_station_name">燃气站</string>
+    <string name="school_name">学校</string>
+    <string name="hospital_name">医院</string>
+    <string name="city_site_name">疏散场地</string>
+    <string name="resettlement_region_name">安置区</string>
+
+    <string name="action_fastscroll">Fast scroll</string>
+    <string name="action_addpadding">Add padding</string>
+    <string name="action_showShadow">Show shadow</string>
+    <string name="action_showHeaderAndFooter">Show Header &amp; Footer</string>
+    <string name="action_updateDataset">Update dataset</string>
+
+    /***地图部分****/
+    <string name="poi_name">地名：</string>
+    <string name="poi_address">地址：</string>
+    <string name="poi_telephone">电话：</string>
+    <string name="dis_themMap_url">http://3dspace.xicp.net:20081/geoserver/fjseism/wms</string>
+    <!--烈度分布图-->
+    <string name="strength_themMap">HA01_201606300033883</string>
+    <!--人员死亡分布图-->
+    <string name="deathsDis_themMap">HA02_201606300033883</string>
+    <!--人员受伤分布图-->
+    <string name="injDis_themMap">HA03_201606300033883</string>
+    <!--房屋倒塌分布图-->
+    <string name="buiCollapseDis_themMap">HA04_201606300033883</string>
+    <!--经济损失分布图-->
+    <string name="ecoLoss_themMap">HA05_201606300033883</string>
+    <!--交通道路shp文件路径-->
+    <string name="road">eqAppData/fj_road/road.shp</string>
+    <!--加油站shp文件路径-->
+    <string name="gas_station">eqAppData/fj_gas_station/fj_gas_station.shp</string>
+    <!--水电站shp文件路径-->
+    <string name="hydr_station">eqAppData/fj_hydr_station/fj_hydr_station.shp</string>
+    <!--燃气站shp文件路径-->
+    <string name="natgas_station">eqAppData/fj_natgas_station/fj_natgas_station.shp</string>
+    <!--学校shp文件路径-->
+    <string name="school">eqAppData/fj_school/school.shp</string>
+    <!--医院shp文件路径-->
+    <string name="hospital">eqAppData/fj_hospital/hospital.shp</string>
+    <!--城区疏散场地shp文件路径-->
+    <string name="city_site">eqAppData/fj_city_site/city_site.shp</string>
+    <!--安置区域shp文件路径-->
+    <string name="resettlement_region">eqAppData/fj_resettlement_region/fj_resettlement_region.shp</string>
+    <!--临时文件夹-->
+    <string name="temp_dir">eqAppData/temp</string>
+    <!--生命线专题callout字段名称-->
+    <string name="death_citySite_name">名称：</string>
+    <string name="death_citySite_class">类别：</string>
+    <string name="death_citySite_name_field">name</string>
+    <string name="death_citySite_class_field">class</string>
+
+    <string name="death_road_name">名称：</string>
+    <string name="death_road_class">类别：</string>
+    <string name="death_road_name_field">name</string>
+    <string name="death_road_class_field">class</string>
+
+    <string name="death_school_name">名称：</string>
+    <string name="death_school_note">类别：</string>
+    <string name="death_school_name_field">unitname</string>
+    <string name="death_school_note_field">note_</string>
+
+    <string name="death_hospital_name">名称：</string>
+    <string name="death_hospital_membership">等级：</string>
+    <string name="death_hospital_grade">主管单位：</string>
+    <string name="death_hospital_name_field">name</string>
+    <string name="death_hospital_membership_field">membership</string>
+    <string name="death_hospital_grade_field">grade</string>
+
+    <string name="death_hydrStation_name">名称：</string>
+    <string name="death_hydrStation_class">类别：</string>
+    <string name="death_hydrStation_name_field">name</string>
+    <string name="death_hydrStation_class_field">class</string>
+
+    <string name="death_natgasStation_name">名称：</string>
+    <string name="death_natgasStation_class">类别：</string>
+    <string name="death_natgasStation_name_field">name</string>
+    <string name="death_natgasStation_class_field">class</string>
+
+    <string name="death_resettlementRegion_name">名称：</string>
+    <string name="death_resettlementRegion_class">类别：</string>
+    <string name="death_resettlementRegion_name_field">name</string>
+    <string name="death_resettlementRegion_class_field">class</string>
+
+    <string name="peripheralQuery">周边查询</string>
+    <string name="pre">返回</string>
+    <string name="title_activity_offline_map_download">OfflineMapDownload</string>
+
+    <string name="vector_data_interface">http://3dspace.xicp.net:20080/fjseism/ma/thematicmap/lifelineLayerInfoList</string>
+    <string name="title_activity_contacts">通讯录</string>
+    <string name="title_activity_contact_add">ContactAddActivity</string>
+
+    <string name="pending">正在连接</string>
+    <string name="download">下载</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
+    <string name="complete">完成</string>
+    <string name="cancel">取消</string>
+    <string name="failed">下载失败</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

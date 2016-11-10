@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 顶部栏 后退修改等按钮的点击变浅蓝色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <gradient android:angle="270" android:startColor="#00BFFF" android:endColor="#00BFFF"/>
+            <size android:height="64dp" android:width="320dp"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:angle="270" android:startColor="#00BFFF" android:endColor="#00BFFF"/>
+           	<size android:height="36dp" android:width="86dp"/>
+            <corners android:radius="6dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape >
+            <gradient android:angle="270" android:startColor="@color/deepskyblue" android:endColor="@color/deepskyblued"/>
+            <size android:height="32dp" android:width="58dp"/>
+            <corners android:radius="6dp"/>
+            <stroke android:width="0.01dp" android:color="@color/darkgreyd"/>
+            
+        </shape>
+    </item>
+</selector>

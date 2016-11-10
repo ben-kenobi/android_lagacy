@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:background="@drawable/listview_item_selector" >  
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/app_logo" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_width="860dp"
+        android:layout_weight="10"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:id="@+id/tv_business_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="云宝体验便利店" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_business_item_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@android:drawable/stat_notify_more"
+                    android:drawablePadding="7dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="3dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="福建省福州市鼓楼区纱帽井巷3号" />
+
+                <TextView
+                    android:id="@+id/tv_business_item_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@android:drawable/stat_notify_more"
+                    android:drawablePadding="7dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="3dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="6.28米" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_collection_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/app_arrow_small" />
+    <CheckBox
+        android:id="@android:id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:clickable="false"/>
+
+</LinearLayout>

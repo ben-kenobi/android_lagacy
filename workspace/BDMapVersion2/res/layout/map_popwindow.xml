@@ -1,0 +1,79 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="fill_parent"
+    android:background="#96000000" >
+    
+    <Button
+        android:id="@+id/bmap_btn_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_dialog_map"
+        android:layout_marginTop="9dp"
+        android:drawablePadding="7dp"
+        android:text="@string/str_tv_map"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <View 
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/bmap_btn_map"/>
+
+    <Button
+        android:id="@+id/bmap_btn_commu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmap_btn_map"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
+        android:drawablePadding="7dp"
+        android:text="@string/str_btn_select_commu"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <View 
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/bmap_btn_commu"/>
+
+    <Button
+        android:id="@+id/bmap_btn_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmap_btn_commu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_dialog_info"
+        android:drawablePadding="7dp"
+        android:text="@string/str_btn_get_route"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <View 
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/bmap_btn_route"/>
+
+    <Button
+        android:id="@+id/bmap_btn_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmap_btn_route"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_dialog_dialer"
+        android:drawablePadding="7dp"
+        android:text="@string/str_btn_show_view"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</RelativeLayout>

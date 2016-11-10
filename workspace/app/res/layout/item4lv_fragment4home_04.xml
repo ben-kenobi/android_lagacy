@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="12dp"
+    android:paddingTop="5dp" >
+    <!--     android:descendantFocusability="blocksDescendants" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginBottom="6dp"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/item_06" />
+        </FrameLayout>
+	
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="3dp" >
+            
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="3dp"
+                android:text="商品名称"
+                android:textColor="#222222"
+                android:textSize="18sp" />
+            
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/cart_pricetext_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="￥单价 x 3"
+                 />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/cart_pricetext_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:text="￥总价" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:layout_alignParentBottom="true"
+                android:background="#e0eeee" >
+
+
+                  <Button
+                      android:id="@+id/button1"
+                        style="@style/shoppingcart_items_operation_button_style"
+                      android:text="@string/delete"
+                      android:textColor="#f55"
+                     />
+
+
+                    <ImageButton
+                        android:id="@+id/imageButton1"
+                        android:layout_alignParentRight="true"
+                        android:src="@android:drawable/arrow_up_float" 
+                        style="@style/shoppingcart_items_operation_button_style"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_toLeftOf="@id/imageButton1"
+                        android:rotation="180"    
+                          style="@style/shoppingcart_items_operation_button_style"
+                        android:src="@android:drawable/arrow_up_float" 
+                        />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/imageButton1"
+                        android:background="#fff" />
+                
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

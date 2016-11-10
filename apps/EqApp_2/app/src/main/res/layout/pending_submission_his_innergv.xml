@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/listviewbg"
+              android:descendantFocusability="blocksDescendants"
+
+             android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<TextView
+    android:id="@+id/cate"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="17dp"
+    android:textStyle="bold"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="7dp"
+    android:gravity="left"
+    android:textColor="#333"
+    android:text="未归类"
+    />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginLeft="7dp"
+        android:gravity="left"
+        android:textColor="#888"
+        android:text="2017-10-1 22:22:22"
+        />
+</LinearLayout>
+        <ImageButton
+            android:id="@+id/delete"
+            android:clickable="true"
+            android:background="@drawable/selector_golden"
+            android:layout_gravity="center"
+            android:src="@mipmap/deletered"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    
+<fj.swsk.cn.eqapp.main.V.InnerGV2
+    android:id="@+id/gv01"
+    android:focusable="false"
+    android:clickable="false"
+        android:cacheColorHint="@null"
+        android:numColumns="4"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:stretchMode="columnWidth"
+        />
+
+
+
+
+
+</LinearLayout>

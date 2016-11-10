@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_white"
+    android:orientation="vertical"
+    android:paddingBottom="9dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="5dp"
+    android:paddingTop="3dp" >
+
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    >
+            <TextView   android:id="@+id/textView1"
+               style="@style/textViewStyle00"
+                android:text="SITE：" />
+            <TextView
+                 android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             	style="@style/moneyStyle"
+                />
+</LinearLayout>
+           <com.yf.accountmanager.ui.AutoSplitTextView_1
+                android:id="@+id/textView3"
+                style="@style/textViewStyle00"
+                />
+        </LinearLayout>

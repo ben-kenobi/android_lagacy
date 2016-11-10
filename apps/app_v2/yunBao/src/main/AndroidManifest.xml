@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.what.yunbao"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="16"/>
+
+    <permission
+        android:name="com.what.yunbao.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name="com.what.yunbao.person.PersonalCenterActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:theme="@style/CentAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+        <!-- 地址编辑 -->
+        <activity 
+            android:name="com.what.yunbao.address.AddressManageActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+        </activity> 
+
+        <!-- 地址修改添加 -->
+        <activity 
+            android:name="com.what.yunbao.address.AddressEditActivity" 
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Transparent"            
+            android:configChanges="keyboardHidden|orientation|screenLayout">                       
+        </activity>
+        
+        <!-- 地址选择 -->
+        <activity 
+            android:name="com.what.yunbao.address.AddressChoseActivity"  
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">                       
+        </activity>
+        
+        <!-- 测试//////////////// -->
+        
+         <activity 
+            android:name="com.what.yunbao.test.TestAddress" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+            
+        </activity>
+        
+        <activity 
+            android:name="com.what.yunbao.test.TestActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+            
+        </activity>
+        <activity 
+            android:name="com.what.yunbao.test.InterceptorActivity" 
+            android:theme="@style/Transparent"
+            android:screenOrientation="portrait">
+            
+        </activity>
+        
+        <receiver 
+            android:name="com.what.yunbao.test.MyBroadcastReceiver">
+             <intent-filter>  
+                <action android:name="23440909419679919L.ACTION" android:process=".abc"/>  
+            </intent-filter>            
+        </receiver>
+        
+        
+        <activity 
+            android:name="com.what.yunbao.test.TestSettingAccountManagerActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+            
+        </activity>
+        
+        
+        <activity 
+            android:name="com.what.yunbao.test.TT"
+            android:screenOrientation="portrait" 
+            android:theme="@style/CentAppTheme">
+            
+        </activity>
+        
+        <!-- 测试 ///////////////// -->
+        
+        <!-- 浏览记录 -->
+        <activity 
+            android:name="com.what.yunbao.history.HistoryActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">            
+        </activity>
+        
+        <!-- 订单列表 -->
+        <activity 
+            android:name="com.what.yunbao.order.OrderActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">           
+        </activity>
+        
+        <!-- 订单详情 -->
+        <activity 
+            android:name="com.what.yunbao.order.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">            
+        </activity>
+        
+        <!-- 更多选项卡 -->
+        <activity 
+            android:name="com.what.yunbao.setting.SettingTabActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">           
+        </activity>
+
+        <!-- 更多——关于我们 -->
+        <activity 
+            android:name="com.what.yunbao.setting.SettingAboutActivity"
+            android:screenOrientation="portrait" 
+            android:theme="@style/CentAppTheme">            
+        </activity>
+        
+        <!-- 更多——新手帮助 -->
+        <activity 
+            android:name="com.what.yunbao.setting.SettingGuideActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">            
+        </activity>
+        
+         <!-- 更多——隐私政策 -->
+        <activity 
+            android:name="com.what.yunbao.setting.SettingPrivacyWebViewActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">            
+        </activity>
+        
+        <!-- 更多——帐号管理——修改密码-->
+        <activity 
+            android:name="com.what.yunbao.setting.SettingAccManaChangePwdActivity" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/CentAppTheme">            
+        </activity>  
+        
+        <activity 
+            android:name="com.what.yunbao.setting.SettingAccManaChangeTelActivity" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/CentAppTheme">            
+        </activity>  
+      
+        <!-- 更多——消息推送 -->
+        <activity 
+            android:name="com.what.yunbao.push.PushSettingActivity" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Transparent">            
+        </activity>      
+
+        <!-- 我的帐户 -->
+            
+        <activity 
+            android:name="com.what.yunbao.test.MainActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+            
+        </activity>
+        
+        <!-- 我的收藏 -->
+        <activity 
+            android:name="com.what.yunbao.collection.CollectionActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">           
+        </activity>
+        
+        <provider
+            android:name="com.what.yunbao.util.CommonProvider"
+            android:authorities="icanit_community"
+            android:multiprocess="true" />
+        
+        <service android:name="com.what.yunbao.update.AppUpgradeService">
+        </service>
+        
+        <!--
+        	PUSH功能       
+        -->
+        
+        <!-- 自定义的广播接收器-->
+        <receiver
+            android:name="com.what.yunbao.push.MyBroadcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->              
+                <category android:name="com.what.yunbao" />
+            </intent-filter>
+        </receiver>
+   
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.what.yunbao" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    
+        
+        <!-- Required SDK 核心功能--> 
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="681fafa16e7b507f0a79884a" /> <!--  </>值来自开发者平台取得的AppKey-->
+        
+         
+		<!-- 
+			微博
+		 -->
+		<activity
+            android:name="com.what.weibo.WeiboMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">
+        </activity>  
+        
+        <activity
+            android:name="com.what.weibo.WeiBoRequestMessageActivity" 
+            android:configChanges="keyboardHidden|orientation" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme">       
+        </activity>  
+
+        <activity 
+            android:name="com.what.weibo.Authorize" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme"/>
+        
+         <activity 
+            android:name="com.what.weibo.TestShareActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/CentAppTheme"/>
+         
+         <!-- 
+			用户反馈
+		 -->
+        <!-- Fb Activitys Start -->
+
+        <activity android:name="com.umeng.fb.ConversationActivity" android:theme="@style/CentAppTheme" />
+        <activity android:name="com.umeng.fb.ContactActivity"  android:theme="@style/CentAppTheme"/>
+
+        <!-- Fb Activitys End -->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="51e34d7856240b560c0cfefb" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+        
+    </application>
+      
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>	
+	<uses-permission android:name="android.permission.ACCESS_GPS"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET" /> 
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/> 
+	
+	<!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.what.yunbao.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+
+    
+    
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+</manifest>

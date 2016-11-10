@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/upomp_lthj_info_layout" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/tableLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/upomp_lthj_vertical_line" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="@dimen/upomp_lthj_infobutton_w"
+            android:layout_height="@dimen/upomp_lthj_infobutton_h"
+            android:layout_margin="@dimen/upomp_lthj_infobutton_margin"
+            android:background="@drawable/upomp_lthj_info_down_btn" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        style="@style/upomp_lthj_tablelayout"
+        android:layout_toLeftOf="@+id/linearLayout1" >
+
+        <TableRow style="@style/upomp_lthj_tablerow" >
+
+            <TextView
+                android:id="@+id/TextView1"
+                style="@style/upomp_lthj_info_textview"
+                android:text="商户名称  " />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/upomp_lthj_info_textview" />
+        </TableRow>
+
+        <TableRow style="@style/upomp_lthj_tablerow" >
+
+            <TextView
+                style="@style/upomp_lthj_info_textview"
+                android:text="应付金额  " />
+
+            <TextView
+                style="@style/upomp_lthj_info_textview"
+                android:id="@+id/textView2"
+                android:textColor="@drawable/upomp_lthj_red" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/upomp_lthj_tablerow"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/upomp_lthj_info_textview"
+                android:text="订单编号  " />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/upomp_lthj_info_textview" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            style="@style/upomp_lthj_tablerow"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/upomp_lthj_info_textview"
+                android:text="交易时间  " />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/upomp_lthj_info_textview" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_recycle_bmp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_g"
+    android:orientation="vertical" >
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	
+	    <ImageView
+	        android:id="@+id/iv_recycle_bmp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="206dp"
+	        android:background="@drawable/bg_gt"
+	        android:scaleType="centerCrop" />
+	
+	    <RelativeLayout
+	        android:id="@+id/relativeLayout1"
+	        android:layout_width="230dp"
+	        android:layout_height="58dp"
+	        android:layout_centerInParent="true"
+	        android:background="#99EAEAEA" >
+	
+	        <ImageView
+	            android:id="@+id/iv_person_logo"
+	            android:layout_width="58dp"
+	            android:layout_height="fill_parent"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="16dp"
+	            android:src="@drawable/app_logo" />
+	
+	        <TextView
+	            android:id="@+id/tv_person_mycommucity"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="32dp"
+	            android:text="我的社区"
+	            android:textSize="23sp" />
+	    </RelativeLayout>
+
+
+
+
+	</RelativeLayout>
+	
+    <GridView
+        android:id="@+id/gv_person_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:verticalSpacing="20dp"
+        android:listSelector="#00000000">
+
+    </GridView>
+</LinearLayout>

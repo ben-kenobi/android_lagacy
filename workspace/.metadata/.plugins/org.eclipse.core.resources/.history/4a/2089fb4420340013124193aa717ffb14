@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:background="@drawable/selector_golden_framelayout"
+    android:orientation="vertical"
+    android:padding="12dp" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="6dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_dialog_dialer" />
+
+    <com.yf.accountmanager.ui.AutoSplitTextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:text="bluetoothkaljfekfffffwakdfejf kjwl开发金额口连接无法看文件反馈文件额疯狂链接额矿务局浪费飞l" />
+
+</LinearLayout>

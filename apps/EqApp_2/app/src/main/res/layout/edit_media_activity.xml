@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+
+                android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#000"
+
+                android:layout_height="match_parent">
+
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#000"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="个人设置"
+        custom:titleSize="6sp" />
+
+
+    <ImageView
+        android:id="@+id/iv01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#fff"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/loading_icon"
+        />
+    <ImageView
+        android:id="@+id/videoflag"
+        android:src="@mipmap/video_flag"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/iv01"
+        android:layout_alignLeft="@+id/iv01"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+android:orientation="vertical"
+        android:layout_height="150dp">
+<TextView
+    android:id="@+id/location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="4dp"
+    android:textColor="#aaa"
+    android:text="地点 2011-11-11 11:11:11"
+    android:textSize="14dp"
+   />
+        
+        <EditText
+            android:id="@+id/et01"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/selector_color_state_list2"
+            android:textSize="17dp"
+            android:paddingLeft="8dp"
+            android:text="werwerw"
+            android:background="@drawable/edittext_blackbg_selector"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="top|left"
+            android:enabled="false"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/operation"
+            android:layout_width="match_parent"
+            android:background="#222"
+            android:layout_height="44dp">
+
+           <Button
+               android:id="@+id/cancel"
+               android:layout_width="80dp"
+               android:layout_height="match_parent"
+               android:text="取消"
+               android:onClick="onClick"
+               android:background="@null"
+               android:visibility="gone"
+               android:textColor="@color/tv_state_list"
+               android:textSize="18dp"
+               />
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="编辑"
+                android:onClick="onClick"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:textColor="@color/tv_state_list"
+                android:textSize="18dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+
+
+
+
+</RelativeLayout>

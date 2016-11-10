@@ -1,0 +1,1020 @@
+package com.yf.filesystem;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.method.ArrowKeyMovementMethod;
+import android.text.method.LinkMovementMethod;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.URLSpan;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckedTextView;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
+
+import com.yf.accountmanager.R;
+import com.yf.accountmanager.common.IConstants;
+import com.yf.accountmanager.ui.FocusedEditText;
+import com.yf.accountmanager.ui.ListenInterceptTouchEventRelativeLayout;
+import com.yf.accountmanager.util.CommonUtils;
+import com.yf.accountmanager.util.DeviceInfoUtil;
+import com.yf.accountmanager.util.FileUtils.FileSaver;
+import com.yf.accountmanager.util.MenuUtil;
+import com.yf.accountmanager.util.ResourcesUtils;
+import com.yf.accountmanager.util.SharePrefUtil;
+import com.yf.accountmanager.util.StringUtil;
+
+public class FileEditorActivity extends BaseSaveasActivity implements
+		OnClickListener, Runnable, TextWatcher, OnGestureListener {
+
+	private int minTextSize = 9,
+
+	screenHeight = DeviceInfoUtil.getScreenHeight(),
+
+	dp_40 = ResourcesUtils.getDimension(R.dimen.dp_40),
+	
+	dp_30 = ResourcesUtils.getDimension(R.dimen.dp_30);
+			
+	
+
+	public int resId = R.layout.activity_fileeditor,
+			selectedMenuIndicator = android.R.drawable.presence_online;
+
+	public File file;
+
+	private ListenInterceptTouchEventRelativeLayout container;
+
+	private EditText findField, pageField, replaceField;
+
+	private FocusedEditText content;
+
+	private View findFieldDisposer, replaceFieldDisposer;
+
+	private Editable contentEditable;
+
+	private ViewGroup findNreplaceContainer, seekerContainer, footer,
+			contentContainer, findOptionsContainer;
+
+	private SeekBar textsizeController;
+
+	private ImageButton nextPage, prevPage, goPage, dropdown;
+
+	private Button replaceAll, find, replace;
+
+	private CheckedTextView caseSensitive, wrapSearch, reverse;
+
+	private TextView pageInfo;
+
+	private MenuItem[] codecMenuItems = new MenuItem[3],
+
+	pagesizeMenuItems = new MenuItem[3];
+
+	private String[] codecValue = new String[] { "UTF-8", "GBK", "HEX" };
+
+	private int codecIndex = 0,
+
+	pagesizeIndex = 0;
+
+	private byte[] buf;
+
+	private int count, curpage, totalPages, bottomCoordinate;
+
+	private InputMethodManager imm;
+
+	private BackgroundColorSpan contentBGSpan = new BackgroundColorSpan(
+			Color.argb(0x88, 0x00, 0xaa, 0xdd));
+
+	private boolean isResume, contentChanged = false;
+
+	public Runnable resetContentFocusibilityRunnable;
+
+	public GestureDetector gestureDetector;
+
+	public long lastFlingGestureTime;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		file = (File) getIntent().getSerializableExtra(IConstants.FILE);
+		if (file == null) {
+			Uri uri = getIntent().getData();
+			if (uri != null)
+				file = new File(uri.getPath());
+		}
+		if (file == null || !file.exists() || !file.canRead()) {
+			finish();
+			return;
+		}
+		MenuUtil.commonActionBarDisplayOption(this);
+		setContentView(resId);
+		baseProcedure();
+		textsizeController.setMax(30);
+		textsizeController.setProgress(SharePrefUtil.getFileEditorTextsize()
+				- minTextSize);
+		gestureDetector = new GestureDetector(this, this);
+	}
+
+	private void baseProcedure() {
+		init();
+		try {
+			initMainContent();
+			bindListeners();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void init() {
+		container = (ListenInterceptTouchEventRelativeLayout) findViewById(R.id.container);
+		content = (FocusedEditText) findViewById(R.id.editText1);
+		inactivateContent();
+		resetContentFocusibilityRunnable = new Runnable() {
+			public void run() {
+				content.focused = false;
+			}
+		};
+
+		findField = (EditText) findViewById(R.id.findField);
+		replaceField = (EditText) findViewById(R.id.replaceField);
+		findNreplaceContainer = (ViewGroup) findViewById(R.id.findNreplace);
+		seekerContainer = (ViewGroup) findViewById(R.id.frameLayout1);
+		findOptionsContainer = (ViewGroup) findViewById(R.id.findOptions);
+		seekerContainer.setVisibility(View.GONE);
+		findNreplaceContainer.setVisibility(View.GONE);
+		findOptionsContainer.setVisibility(View.GONE);
+		findFieldDisposer = findViewById(R.id.findFieldDisposer);
+		replaceFieldDisposer = findViewById(R.id.replaceFieldDisposer);
+		textsizeController = (SeekBar) findViewById(R.id.seekBar1);
+		footer = (ViewGroup) findViewById(R.id.relativeLayout2);
+		prevPage = (ImageButton) findViewById(R.id.imageButton5);
+		nextPage = (ImageButton) findViewById(R.id.imageButton6);
+		pageInfo = (TextView) findViewById(R.id.textView1);
+		pageField = (EditText) findViewById(R.id.editText3);
+		goPage = (ImageButton) findViewById(R.id.imageButton3);
+		contentContainer = (ViewGroup) findViewById(R.id.scrollView1);
+		imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		dropdown = (ImageButton) findViewById(R.id.dropdown);
+		replaceAll = (Button) findViewById(R.id.replaceAll);
+		find = (Button) findViewById(R.id.find);
+		replace = (Button) findViewById(R.id.replace);
+		replace.setEnabled(false);
+		caseSensitive = (CheckedTextView) findViewById(R.id.caseSensitive);
+		wrapSearch = (CheckedTextView) findViewById(R.id.wrapSearch);
+		reverse = (CheckedTextView) findViewById(R.id.reverse);
+	}
+
+	private void initMainContent() throws Exception {
+		setPagesizeIndex(SharePrefUtil.getFileEditorPagesize(), true);
+		showFooter();
+	}
+
+	private void updateFileInfo() throws Exception {
+		long length = file.length();
+		totalPages = (int) (length % buf.length == 0 ? length / buf.length
+				: (length / buf.length + 1));
+		updateContent(curpage);
+	}
+
+	private void setPagesizeIndex(int index, boolean forceUpdate) {
+		if (pagesizeIndex == index && !forceUpdate)
+			return;
+		if (index < 0 || index > 2)
+			index = 0;
+		pagesizeIndex = index;
+		if (pagesizeIndex == 1)
+			buf = new byte[1024 * 8];
+		else if (pagesizeIndex == 2)
+			buf = new byte[1024 * 16];
+		else
+			buf = new byte[1024 * 4];
+		try {
+			updateFileInfo();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void bindListeners() {
+		CommonUtils.bindEditTextNtextDisposer(findField, findFieldDisposer);
+		CommonUtils.bindEditTextNtextDisposer(replaceField,
+				replaceFieldDisposer);
+		caseSensitive.setOnClickListener(this);
+		wrapSearch.setOnClickListener(this);
+		reverse.setOnClickListener(this);
+		replace.setOnClickListener(this);
+		find.setOnClickListener(this);
+		replaceAll.setOnClickListener(this);
+		textsizeController
+				.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+					public void onStopTrackingTouch(SeekBar seekBar) {}
+					public void onStartTrackingTouch(SeekBar seekBar) {}
+
+					public void onProgressChanged(SeekBar seekBar,
+							int progress, boolean fromUser) {
+						setTextSize(progress + minTextSize);
+					}
+				});
+		prevPage.setOnClickListener(this);
+		nextPage.setOnClickListener(this);
+		goPage.setOnClickListener(this);
+		content.setOnClickListener(this);
+		OnTouchListener otl = new OnTouchListener() {
+			public boolean onTouch(View v, MotionEvent event) {
+				int action = event.getAction();
+				if (v == container && action == MotionEvent.ACTION_UP) {
+					if (event.getY() >= container.getBottom() - dp_40) {
+						showFooter();
+					}
+				}
+				return true;
+			}
+		};
+		container.setInterceptTouchEventListener(otl);
+		content.addTextChangedListener(this);
+		dropdown.setOnClickListener(this);
+		findField.addTextChangedListener(new TextWatcher() {
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+
+			}
+
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+
+			}
+
+			public void afterTextChanged(Editable s) {
+				String tar = s.toString();
+				findText(caseSensitive.isChecked(), false, false, 0, tar);
+			}
+		});
+	}
+
+	/**
+	 * findText
+	 */
+	private void findText() {
+		String tar = findField.getText().toString();
+		findText(caseSensitive.isChecked(), wrapSearch.isChecked(),
+				reverse.isChecked(), content.getSelectionEnd(), tar);
+	}
+
+	private void findText(boolean caseSensitive, boolean wrapSearch,
+			boolean reverse, int startOffset, String tar) {
+		int index;
+		String contentText = contentEditable.toString();
+		if (reverse) {
+			startOffset = startOffset - 1;
+			if (caseSensitive) {
+				index = StringUtil.lastIndexOf(contentText, startOffset - 1,
+						tar, wrapSearch);
+			} else {
+				index = StringUtil.ignoreCaseLastIndexOf(contentText,
+						startOffset - 1, tar, wrapSearch);
+
+			}
+		} else {
+			startOffset = startOffset - tar.length() + 1;
+			if (caseSensitive) {
+				index = StringUtil.indexOf(contentText, startOffset, tar,
+						wrapSearch);
+			} else {
+				index = StringUtil.ignoreCaseIndexOf(contentText, startOffset,
+						tar, wrapSearch);
+			}
+		}
+
+		findText(index, tar.length());
+	}
+
+	private void findText(int index, int length) {
+		if (length == 0) {
+			removeContentBGSpan();
+			setSelectionOfContent(0);
+		} else if (index >= 0) {
+			removeContentBGSpan();
+			setSelectionOfContent(index + length);
+			setContentBGSpan(index, length);
+		}
+		// else
+		// content.setSelection(content.length());
+	}
+
+	private void setSelectionOfContent(int index) {
+		content.focused = true;
+		content.setSelection(index);
+		IConstants.MAIN_HANDLER.postDelayed(resetContentFocusibilityRunnable,
+				50);
+	}
+
+	private void setContentBGSpan(int index, int length) {
+		contentEditable.setSpan(contentBGSpan, index, index + length,
+				Editable.SPAN_EXCLUSIVE_EXCLUSIVE);
+		replace.setEnabled(true);
+	}
+
+	private void removeContentBGSpan() {
+		contentEditable.removeSpan(contentBGSpan);
+		replace.setEnabled(false);
+	}
+
+	private void replaceText() {
+
+		if (contentEditable.getSpanStart(contentBGSpan) >= 0) {
+			contentEditable.replace(
+					contentEditable.getSpanStart(contentBGSpan),
+					contentEditable.getSpanEnd(contentBGSpan), replaceField
+							.getText().toString());
+			// contentEditable.removeSpan(contentBGSpan);
+		} else
+			replace.setEnabled(false);
+	}
+
+	private void doReplaceAll() {
+		if (caseSensitive.isChecked()) {
+			replaceAll();
+		} else {
+			ignoreCaseReplaceAll();
+		}
+	}
+
+	private void replaceAll() {
+		setContent(contentEditable.toString().replaceAll(
+				findField.getText().toString(),
+				replaceField.getText().toString()));
+	}
+
+	private void ignoreCaseReplaceAll() {
+		setContent(StringUtil.ignoreCaseReplaceAll(contentEditable.toString(),
+				findField.getText().toString(), replaceField.getText()
+						.toString()));
+	}
+
+	/**
+	 * private void ignoreCaseReplaceAll() { String tar =
+	 * findField.getText().toString(); String replacement =
+	 * replaceField.getText().toString(); if (TextUtils.isEmpty(tar)) {
+	 * replaceAll(); } else { char c = tar.charAt(0); for (int i = 0; i <
+	 * contentEditable.length(); i++) { if
+	 * (StringUtil.equalsIgnoreCase(contentEditable.charAt(i), c)) { int j; for
+	 * (j = 1; j < tar.length(); j++) { int k = i + j; if (k >
+	 * contentEditable.length() - 1 || !StringUtil.equalsIgnoreCase(
+	 * contentEditable.charAt(k), tar.charAt(j))) break; } if (j ==
+	 * tar.length()) { contentEditable.replace(i, i + j, replacement); i = i +
+	 * replacement.length()-1; } } } } }
+	 */
+
+	/**
+	 * codec
+	 * 
+	 * @param charset
+	 * @throws Exception
+	 */
+
+	private void setContentText(String charset) throws Exception {
+		if (count <= 0 || count > buf.length)
+			setContent("");
+		else {
+			setContent(new String(buf, 0, count, charset));
+			contentContainer.scrollTo(0, 0);
+		}
+	}
+
+	private void setContentAsHexText() {
+		if (count <= 0 || count > buf.length)
+			setContent("");
+		else {
+			setContent(StringUtil.bytesToHexStr(buf, count, "  "));
+			contentContainer.scrollTo(0, 0);
+		}
+	}
+
+	private void setContent(String content) {
+		this.content.setText(content);
+		contentEditable = this.content.getText();
+		contentChanged = false;
+		int index = 0, tail;
+		while ((index = StringUtil.ignoreCaseIndexOf(content, index, "http://",
+				false)) != -1) {
+			tail = StringUtil.indexOfUrlBreakSymbo(content, index + 7);
+			if (tail == -1)
+				tail = content.length();
+			contentEditable.setSpan(
+					new URLSpan(content.substring(index, tail)), index, tail,
+					Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			index = tail + 1;
+		}
+
+		// TODO
+	}
+
+	private void setCodec(int index, boolean update) {
+		if (index < 0 || index > codecValue.length - 1
+				|| (index == codecIndex && !update))
+			return;
+		codecIndex = index;
+		if (index == 2) {
+			setContentAsHexText();
+		} else {
+			try {
+				setContentText(codecValue[index]);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private void setTextSize(int textsize) {
+		content.setTextSize(textsize);
+	}
+
+	/**
+	 * content
+	 * 
+	 * @param curPage
+	 * @throws Exception
+	 */
+	private void updateContent(int curPage) throws Exception {
+		if (curPage > totalPages)
+			curPage = totalPages;
+		if (curPage < 1)
+			curPage = 1;
+
+		this.curpage = curPage;
+		FileInputStream fis = new FileInputStream(file);
+		fis.skip(buf.length * (curpage - 1));
+		count = fis.read(buf);
+		fis.close();
+		setCodec(codecIndex, true);
+		updatePageInfo();
+	}
+
+	private void nextPage() throws Exception {
+		if (curpage < totalPages)
+			updateContent(curpage + 1);
+	}
+
+	private void prevPage() throws Exception {
+		if (curpage > 1)
+			updateContent(curpage - 1);
+	}
+
+	private void updatePageInfo() {
+		prevPage.setEnabled(curpage > 1);
+		nextPage.setEnabled(curpage < totalPages);
+		pageInfo.setText(curpage + " / " + totalPages);
+		pageField.setText(curpage + "");
+		pageField.setSelection(pageField.length());
+	}
+
+	/***
+	 * override
+	 */
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		isResume = true;
+		IConstants.MAIN_HANDLER.postDelayed(new Runnable() {
+			public void run() {
+				bottomCoordinate = container.getBottom();
+				if (bottomCoordinate == 0 && isResume) {
+					IConstants.MAIN_HANDLER.postDelayed(this, 200);
+				}
+			}
+		}, 200);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		isResume = false;
+		SharePrefUtil.saveFileEditorTextsize(textsizeController.getProgress()
+				+ minTextSize);
+		SharePrefUtil.saveFileEditorPagesize(pagesizeIndex);
+	}
+
+	@Override
+	public void onClick(View v) {
+		try {
+			if (v == prevPage) {
+				prevPage();
+			} else if (v == nextPage) {
+				nextPage();
+			} else if (v == goPage) {
+				String page = pageField.getText().toString();
+				updateContent(TextUtils.isEmpty(page) ? 1 : StringUtil
+						.isNumber(page) ? Integer.parseInt(page) : 1);
+			} else if (v == dropdown) {
+				switchFindOptionContainer();
+			} else if (v == wrapSearch || v == caseSensitive || v == reverse) {
+				CheckedTextView ctv = (CheckedTextView) v;
+				ctv.setChecked(!ctv.isChecked());
+			} else if (v == replace) {
+				replaceText();
+			} else if (v == find) {
+				findText();
+			} else if (v == replaceAll) {
+				doReplaceAll();
+			} else if (v == content) {
+				content.requestFocus();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.fileeditor_menu, menu);
+		codecMenuItems[0] = menu.findItem(R.id.utf8);
+		codecMenuItems[1] = menu.findItem(R.id.gbk);
+		codecMenuItems[2] = menu.findItem(R.id.hextext);
+
+		pagesizeMenuItems[0] = menu.findItem(R.id.kb_4);
+		pagesizeMenuItems[1] = menu.findItem(R.id.kb_8);
+		pagesizeMenuItems[2] = menu.findItem(R.id.kb_16);
+		return true;
+	}
+
+	private void setCodecMenuIndicator(int index) {
+		for (int i = 0; i < codecMenuItems.length; i++) {
+			MenuItem item = codecMenuItems[i];
+			if (i == index)
+				item.setIcon(selectedMenuIndicator);
+			else
+				item.setIcon(null);
+		}
+	}
+
+	private void setPagesizeMenuIndicator(int index) {
+		for (int i = 0; i < pagesizeMenuItems.length; i++) {
+			MenuItem item = pagesizeMenuItems[i];
+			if (i == index)
+				item.setIcon(selectedMenuIndicator);
+			else
+				item.setIcon(null);
+		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		if (id == android.R.id.home) {
+			backOperation();
+		} else if (id == R.id.textsize) {
+			switchSeekerContainer();
+		} else if (id == R.id.edit) {
+			switchContentState();
+		} else if (id == R.id.decoding) {
+			setCodecMenuIndicator(codecIndex);
+		} else if (id == R.id.find) {
+			switchFindContainer();
+		} else if (id == R.id.utf8) {
+			setCodec(0, false);
+		} else if (id == R.id.gbk) {
+			setCodec(1, false);
+		} else if (id == R.id.hextext) {
+			setCodec(2, false);
+		} else if (id == R.id.save) {
+			save();
+		} else if (id == R.id.saveas) {
+			onSaveas(codecIndex);
+		} else if (id == R.id.pagesize) {
+			setPagesizeMenuIndicator(pagesizeIndex);
+		} else if (id == R.id.kb_4) {
+			setPagesizeIndex(0, false);
+		} else if (id == R.id.kb_8) {
+			setPagesizeIndex(1, false);
+		} else if (id == R.id.kb_16) {
+			setPagesizeIndex(2, false);
+		}
+
+		return true;
+	}
+
+	protected void backOperation() {
+		if (findNreplaceContainer.getVisibility() == View.VISIBLE
+				|| seekerContainer.getVisibility() == View.VISIBLE) {
+			if (findNreplaceContainer.getVisibility() == View.VISIBLE)
+				collapseFindContainer();
+			if (seekerContainer.getVisibility() == View.VISIBLE)
+				collapseSeekerContainer();
+		} else if (content.isActivated()) {
+			switchContentState();
+		} else {
+			finish();
+		}
+	}
+
+	/**
+	 * content
+	 */
+	private void switchContentState() {
+		if (content.isActivated()) {
+			inactivateContent();
+		} else {
+			activateContent();
+		}
+	}
+
+	// TODO
+	private void activateContent() {
+		content.setActivated(true);
+		content.setFocusableInTouchMode(true);
+		
+		//add later(unchecked)(removed)
+//		content.setEnabled(true);
+		
+		// ((ViewGroup)content.getParent()).setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+
+		// content.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE|InputType.TYPE_CLASS_TEXT);
+		this.content.setMovementMethod(ArrowKeyMovementMethod.getInstance());
+	}
+
+	private void inactivateContent() {
+		if (contentChanged)
+			initNshowSaveConfirmDialog(codecIndex);
+		content.setActivated(false);
+		content.setFocusable(false);
+		
+		//add later(unchecked)(removed)
+//		content.setEnabled(false);
+		
+		// ((ViewGroup)content.getParent()).setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+		// content.clearFocus();
+
+		// content.setInputType(InputType.TYPE_NULL);
+		// content.setSingleLine(false);
+		MenuUtil.hideSoftInput(content, this);
+		this.content.setMovementMethod(LinkMovementMethod.getInstance());
+
+	}
+
+	/**
+	 * findContainer
+	 */
+
+	private void switchFindContainer() {
+		if (findNreplaceContainer.getVisibility() == View.VISIBLE)
+			collapseFindContainer();
+		else
+			showFindContainer();
+	}
+
+	private void collapseFindContainer() {
+		//add later(for link work )
+		content.setEnabled(true);
+		findNreplaceContainer.setVisibility(View.GONE);
+		MenuUtil.hideSoftInput(findField, this);
+	}
+
+	private void showFindContainer() {
+		findNreplaceContainer.setVisibility(View.VISIBLE);
+		
+		//add later(for sequence search work )
+		if(findOptionsContainer.getVisibility()==View.VISIBLE)
+			content.setEnabled(false);
+		else 
+			content.setEnabled(true);
+		if (findField.requestFocus())
+			MenuUtil.showSoftInput(findField, this);
+	}
+
+	/**
+	 * seekerContainer
+	 */
+	private void switchSeekerContainer() {
+		if (seekerContainer.getVisibility() == View.VISIBLE)
+			collapseSeekerContainer();
+		else
+			showSeekerContainer();
+
+	}
+
+	private void collapseSeekerContainer() {
+		seekerContainer.setVisibility(View.GONE);
+	}
+
+	private void showSeekerContainer() {
+		collapseFindOptionsContainer();
+		seekerContainer.setVisibility(View.VISIBLE);
+	}
+
+	private void switchFindOptionContainer() {
+		if (findOptionsContainer.getVisibility() == View.VISIBLE)
+			collapseFindOptionsContainer();
+		else
+			showFindOptionsContainer();
+		
+	}
+
+	private void collapseFindOptionsContainer() {
+		//add later(for link work )
+		content.setEnabled(true);
+		findOptionsContainer.setVisibility(View.GONE);
+		dropdown.setImageResource(R.drawable.rotate_scrollup);
+	}
+
+	private void showFindOptionsContainer() {
+		//add later(for sequence search work )
+		content.setEnabled(false);
+		collapseSeekerContainer();
+		findOptionsContainer.setVisibility(View.VISIBLE);
+		dropdown.setImageResource(R.drawable.scroll_up);
+	}
+
+	private void collapseFooter() {
+		footer.setVisibility(View.GONE);
+	}
+
+	private void showFooter() {
+		IConstants.MAIN_HANDLER.removeCallbacks(this);
+		footer.setVisibility(View.VISIBLE);
+		post();
+	}
+
+	private void post() {
+		IConstants.MAIN_HANDLER.postDelayed(this, 4000);
+	}
+
+	public void run() {
+		if (imm.isActive(pageField)
+				&& container.getBottom() != bottomCoordinate) {
+			post();
+		} else
+			collapseFooter();
+	}
+
+	@Override
+	public void afterTextChanged(Editable s) {
+		if (s.getSpanStart(contentBGSpan) == -1) {
+			replace.setEnabled(false);
+		}
+	}
+
+	@Override
+	public void beforeTextChanged(CharSequence s, int start, int count,
+			int after) {
+	}
+
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
+		contentChanged = true;
+	}
+	
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		outState.putInt(key, value);
+		super.onSaveInstanceState(outState);
+	}
+	@Override
+	protected void doOnDestroy() {
+	}
+
+	// TODO
+	/**
+	 * save
+	 */
+	@Override
+	protected void save() {
+		if (!file.canWrite()) {
+			CommonUtils.toast("该文件为只读文件");
+			return;
+		}
+		String str = content.getText().toString();
+		if (codecIndex == 0) {
+			utf8FileSave(str);
+		} else if (codecIndex == 1) {
+			gbkFileSave(str);
+		} else if (codecIndex == 2) {
+			hextextFileSave(str);
+		}
+	}
+
+	private void encodeContentNsave() {
+		try {
+			byte[] newContentBytes = content.getText().toString()
+					.getBytes(codecValue[codecIndex]);
+			doSave(newContentBytes);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void messyCodeWarning() {
+		initNshowWarningDialog("含乱码或非文本文件,保存后将无法恢复\n确定保存?",
+				new OnClickListener() {
+					public void onClick(View v) {
+						warningDialog.dismiss();
+						encodeContentNsave();
+					}
+				});
+	}
+
+	private void utf8FileSave(String str) {
+		if (StringUtil.hasMessyCode(str)) {
+			messyCodeWarning();
+		} else {
+			encodeContentNsave();
+		}
+	}
+
+	private void gbkFileSave(String str) {
+		if (StringUtil.hasMessyCode(str)) {
+			messyCodeWarning();
+		} else {
+			encodeContentNsave();
+		}
+	}
+
+	private void hextextFileSave(String str) {
+		byte[] newContentBytes = StringUtil.hexStrToBytes(str);
+		if (newContentBytes == null) {
+			CommonUtils.toast("输入的16进制数字格式有误,请检查");
+		} else {
+			doSave(newContentBytes);
+		}
+	}
+
+	private void doSave(byte[] newContentBytes) {
+		fileSaver = new FileSaver(file, (curpage - 1) * buf.length, buf.length,
+				newContentBytes);
+		initNshowProgressDialog();
+		IConstants.THREAD_POOL.submit(new Runnable() {
+			public void run() {
+				fileSaver.run();
+				IConstants.MAIN_HANDLER.post(new Runnable() {
+					public void run() {
+						try {
+							updateFileInfo();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+				progressDialog.dismiss();
+			}
+		});
+
+	}
+
+	/**
+	 * saveas
+	 */
+	@Override
+	protected void saveas(File dest, String charset) {
+		if (file.equals(dest)) {
+			conflifctWarning(dest, charset);
+		} else {
+			encodeContentNsaveas(dest, charset);
+		}
+	}
+
+	private void conflifctWarning(final File dest, final String charset) {
+		initNshowWarningDialog("目标文件与源文件冲突\n确定覆盖？", new OnClickListener() {
+			public void onClick(View v) {
+				warningDialog.dismiss();
+				encodeContentNsaveas(dest, charset);
+			}
+		});
+	}
+
+	private void encodeContentNsaveas(File dest, String charset) {
+		if (file.equals(dest) && !file.canWrite()) {
+			CommonUtils.toast("该文件为只读文件");
+			return;
+		}
+		String str = content.getText().toString();
+		if (codecIndex == 2) {
+			hextextFileSaveas(dest, str);
+		} else {
+			try {
+				doSaveas(dest, str.getBytes(charset));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private void hextextFileSaveas(File dest, String str) {
+		byte[] newContentBytes = StringUtil.hexStrToBytes(str);
+		if (newContentBytes == null) {
+			CommonUtils.toast("输入的16进制数字格式有误,请检查");
+		} else {
+			doSaveas(dest, newContentBytes);
+		}
+	}
+
+	private void doSaveas(final File dest, byte[] newContentBytes) {
+		fileSaver = new FileSaver(file, dest, (curpage - 1) * buf.length,
+				buf.length, newContentBytes);
+		initNshowProgressDialog();
+		IConstants.THREAD_POOL.submit(new Runnable() {
+			public void run() {
+				fileSaver.run();
+				IConstants.MAIN_HANDLER.post(new Runnable() {
+					public void run() {
+						CommonUtils.toast("操作完成");
+						fileListAdapter.refresh(null);
+						if (file.equals(dest))
+							try {
+								updateFileInfo();
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+					}
+				});
+				progressDialog.dismiss();
+			}
+		});
+
+	}
+
+	// GestureEvent
+
+	@Override
+	public boolean onDown(MotionEvent e) {
+		return true;
+	}
+
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+			float velocityY) {
+		long now = System.currentTimeMillis();
+		if (now - lastFlingGestureTime < IConstants.minGestureInterval)
+			return true;
+		float x1, x2, y1, y2;
+		x1 = e1.getX();
+		x2 = e2.getX();
+		y1 = e1.getY();
+		y2 = e2.getY();
+//		System.out.println(dp_30+":"+dp_40+"  @FileEditorActivity");
+		if (Math.abs(y1 - y2) < dp_30) {
+			lastFlingGestureTime = now;
+			try {
+				if (x1 - x2 > dp_40) {
+					nextPage();
+				} else if (x1 - x2 < -dp_40) {
+					prevPage();
+				}
+				showFooter();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public void onLongPress(MotionEvent e) {
+
+	}
+
+	@Override
+	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
+			float distanceY) {
+		return true;
+	}
+
+	@Override
+	public void onShowPress(MotionEvent e) {
+
+	}
+
+	@Override
+	public boolean onSingleTapUp(MotionEvent e) {
+		return true;
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		long now = System.currentTimeMillis();
+		if (now - lastFlingGestureTime > IConstants.minGestureInterval)
+			gestureDetector.onTouchEvent(ev);
+		return super.dispatchTouchEvent(ev);
+	}
+
+}

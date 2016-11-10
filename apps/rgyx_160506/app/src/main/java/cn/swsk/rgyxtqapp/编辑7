@@ -1,0 +1,509 @@
+
+    <key>filesystemIntentAction</key>
+	<string>com.yf.filesystem.FILESYSTEM</string>
+
+    <key>app_name</key>
+	<string>A-M</string>
+
+    <key>ieditor</key>
+	<string>.IEditor</string>
+
+    <key>action_settings</key>
+	<string>Settings</string>
+
+    <key>hello_world</key>
+	<string>Hello world!</string>
+
+    <key>search</key>
+	<string>查找</string>
+
+    <key>newDir</key>
+	<string>新建文件夹</string>
+
+     <key>mkDirHint</key>
+	<string>输入要创建的文件夹名称</string>
+
+    <key>md5sum</key>
+	<string>md5摘要</string>
+
+     <key>searchScope</key>
+	<string>查找范围：</string>
+
+    <key>mark</key>
+	<string>已标记</string>
+
+    <key>settings</key>
+	<string>设置</string>
+
+    <key>usage</key>
+	<string>使用情况</string>
+
+      <key>find</key>
+	<string>发现</string>
+
+    <key>sort</key>
+	<string>排序</string>
+
+    <key>screen</key>
+	<string>筛选</string>
+
+    <key>add</key>
+	<string>添加</string>
+
+    <key>delete</key>
+	<string>删除</string>
+
+    <key>more</key>
+	<string>更多</string>
+
+    <key>coming</key>
+	<string>coming soon</string>
+
+    <key>modifyAccessKey</key>
+	<string>修改密码</string>
+
+    <key>edit</key>
+	<string>编辑</string>
+
+     <key>save</key>
+	<string>保存</string>
+
+     <key>saveas</key>
+	<string>另存为</string>
+
+    <key>textsize</key>
+	<string>字体大小</string>
+
+        <key>pagesize</key>
+	<string>每页字节数</string>
+
+    <key>kb_4</key>
+	<string>4 KB</string>
+
+    <key>kb_8</key>
+	<string>8 KB</string>
+
+    <key>kb_16</key>
+	<string>16 KB</string>
+
+    <key>textsize_l</key>
+	<string>大</string>
+
+    <key>textsize_m</key>
+	<string>正常</string>
+
+    <key>textsize_s</key>
+	<string>小</string>
+
+    <key>share</key>
+	<string>分享</string>
+
+    <key>view</key>
+	<string>查看</string>
+
+    <key>decoding</key>
+	<string>解码方式</string>
+
+     <key>utf8</key>
+	<string>UTF-8</string>
+
+      <key>gbk</key>
+	<string>GBK</string>
+
+       <key>hextext</key>
+	<string>纯字节码</string>
+
+    <key>shareTo</key>
+	<string>分享到</string>
+
+    <key>importEntries</key>
+	<string>导入条目</string>
+
+    <key>exportEntries</key>
+	<string>导出条目</string>
+
+    <key>mkdir</key>
+	<string>创建文件夹</string>
+
+    <key>localService</key>
+	<string>本机服务</string>
+
+    <key>fileSystem</key>
+	<string>文件系统</string>
+
+    <key>deleteFileNotice</key>
+	<string>确定删除文件 %s ？</string>
+
+    <key>deleteDirNotice</key>
+	<string>确定删除文件夹 %s 及其下的所有文件？</string>
+
+    <key>multiDeleteNotice</key>
+	<string>正在删除文件 。。 。</string>
+
+    <key>multiDeleteNotice2</key>
+	<string>正在删除文件 ，忽略 %s 个无法删除的文件(夹)</string>
+
+    <key>contacts</key>
+	<string>联系人</string>
+
+    <key>confirm</key>
+	<string>确 定</string>
+
+    <key>fileOnly</key>
+	<string>只显示文件</string>
+
+    <key>dirOnly</key>
+	<string>只显示文件夹</string>
+
+    <key>systemOnly</key>
+	<string>只显示系统文件</string>
+
+    <key>writeableOnly</key>
+	<string>只显示可写入</string>
+
+    <key>filetype</key>
+	<string>类型：</string>
+
+    <key>filelocation</key>
+	<string>位置：</string>
+
+    <key>filesize</key>
+	<string>大小：</string>
+
+    <key>modifytime</key>
+	<string>修改时间：</string>
+
+    <key>properties</key>
+	<string>属性：</string>
+
+    <key>apply</key>
+	<string>应 用</string>
+
+    <key>done</key>
+	<string>完    成</string>
+
+    <key>readable</key>
+	<string>可读取</string>
+
+    <key>writeable</key>
+	<string>可写入</string>
+
+    <key>executable</key>
+	<string>可执行</string>
+
+    <key>filename</key>
+	<string>文件名</string>
+
+    <key>empty</key>
+	<string>></string>
+
+    <key>enableAccessKey</key>
+	<string>启用访问验证</string>
+
+    <key>disableAccessKey</key>
+	<string>取消访问验证</string>
+
+    <key>paste</key>
+	<string>粘贴</string>
+
+    <key>remove</key>
+	<string>移除</string>
+
+    <key>overlay</key>
+	<string>覆盖</string>
+
+    <key>retain</key>
+	<string>保留</string>
+
+    <key>skip</key>
+	<string>跳过</string>
+
+    <key>cancel</key>
+	<string>取消</string>
+
+    <key>byNameAsc</key>
+	<string>名字 ↑</string>
+
+    <key>byNameDesc</key>
+	<string>名字↓</string>
+
+    <key>bySizeAsc</key>
+	<string>大小↑</string>
+
+    <key>bySizeDesc</key>
+	<string>大小↓</string>
+
+    <key>byTimeAsc</key>
+	<string>修改日期↑</string>
+
+    <key>byTimeDesc</key>
+	<string>修改日期↓</string>
+
+    <key>allfile</key>
+	<string>全部</string>
+
+    <key>onlyfile</key>
+	<string>文件</string>
+
+    <key>onlydirectory</key>
+	<string>文件夹</string>
+
+    <key>onlysystemfile</key>
+	<string>系统文件</string>
+
+    <key>onlywriteablefile</key>
+	<string>writeable</string>
+
+    
+    
+     <key>advanced</key>
+	<string>高级</string>
+
+      <key>startSearch</key>
+	<string>立即搜索</string>
+
+      <key>cease</key>
+	<string>终  止</string>
+
+    
+    <key>byGroup</key>
+	<string>按分组搜索</string>
+
+    <key>byName</key>
+	<string>按名字搜索</string>
+
+    
+    <key>byPhone</key>
+	<string>按手机搜索</string>
+
+    <key>byTel</key>
+	<string>按电话搜索</string>
+
+    <key>byEmail</key>
+	<string>按电子邮箱</string>
+
+    <key>byChatAccount</key>
+	<string>按聊天账户</string>
+
+<key>replace_</key>
+	<string>替换：</string>
+
+<key>replace</key>
+	<string>替换</string>
+
+<key>find_</key>
+	<string>查找：</string>
+
+<key>replaceAll</key>
+	<string>全部替换</string>
+
+<key>caseSensitive</key>
+	<string>大小写敏感</string>
+
+<key>wrapSearch</key>
+	<string>循环查找</string>
+
+<key>reverse</key>
+	<string>反向查找</string>
+
+<key>openas</key>
+	<string>打开方式</string>
+
+<key>chooseActivity</key>
+	<string>选择打开程序 ( %s )</string>
+
+<key>shareSthTo</key>
+	<string>将 %s 分享到>></string>
+
+<key>searchKeyword</key>
+	<string>关键字</string>
+
+<key>keyWord</key>
+	<string>关键字:</string>
+
+<key>keyWordHint</key>
+	<string>文件名称中包含的</string>
+
+<key>suffix_</key>
+	<string>后缀名:</string>
+
+<key>extension_</key>
+	<string>扩展名:</string>
+
+<key>suffix_hint</key>
+	<string>多个扩展名之间以英文逗号隔开 </string>
+
+<key>noSuffix</key>
+	<string>无后缀</string>
+
+<key>docsFile</key>
+	<string>文本-></string>
+
+<key>docsSuffix</key>
+	<string>txt,xml,html,xhtml,doc,docx,xls,xlsx,ppt,pptx,pdf</string>
+
+<key>imgFile</key>
+	<string>图片-></string>
+
+<key>imgSuffix</key>
+	<string>jpg,jpeg,gif,png,bmp,wbmp</string>
+
+<key>videoFile</key>
+	<string>视频-></string>
+
+<key>videoSuffix</key>
+	<string>mpeg,mp4,mov,avi,divx,wmv,m4v,3gp,3gpp,3g2,3gpp2,asf,flv,mkv,mpg,rmvb,rm,vob,f4v</string>
+
+<key>audioFile</key>
+	<string>音频-></string>
+
+<key>audioSuffix</key>
+	<string>mp3,m4a,wav,amr,awb,aac,flac,mid,midi,xmf,rttt1,rtx,ota,wma,ra,mka,m3u,pls</string>
+
+<key>compressedFile</key>
+	<string>压缩文件-></string>
+
+<key>compresssionSuffix</key>
+	<string>xzip,zip,rar,gzip,bzip2,tar,jar</string>
+
+<key>installationFile</key>
+	<string>安装文件-></string>
+
+<key>installationSuffix</key>
+	<string>apk</string>
+
+
+
+
+
+
+<key>advanced_</key>
+	<string>高级选项>></string>
+
+<key>regularExpression</key>
+	<string>使用正则表达式</string>
+
+<key>searchOptions</key>
+	<string>搜索选项>></string>
+
+<key>editRETemplate</key>
+	<string>编辑模板</string>
+
+<key>editRETemplateDetail</key>
+	<string>编辑正则表达式模板</string>
+
+<key>closeRETemplate</key>
+	<string>关闭模板</string>
+
+<key>basicSetting</key>
+	<string>基本设置>></string>
+
+<key>searchType</key>
+	<string>查找类型>></string>
+
+<key>file</key>
+	<string>文件</string>
+
+<key>directory</key>
+	<string>文件夹</string>
+
+<key>systemFile</key>
+	<string>系统文件</string>
+
+<key>more_</key>
+	<string>更多>></string>
+
+<key>fileSizeBetween</key>
+	<string>文件大小</string>
+
+<key>modifyTimeBetween</key>
+	<string>修改时间至当前时间</string>
+
+<key>greatThan</key>
+	<string>大于:</string>
+
+<key>lessThan</key>
+	<string>小于:</string>
+
+<key>B</key>
+	<string>B</string>
+
+<key>KB</key>
+	<string>KB</string>
+
+<key>MB</key>
+	<string>MB</string>
+
+<key>GB</key>
+	<string>GB</string>
+
+<key>hour</key>
+	<string>时</string>
+
+<key>day</key>
+	<string>天</string>
+
+<key>month</key>
+	<string>月</string>
+
+<key>year</key>
+	<string>年</string>
+
+
+
+
+<key>gridcolumn</key>
+	<string>显示列数>></string>
+
+<key>maxiumFileSearchResultCount</key>
+	<string>搜索最大结果数>></string>
+
+<key>plus_</key>
+	<string>+\n</string>
+
+<key>minus_</key>
+	<string>-\n</string>
+
+
+
+<key>sizeAry</key>
+	<array>
+		
+    <string>B</string>
+     <string>KB</string>
+      <string>MB</string>
+       <string>GB</string>
+
+	</array>
+<key>dateAry</key>
+	<array>
+		
+    <string>时</string>
+     <string>天</string>
+      <string>月</string>
+       <string>年</string>
+
+	</array>
+
+
+<key>openaslist1</key>
+	<array>
+		
+    <string>文本文件</string>
+     <string>图片文件</string>
+      <string>视频文件</string>
+       <string>音频文件</string>
+        <string>安装文件</string>
+        <string>inflate</string>
+
+	</array>
+<key>openaslist2</key>
+	<array>
+		
+    <string>文本文件</string>
+     <string>图片文件</string>
+      <string>视频文件</string>
+       <string>音频文件</string>
+        <string>安装文件</string>
+
+	</array>

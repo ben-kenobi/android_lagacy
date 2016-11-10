@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/uniform_titlebar_style"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:baselineAligned="false"
+        android:paddingRight="6dp" >
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="3dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="3dp"
+                android:text="有家超市"
+                android:textColor="#222222"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@android:drawable/presence_offline"
+                android:paddingLeft="2dp"
+                android:text="电话" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/base_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/textView3"
+                android:drawableLeft="@android:drawable/presence_offline"
+                android:singleLine="true"
+                android:text="地址" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="起送:￥33.0" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="@style/iratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:isIndicator="true"
+                android:numStars="5"
+             	android:rating="3.3"/>
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/selector_top_button"
+                android:src="@android:drawable/stat_notify_sync_noanim" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8bbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/listView1"
+            style="@style/scrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider_lv" >
+
+        </ListView>
+
+    </FrameLayout>
+
+</LinearLayout>

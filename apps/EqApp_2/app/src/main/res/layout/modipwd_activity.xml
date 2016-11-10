@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/listviewbg"
+              android:layout_height="match_parent">
+
+
+
+    <fj.swsk.cn.eqapp.main.Common.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarh"
+        android:background="#feee"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="@string/text_done"
+
+        custom:titleColor="#555"
+        custom:titleText="修改密码"
+        custom:titleSize="6sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:textColor="#555"
+        android:typeface="serif"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="3dp"
+        android:text="修改密码"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:layout_width="@dimen/menuitemh"
+            android:layout_height="@dimen/menuitemh"
+            android:src="@mipmap/password"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:padding="9dp"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="原密码"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/menuitemfontsize1"
+            android:textColor="#f222"
+            />
+        <fj.swsk.cn.eqapp.main.V.ClearEditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColorHint="#aaa"
+            android:inputType="textPassword"
+            android:password="true"
+            android:background="#fff"
+            />
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:background="#ddd"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_width="@dimen/menuitemh"
+                android:layout_height="@dimen/menuitemh"
+                android:src="@mipmap/password"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:padding="9dp"
+                />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="新密码"
+                android:gravity="left|center_vertical"
+                android:textSize="@dimen/menuitemfontsize1"
+                android:textColor="#f222"
+                />
+            <fj.swsk.cn.eqapp.main.V.ClearEditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColorHint="#aaa"
+                android:inputType="textPassword"
+                android:password="true"
+                android:background="#fff"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:background="#ddd"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_width="@dimen/menuitemh"
+                android:layout_height="@dimen/menuitemh"
+                android:src="@mipmap/password"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:padding="9dp"
+                />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="重新输入"
+                android:gravity="left|center_vertical"
+                android:textSize="@dimen/menuitemfontsize1"
+                android:textColor="#f222"
+                />
+            <fj.swsk.cn.eqapp.main.V.ClearEditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPassword"
+                android:password="true"
+                android:textColorHint="#aaa"
+                android:background="#fff"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
+    
+
+</LinearLayout>

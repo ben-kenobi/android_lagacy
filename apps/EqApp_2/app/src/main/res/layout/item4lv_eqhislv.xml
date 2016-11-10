@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/selector_whitebg"
+    android:layout_height="72dp">
+<TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="手机号码"
+    android:gravity="left"
+    android:layout_marginLeft="12dp"
+    android:textSize="@dimen/menuitemfontsize1"
+    android:textColor="#f222"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="9dp"
+    />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/accessory"
+        android:text="1231231231"
+        android:gravity="left"
+        android:textSize="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#f888"
+        android:layout_marginBottom="9dp"
+        />
+
+
+</RelativeLayout>

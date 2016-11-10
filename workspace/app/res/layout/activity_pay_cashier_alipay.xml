@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/uniform_titlebar_style"
+        android:paddingRight="30dp" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+             style="@style/title_back_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#3333" />
+
+        <TextView
+            style="@style/title_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cashierAlipay"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" 
+        android:background="#ddd"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9333" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:gravity="left|center"
+            android:text="@string/cashier" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#cc00008b" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#f7f7f7"
+        android:padding="6dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_light_yellow_gradient"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/prodName" 
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <TextView
+                 android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/from"
+                  android:textSize="@dimen/font_size_m"
+                 />
+
+            <TextView
+                 android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/boundToPay"
+                 android:textSize="@dimen/font_size_l" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/textView8"
+                  android:textSize="@dimen/font_size_m"
+                android:text="牙痛药" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/textView9"
+                  android:textSize="@dimen/font_size_m"
+                android:text="某家制药有限公司"
+              />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/textView10"
+                android:text="$$" 
+                android:textColor="#ff2222"
+                android:textSize="@dimen/font_size_l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/textView3"
+                android:text="@string/$"
+                android:textSize="@dimen/font_size_l" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6333" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="#8888"
+        android:paddingBottom="1dp" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_light_gradient_grey_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/recommendUseAlipay"
+            android:textSize="@dimen/font_size_mplus" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@drawable/shadow_horizontal_noradius" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_exetremely_light_gradient_grey_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="@string/creditCardConvenient"
+                    android:textSize="@dimen/font_size_mplus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:gravity="center"
+                    android:text="@string/recommend"
+                    android:textColor="#ee9a00"
+                    android:textSize="@dimen/font_size_mplus" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#8888"
+                android:paddingBottom="1dp"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_white_text"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/personal_right_char"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/bankCardConvenient"
+                    android:textSize="@dimen/font_size_mplus" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#eaeeee"
+                android:orientation="vertical"
+                android:padding="16dp" >
+		  <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" 
+                     android:layout_marginBottom="5dp">
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:ems="10"
+                    android:hint="@string/alipayAccount" >
+
+                    <requestFocus />
+                </EditText>
+                 <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/textDisposerStyle"/>
+ </RelativeLayout>
+  <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" 
+                     android:layout_marginBottom="5dp">
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:hint="@string/payCombination"
+                    android:inputType="textPassword" />
+                 <ImageButton
+            android:id="@+id/imageButton3"
+             style="@style/textDisposerStyle"/>
+				</RelativeLayout>
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/selector_transparent_tv"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="@string/retrieveCombination"
+                    android:textColor="#3a5fcd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp" >
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_orange_button"
+                        android:text="@string/pay" 
+                        android:textColor="#88ffffff"/>
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_white_button"
+                        android:text="@string/cancel"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

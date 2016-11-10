@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/uniform_titlebar_style" >
+
+        <TextView
+            style="@style/title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/registerVerify"
+            android:textSize="@dimen/font_size_xl"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/imageButton1"
+            android:background="#3333" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+          style="@style/title_back_style"/>
+
+    </RelativeLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8bbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/bg_extremely_low_grey_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+          style="@style/registerSequenceTextHintStyle"
+            android:text="@string/veriCode" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp" >
+
+	<RelativeLayout
+	    android:layout_width="180dp"
+	    android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText1"
+            style="@style/veriCodeEditorStyle"
+            />
+
+            <requestFocus />
+              <ImageButton
+            android:id="@+id/imageButton2"
+           style="@style/textDisposerStyle"/>
+	</RelativeLayout>
+
+	<Button
+	    android:id="@+id/button2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="42dp"
+	    android:layout_gravity="right"
+	    android:background="@drawable/selector_holo_light_dark"
+	    android:text="@string/resendVeriCode"
+	    android:textColor="#555" />
+
+	   </FrameLayout>
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/title_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/selector_orange_button_gradient"
+            android:text="@string/affirmative"
+            android:textSize="@dimen/font_size_xl" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/selector_simple_press"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_gravity="top"
+            android:background="@drawable/shadow_horizontal" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/userOtherAccount"
+            android:textColor="#88333333"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

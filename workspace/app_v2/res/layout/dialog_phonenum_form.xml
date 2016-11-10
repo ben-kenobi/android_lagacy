@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="320dp"
+    android:background="@drawable/bg_shadow_radius"
+    android:padding="12dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_eee_radius"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                style="@style/verticalParallelTextViewStyle02"
+                android:text="姓名：" />
+
+            <EditText
+                android:id="@+id/editText1"
+                 style="@style/editTextStyle_02"
+                android:inputType="text"
+                android:ems="10" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                style="@style/verticalParallelTextViewStyle02"
+                android:text="电话：" />
+
+            <EditText
+                android:id="@+id/editText2"  style="@style/editTextStyle_02"
+                android:inputType="phone" android:maxLength="11"
+                android:ems="10" >
+
+            </EditText>
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginTop="10dp" >
+
+           <Button
+               android:id="@+id/button1"
+                style="@style/buttonStyle_appv2_white"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginRight="7dp"
+               android:layout_weight="1"
+                 android:textSize="@dimen/font_size_xl"
+               android:text="取 消" />
+
+           <Button
+               android:id="@+id/button2"
+                style="@style/buttonStyle_appv2_blue"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="7dp"
+               android:layout_weight="1"
+               android:textSize="@dimen/font_size_xl"
+               android:text="提交订单" />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/selector_whitebg"
+    android:layout_height="82dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="52dp"
+        android:src="@mipmap/deletered"
+        android:layout_height="52dp"
+        android:layout_margin="15dp"/>
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="评估报告.doc"
+    android:textSize="16dp"
+    android:textColor="#f222"
+    android:layout_toRightOf="@+id/icon"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="15dp"
+    />
+    <TextView
+    android:id="@+id/size"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="121.1K"
+    android:textSize="12dp"
+    android:layout_toRightOf="@+id/icon"
+    android:layout_centerVertical="true"
+    android:textColor="#f888"
+    />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2012-5-5 05:05:05"
+        android:textSize="12dp"
+        android:layout_toRightOf="@+id/icon"
+
+        android:layout_alignParentBottom="true"
+        android:textColor="#f888"
+        android:layout_marginBottom="15dp"
+        />
+
+    <Button
+        android:id="@+id/btn2"
+
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:text="删除"
+        android:textColor="#f55"
+        android:textSize="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/selector_white_radius_stroke_button"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:text="下载"
+        android:textColor="#29f"
+        android:textSize="17dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btn2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/selector_white_radius_stroke_button"
+        />
+
+</RelativeLayout>

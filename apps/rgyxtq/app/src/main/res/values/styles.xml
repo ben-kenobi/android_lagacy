@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style  name="top_right_shadow" >
+        <item name="android:shadowColor" >#aa333333</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="title_text_style" parent="@style/top_right_shadow">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="dialogStyle" >
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--          <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>   -->
+    </style>
+
+
+
+
+
+
+    <style name="plan_popupwindow_anim" >
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    </style>
+
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮动-->
+        <item name="android:windowIsTranslucent">true</item><!--是否半透明-->
+        <item name="android:windowNoTitle">true</item><!--不显示标题栏-->
+        <item name="android:background">@null</item><!--背景-->
+        <item name="android:windowBackground">@null</item><!--窗口背景-->
+        <item name="android:backgroundDimEnabled">true</item><!--显示模板-->
+    </style>
+
+    <!--表单表格行基本样式-->
+    <style name="form_tab_row_base">
+        <item name="android:layout_marginTop">2sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <!-- 表单文本框基本样式 -->
+    <style name="form_tv_base">
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 表单编辑框基本样式 -->
+    <style name="form_edit_base">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:padding">5sp</item>
+    </style>
+
+    <!-- 表单下拉框基本样式 -->
+    <style name="form_spnr_base">
+        <item name="android:layout_gravity">left</item>
+    </style>
+    <style name="rl_row_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/selector_rowbg</item>
+        <item name="android:clickable">true</item>
+
+    </style>
+    <style name="rl_row_et_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:background">@null</item>
+    <item name="android:clickable">true</item>
+    <item name="android:gravity">right|center_vertical</item>
+    <item name="android:minWidth">100dp</item>
+    <item name="android:layout_alignParentRight">true</item>
+
+    <item name="android:textColor">@color/color_lighterText</item>
+    </style>
+</resources>

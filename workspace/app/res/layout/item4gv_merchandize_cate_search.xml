@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="12dp" >
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_dark_bg_radius" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/selector_button_white"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="Button"
+        android:textColor="#eead0e"
+        android:textColorLink="#eead0e"
+        android:textSize="14sp" />
+
+</FrameLayout>
+</RelativeLayout>

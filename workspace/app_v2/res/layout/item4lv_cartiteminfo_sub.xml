@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_button_white_radius"
+        android:paddingLeft="10dp"
+        android:paddingRight="12dp" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/selector_oval_white"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/homepage_icon1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageButton1"
+                android:text="商店名称" 
+                android:textSize="@dimen/font_size_mplus"/>
+            
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="top"
+                android:button="@drawable/selector_radio_button"
+                android:checked="true"
+                android:text="送货" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="bottom"
+                android:button="@drawable/selector_radio_button"
+                android:text="自提" />
+
+        </RadioGroup>
+
+        </RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/shape_button_white_radius"
+	    android:orientation="vertical" >
+
+        <com.icanit.app_v2.ui.InnerListView2
+            android:id="@+id/listView1"
+            style="@style/scrollStyle01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+</com.icanit.app_v2.ui.InnerListView2>
+
+      <EditText
+          android:id="@+id/editText1"
+          style="@style/editTextStyle_02"
+          android:layout_height="33dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="6dp"
+          android:hint="备注：(可以填写送达时间和其他要求)"
+          android:textSize="14sp" />
+
+</LinearLayout>
+
+</LinearLayout>

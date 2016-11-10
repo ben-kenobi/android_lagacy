@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/selector_whitebg"
+    android:layout_height="@dimen/menuitemh">
+<ImageView
+    android:id="@+id/icon"
+    android:layout_width="@dimen/menuitemh"
+    android:layout_height="@dimen/menuitemh"
+    android:src="@mipmap/cellphone"
+    android:layout_marginLeft="8dp"
+    android:scaleType="fitCenter"
+    android:padding="9dp"
+    />
+<TextView
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_toRightOf="@+id/icon"
+    android:text="手机号码"
+    android:gravity="center"
+    android:layout_marginLeft="7dp"
+    android:textSize="@dimen/menuitemfontsize1"
+    android:textColor="#f222"
+    />
+<ImageView
+    android:id="@+id/accessory"
+    android:layout_width="22dp"
+    android:layout_height="22dp"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="4dp"
+    android:layout_alignParentRight="true"
+    android:scaleType="centerInside"
+
+    />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/accessory"
+        android:text="1231231231"
+        android:gravity="center"
+        android:textSize="@dimen/menuitemfontsize2"
+        android:textColor="#f888"
+        />
+
+
+</RelativeLayout>

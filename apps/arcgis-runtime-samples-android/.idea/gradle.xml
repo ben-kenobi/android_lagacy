@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AddCSV2GraphicsLayer" />
+            <option value="$PROJECT_DIR$/AttributeEditor" />
+            <option value="$PROJECT_DIR$/Basemaps" />
+            <option value="$PROJECT_DIR$/BasicLicense" />
+            <option value="$PROJECT_DIR$/ClassBreaksRenderer" />
+            <option value="$PROJECT_DIR$/ClosestFacilities" />
+            <option value="$PROJECT_DIR$/Convert2MGRSGrid" />
+            <option value="$PROJECT_DIR$/CreateRuntimeGeodatabase" />
+            <option value="$PROJECT_DIR$/DynamicLayerRenderer" />
+            <option value="$PROJECT_DIR$/DynamicSubLayerReorder" />
+            <option value="$PROJECT_DIR$/ExportTileCacheTask" />
+            <option value="$PROJECT_DIR$/FeatureServiceTableQuery" />
+            <option value="$PROJECT_DIR$/FeatureUserGroup" />
+            <option value="$PROJECT_DIR$/FragmentManagement" />
+            <option value="$PROJECT_DIR$/GeoJSONEarthquakeMap" />
+            <option value="$PROJECT_DIR$/GeometryEditor" />
+            <option value="$PROJECT_DIR$/GeometrySample" />
+            <option value="$PROJECT_DIR$/HelloWorld" />
+            <option value="$PROJECT_DIR$/IdentifyTask" />
+            <option value="$PROJECT_DIR$/LocalMBTiles" />
+            <option value="$PROJECT_DIR$/LocalRasterData" />
+            <option value="$PROJECT_DIR$/MapLegend" />
+            <option value="$PROJECT_DIR$/MapRotation" />
+            <option value="$PROJECT_DIR$/Measure" />
+            <option value="$PROJECT_DIR$/MilSym2525c" />
+            <option value="$PROJECT_DIR$/Nearby" />
+            <option value="$PROJECT_DIR$/OAuth2" />
+            <option value="$PROJECT_DIR$/OfflineAnalysis" />
+            <option value="$PROJECT_DIR$/OfflineEditor" />
+            <option value="$PROJECT_DIR$/OfflineRoutingAndGeocoding" />
+            <option value="$PROJECT_DIR$/OsmLayer" />
+            <option value="$PROJECT_DIR$/PlaceSearch" />
+            <option value="$PROJECT_DIR$/PopupInWebMapForEditing" />
+            <option value="$PROJECT_DIR$/PopupInWebMapForViewing" />
+            <option value="$PROJECT_DIR$/PopupUICustomization" />
+            <option value="$PROJECT_DIR$/QueryCloudFeatureService" />
+            <option value="$PROJECT_DIR$/QueryTask" />
+            <option value="$PROJECT_DIR$/Routing" />
+            <option value="$PROJECT_DIR$/ServiceArea" />
+            <option value="$PROJECT_DIR$/SimpleMap" />
+            <option value="$PROJECT_DIR$/StandardLicense" />
+            <option value="$PROJECT_DIR$/StandardLicenseOffline" />
+            <option value="$PROJECT_DIR$/SwitchMaps" />
+            <option value="$PROJECT_DIR$/UniqueValueRenderer" />
+            <option value="$PROJECT_DIR$/ViewShed" />
+            <option value="$PROJECT_DIR$/WmsLayer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

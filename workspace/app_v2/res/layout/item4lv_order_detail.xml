@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="3dp"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_button_white_radius"
+        android:paddingLeft="10dp"
+        android:paddingRight="12dp" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/selector_oval_white"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/homepage_icon1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageButton1"
+                android:text="商店名称" 
+                android:textSize="@dimen/font_size_mplus"/>
+
+        </RelativeLayout>
+ <TextView
+                android:id="@+id/textView2"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_mplus"
+                android:text="店铺地址：XXXX" />
+ <View style="@style/dividerViewStyle01" />
+    
+        <com.icanit.app_v2.ui.InnerListView2
+            android:id="@+id/listView1"
+            style="@style/scrollStyle01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:background="@drawable/shape_button_white_radius"
+            >
+
+           
+	</com.icanit.app_v2.ui.InnerListView2>
+
+</LinearLayout>

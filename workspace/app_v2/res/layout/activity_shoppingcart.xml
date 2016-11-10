@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        style="@style/uniform_titlebar_style02"
+       >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            style="@style/title_button_style_backbutton"/>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/title_button_style"
+            android:layout_gravity="right|center_vertical"
+            android:src="@android:drawable/ic_menu_delete" />
+
+        <TextView
+            style="@style/title_text_style_center"
+            android:text="我的购物车"
+           />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <View
+            style="@style/shadowViewStyle00" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eee"
+        android:orientation="vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"  >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@drawable/selector_radio_button"
+                android:checked="true"
+                android:gravity="center"
+                android:text="送货" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+              android:button="@drawable/selector_radio_button"
+                android:layout_marginLeft="20dp"
+              android:gravity="center"
+                android:text="自提" />
+
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/listView1"
+            style="@style/scrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button_white_radius"
+            android:divider="@drawable/divider_lv" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/moneyStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="总金额：11.5 元"
+            android:textSize="@dimen/font_size_mplus" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/buttonStyle_appv2_blue"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|right"
+            android:text="确认并选择地址"
+            android:textSize="@dimen/font_size_mplus" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- layout文本框外边框+选择天蓝色 
+		更多/帐号管理
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/corner_list_single_pressed" >
+    </item>
+    <item android:drawable="@drawable/corner_list_bg">              
+    </item>
+</selector>

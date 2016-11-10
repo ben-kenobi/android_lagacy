@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#000" >
+
+        <FrameLayout
+            style="@style/uniform_titlebar_style02"
+            android:layout_gravity="center" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                style="@style/title_button_style_backbutton" />
+
+            <TextView
+                style="@style/title_text_style_center"
+                android:text="注  册" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <View style="@style/dividerViewStyle02" />
+
+    <View style="@style/shadowViewStyle00" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="9dp" >
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="手机号码：" />
+
+            <EditText
+                android:id="@+id/editText1"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView1"
+                android:hint="输入11位手机号"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+            <requestFocus />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/textDisposerStyle" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/selector_white_layerlist_button"
+            android:text="获取验证码"
+            android:textColor="#555" />
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="手机验证：" />
+
+            <EditText
+                android:id="@+id/editText2"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView2"
+                android:hint="输入收到的6位验证码"
+                android:maxLength="6" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/textDisposerStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="用户昵称：" />
+
+            <EditText
+                android:id="@+id/editText3"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView3"
+                android:hint="昵称"
+                android:maxLength="8" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/textDisposerStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="用户密码：" />
+
+            <EditText
+                android:id="@+id/editText4"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView4"
+                android:hint="@string/pwdHint"
+                android:inputType="textPassword"
+                android:maxLength="18" >
+            </EditText>
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/textDisposerStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="确认密码：" />
+
+            <EditText
+                android:id="@+id/editText5"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView5"
+                android:hint="@string/repwdHint"
+                android:inputType="textPassword"
+                android:maxLength="18" >
+            </EditText>
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/textDisposerStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/rlRimEditTextStyle01" >
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/verticalParallelTextViewStyle05"
+                android:text="社区选择：" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/editTextStyle_02"
+                android:layout_toRightOf="@id/textView6"
+                android:clickable="true"
+                android:drawableRight="@drawable/rotate_arrow_90d"
+            	    android:hint="区/街道/社区"
+                android:paddingRight="10dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="12dp" >
+
+            <CheckedTextView
+                android:id="@+id/checkedTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/selector_checkable_text"
+                android:gravity="center"
+                android:text="我已阅读并同意->"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_height="match_parent"
+                 style="@style/textView_clickable_style_blue"
+                android:text="《用户协议》"
+                android:textColor="#55e"
+               />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/buttonStyle_appv2_blue"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="提交注册"
+            android:textSize="@dimen/font_size_xl" />
+    </LinearLayout>
+
+</LinearLayout>

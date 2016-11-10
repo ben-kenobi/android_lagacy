@@ -1,0 +1,14 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+
+public class Test {
+	public static void main(String[] args) throws MalformedURLException, IOException {
+//		System.out.println(String.format("%s:%s:%s", 123123,123123,1111,"aa"));
+		
+	}
+}

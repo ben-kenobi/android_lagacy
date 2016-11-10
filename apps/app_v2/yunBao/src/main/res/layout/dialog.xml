@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="23dp" >
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Message"
+        android:textColor="@android:color/black" 
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/btn_dialog_negative"
+            android:layout_width="106dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/address_add_negative_selector"
+            android:text="取消"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/lightgray" />
+        
+        <Button
+            android:id="@+id/btn_dialog_positive"
+            android:layout_width="106dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/address_add_positive_selector"
+            android:text="确定"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+</LinearLayout>

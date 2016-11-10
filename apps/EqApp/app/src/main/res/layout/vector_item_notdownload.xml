@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="福州"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/dataSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="36dp"
+        android:text="23.5M"
+        android:textColor="@color/blue_light"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/download"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/stat_sys_download_done" />
+
+    <View android:layout_alignParentBottom="true"
+        android:background="@color/lighter_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+</RelativeLayout>

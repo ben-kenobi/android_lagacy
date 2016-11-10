@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+    <include layout="@layout/normal_header"  android:id="@+id/lo01"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/lo01"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="1dp"
+                android:background="@drawable/d_recbg_bold"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                >
+
+
+
+
+                <RelativeLayout android:id="@+id/date"
+                                style="@style/rl_row_style"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:gravity="left|center_vertical"
+                        android:text="预警时间:"/>
+                    <TextView
+                        android:id="@+id/fromdate"
+                        android:editable="true"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        android:text="2016-06-01"
+                        android:layout_toLeftOf="@+id/tv02"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"/>
+                    <TextView
+                        android:id="@+id/tv02"
+                        android:layout_toLeftOf="@+id/todate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:gravity="left|center_vertical"
+                        android:text="   到    "/>
+
+                    <TextView
+                        android:id="@+id/todate"
+                        android:editable="true"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/color_lighterText"
+                        android:text="2016-06-01"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"/>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" android:background="#eee"/>
+                <RelativeLayout android:id="@+id/statisticstype"
+                                style="@style/rl_row_style"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:gravity="left|center_vertical"
+                        android:text="预警类型:"/>
+                    <TextView
+                        android:id="@+id/reckonertv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/color_lighterText"
+                        android:drawableRight="@drawable/ic_arrow"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/pagemarginV"
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pagebuttonh"
+                android:text="查询"
+                android:onClick="onClick"
+                android:textColor="#fff"
+                android:layout_marginLeft="@dimen/pagemarginH"
+                android:layout_marginRight="@dimen/pagemarginH"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/selector_blue_button"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/pagemarginH"
+                android:layout_marginRight="@dimen/pagemarginH"
+                android:layout_above="@id/save"
+                android:layout_marginBottom="@dimen/pagemarginV"
+                android:background="@drawable/d_recbg"
+                android:padding="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <cn.swsk.rgyxtqapp.custom.ItemStack
+                    android:id="@+id/warningTitle"
+                    android:layout_width="match_parent"
+                    android:background="#fff5f5f5"
+                    android:layout_height="@dimen/tableitemh"></cn.swsk.rgyxtqapp.custom.ItemStack>
+                <!--<include layout="@layout/item4lv_stockwarning" android:id="@+id/warning1"/>-->
+                <!--<include layout="@layout/item4lv_stockwarning2" android:id="@+id/warning2"/>-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_divider001"/>
+                <cn.swsk.rgyxtqapp.custom.InnerLV2
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:divider="@color/color_divider001"
+                    android:dividerHeight="1dp"
+                    android:cacheColorHint="@null"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

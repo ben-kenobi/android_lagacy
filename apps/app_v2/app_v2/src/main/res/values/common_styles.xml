@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+   <style name="title_back_style">
+	  <item name="android:layout_width">60dp</item>
+	   <item name="android:layout_height">match_parent</item>
+	    <item name="android:background">@drawable/selector_light_gradient_orange</item>
+		<item name="android:src">@drawable/ic_arrow</item>
+<!-- 		<item name="android:rotation"  tools:targetApi="11">180</item> -->
+  </style>
+     <style name="title_back_style_reverse">
+	  <item name="android:layout_width">60dp</item>
+	   <item name="android:layout_height">match_parent</item>
+	    <item name="android:background">@drawable/selector_light_gradient_orange</item>
+		<item name="android:src">@android:drawable/ic_menu_revert</item>
+  </style>
+  
+     <style name="shoppingcart_items_operation_button_style">
+	  <item name="android:layout_width">60dp</item>
+	   <item name="android:layout_height">match_parent</item>
+	    <item name="android:background">@drawable/selector_cart_button_left</item>
+  </style>
+  
+      <style name="dialogStyle" >
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    
+</resources>

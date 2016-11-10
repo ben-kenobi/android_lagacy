@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="5dp" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:duplicateParentState="false"
+        android:foreground="@drawable/selector_golden_framelayout" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chrome" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/textView2"
+        android:layout_toRightOf="@+id/frameLayout1"
+        android:text="黄鹤楼特制香烟"
+        android:textColor="#444"
+        android:singleLine="true"
+        android:textSize="@dimen/font_size_mplus" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/moneyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:text="￥11.9/个" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/minusButtonStyle"
+        android:layout_below="@id/textView1"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/button1" />
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/addButtonStyle"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/frameLayout1"
+        android:singleLine="true"
+         android:textColor="#777"
+         android:textSize="13sp"
+        android:text="基础信息：" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/frameLayout1"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/frameLayout1"
+        android:singleLine="true"
+        android:text="数量"
+        android:textColor="#777"
+        android:textSize="13sp" />
+
+</RelativeLayout>

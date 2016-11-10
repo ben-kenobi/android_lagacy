@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/tableitemh"
+    android:background="#fff5f5f5">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/et00"
+            style="@style/innerEtStyle"
+            android:enabled="false"
+
+            />
+    </FrameLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+
+        android:background="@color/color_divider001"/>
+    <FrameLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:padding="3dp"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et01"
+        style="@style/innerEtStyle"
+        />
+</FrameLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+
+        android:background="@color/color_divider001"/>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et02"
+        style="@style/innerEtStyle"
+        android:enabled="false"
+
+        />
+    </FrameLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+
+        android:background="@color/color_divider001"/>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/et03"
+            style="@style/innerEtStyle"
+            android:enabled="false"
+
+            />
+    </FrameLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider001"/>
+    <FrameLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:padding="3dp"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et04"
+        style="@style/innerEtStyle"
+       android:enabled="false"
+        />
+</FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data">
+        <item>古田县凤埔乡作业点</item>
+        <item>古田县吉巷乡矮树下作业点</item>
+        <item>古田县凤埔乡西溪村作业点</item>
+        <item>古田县凤都镇石坑作业点</item>
+        <item>古田县凤都镇东厝作业点</item>
+        <item>上杭县临城镇西南村作业点</item>
+        <item>上杭县才溪乡东坑村作业点</item>
+        <item>上杭县蛟洋镇坑头村作业点</item>
+        <item>上杭县稔田乡长滩村作业点</item>
+        <item>上杭县白砂乡桐子甲作业点</item>
+        <item>上杭县泮境乡祖加村作业点</item>
+        <item>上杭县旧县乡梨头坊作业点</item>
+        <item>上杭县通贤乡文坑村作业点</item>
+        <item>上杭县南阳镇涂屋村作业点</item>
+        <item>上杭县蓝溪镇沈田村作业点</item>
+        <item>上杭县庐丰乡立英村作业点</item>
+        <item>上杭县湖洋乡通桥村作业点</item>
+        <item>上杭县官庄乡回龙村作业点</item>
+        <item>上杭县中都镇兴坊村作业点</item>
+        <item>上杭县蓝溪镇觉坊村作业点</item>
+        <item>上杭县下都乡八岭下作业点</item>
+
+        <item>建宁县竹源作业点</item>
+        <item>宁化县城南乡石螺坑</item>
+        <item>宁化县谢坊都坑</item>
+        <item>清流龙津镇基头小学作业点</item>
+        <item>南平光泽止马镇亲目村作业点</item>
+        <item>南平光泽李坊乡李家村作业点</item>
+    </string-array>
+
+    <string-array name="workToolsType">
+        <item>晋安区宦洗镇恩顶村20151101</item>
+        <item>晋安区宦洗镇恩顶村20151102</item>
+        <item>晋安区宦洗镇恩顶村20151103</item>
+        <item>晋安区宦洗镇恩顶村20151104</item>
+        <item>晋安区宦洗镇恩顶村20151105</item>
+        <item>晋安区宦洗镇恩顶村20151106</item>
+    </string-array>
+
+    <string-array name="weatherBeforeWork">
+        <item>阴</item>
+        <item>阵雨</item>
+        <item>小雨</item>
+        <item>小~中雨</item>
+        <item>中雨</item>
+        <item>中~大雨</item>
+        <item>大雨</item>
+        <item>大到暴雨</item>
+        <item>暴雨及以上</item>
+    </string-array>
+
+    <string-array name="weatherAfterWork">
+        <item>阴</item>
+        <item>阵雨</item>
+        <item>小雨</item>
+        <item>小~中雨</item>
+        <item>中雨</item>
+        <item>中~大雨</item>
+        <item>大雨</item>
+        <item>大到暴雨</item>
+        <item>暴雨及以上</item>
+    </string-array>
+
+    <string-array name="effectWork">
+        <item>无效</item>
+        <item>明显</item>
+        <item>一般</item>
+        <item>好</item>
+    </string-array>
+
+    <string-array name="surfaceWind">
+        <item>东</item>
+        <item>南</item>
+        <item>西</item>
+        <item>北</item>
+        <item>东南</item>
+        <item>西南</item>
+        <item>东北</item>
+        <item>西北</item>
+    </string-array>
+
+    <string-array name="workType">
+        <item>增雨</item>
+        <item>防雹</item>
+    </string-array>
+
+</resources>

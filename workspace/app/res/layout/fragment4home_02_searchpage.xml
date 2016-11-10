@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_container_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/uniform_titlebar_style" >
+     
+        <ImageButton
+            android:id="@+id/imageButton2"
+             style="@style/title_back_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/imageButton2"
+            android:background="#3333" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/title_text_style"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_title_text"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:padding="4dp" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_centerInParent="true"
+            	android:ems="10"
+            android:hint="@string/hint03"
+            style="@style/edittext_style"
+            android:padding="3dp"
+             >
+            <requestFocus />
+        </EditText>
+         <ImageButton
+            android:id="@+id/imageButton1"
+            style="@style/textDisposerStyle"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#88333333" >
+
+    </View>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#22ffdddd"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00ffffff"
+            android:numColumns="3" 
+            style="@style/scrollStyle">
+
+        </GridView>
+
+    </FrameLayout>
+
+</LinearLayout>

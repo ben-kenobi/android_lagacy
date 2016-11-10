@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="always"
+        android:title="@string/search">
+        <menu >
+              <item
+        android:id="@+id/byGroup"
+        android:title="@string/byGroup"/>
+          <item
+        android:id="@+id/byName"
+        android:title="@string/byName"/>
+          <item
+        android:id="@+id/byPhone"
+        android:title="@string/byPhone"/>
+          <item
+        android:id="@+id/byTel"
+        android:title="@string/byTel"/>
+         <item
+        android:id="@+id/byChatAccount"
+        android:title="@string/byChatAccount"/>
+        
+          <item
+        android:id="@+id/byEmail"
+        android:title="@string/byEmail"/>
+            
+        </menu>
+        </item>
+    <item
+        android:id="@+id/add"
+        android:icon="@android:drawable/ic_menu_add"
+         android:showAsAction="always"
+        android:title="@string/add"/>
+      <item
+        android:id="@+id/delete"
+        android:icon="@android:drawable/ic_menu_delete"
+         android:showAsAction="always"
+        android:title="@string/delete"/>
+          <item
+        android:id="@+id/export"
+         android:showAsAction="never"
+        android:title="@string/exportEntries"/>
+        <item
+        android:id="@+id/importE"
+         android:showAsAction="never"
+        android:title="@string/importEntries"/>
+    
+        
+</menu>

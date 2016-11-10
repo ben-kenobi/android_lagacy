@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="workType">
+        <item>增雨</item>
+        <item>防雹</item>
+    </string-array>
+    <string-array name="eqlevel">
+        <item>Ⅰ度</item>
+        <item>Ⅱ度</item>
+        <item>Ⅲ度</item>
+        <item>Ⅳ度</item>
+        <item>Ⅴ度</item>
+        <item>Ⅵ度</item>
+        <item>Ⅶ度</item>
+        <item>Ⅷ度</item>
+        <item>Ⅸ度</item>
+        <item>Ⅹ度</item>
+        <item>XI度</item>
+        <item>XII度</item>
+
+    </string-array>
+    <string-array name="eqsummary">
+        <item>无人员伤亡，无建筑物损坏</item>
+        <item>少量人员轻伤，未出现重伤和死亡人员，建筑物轻微损坏</item>
+        <item>较多人员受轻伤，少量重伤，未死亡人员，建筑物损坏一般</item>
+        <item>大量人员受伤，数十人受重伤，有数人死亡，建筑物损坏严重</item>
+        <item>人员伤亡严重，建筑物大量倒塌</item>
+    </string-array>
+</resources>

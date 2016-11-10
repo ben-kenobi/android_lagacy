@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="weibo_src"/>
+	<classpathentry kind="src" path="yunbao_src"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="libs/com_unionpay_upomp_lthj_lib.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_v2_1_1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-httpclient-3.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/jpush-sdk-release1.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/locSDK_3.3.jar"/>
+	<classpathentry kind="lib" path="libs/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/sina_weibo_api.jar"/>
+	<classpathentry kind="lib" path="libs/sina_weibo_sdk2.1_130712.jar"/>
+	<classpathentry kind="lib" path="libs/tecent_weibo_common.jar"/>
+	<classpathentry kind="lib" path="libs/umeng_sdk.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="src" path="bshare_src"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                android:background="#88000000"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/dismiss"
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="@dimen/mapitemh"
+        android:src="@mipmap/deletered"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:onClick="onClick"
+        android:background="@drawable/selector_lightblue_radius"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mapitemmargin"
+
+
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_white_radius_bg"
+    android:layout_below="@+id/dismiss"
+    android:layout_marginRight="@dimen/mapitemmargin"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/mapitemmargin"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="28dp">
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:textSize="16dp"
+        android:textColor="#555"
+        android:text="地震发生时间:  "
+        />
+<TextView
+    android:id="@+id/time"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|left"
+    android:textSize="15dp"
+    android:textColor="#888"
+    android:text="2012-12-12 12:12:12"
+
+    />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="28dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:textSize="16dp"
+            android:textColor="#555"
+            android:text="震中位置:  "
+            />
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textSize="15dp"
+            android:textColor="#888"
+            android:text="2012-12-12 12:12:12"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="28dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:textSize="16dp"
+            android:textColor="#555"
+            android:text="经度:  "
+            />
+        <TextView
+            android:id="@+id/latlon"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textSize="15dp"
+            android:textColor="#888"
+            android:text="2012-12-12 12:12:12"
+
+            />
+
+        <ImageButton
+            android:id="@+id/locationing"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/mapitemh"
+            android:layout_height="@dimen/mapitemh"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:onClick="onClick"
+            android:background="@drawable/selector_trans_radius_button3"
+            android:src="@mipmap/location"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="28dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:textSize="16dp"
+            android:textColor="#555"
+            android:text="纬度:  "
+            />
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textSize="15dp"
+            android:textColor="#888"
+            android:text="2012-12-12 12:12:12"
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="28dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:textSize="16dp"
+            android:textColor="#e55"
+            android:text="震级/深度:  "
+            />
+        <TextView
+            android:id="@+id/magdepth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textSize="15dp"
+            android:textColor="#888"
+            android:text="2012-12-12 12:12:12"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/dismiss"
+        android:layout_toStartOf="@+id/dismiss"
+        android:layout_marginRight="240dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="92dp"/>
+
+
+</RelativeLayout>

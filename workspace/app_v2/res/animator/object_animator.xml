@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+<objectAnimator></objectAnimator>
+<!-- <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"  -->
+<!--     android:propertyName="rotation"  android:interpolator="@android:anim/linear_interpolator" -->
+<!--     android:duration="1200"  android:repeatCount="infinite"  android:repeatMode="restart" android:valueFrom="0" -->
+<!--     android:valueTo="350" android:valueType="floatType"  /> -->

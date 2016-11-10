@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A8C7FC"
+    android:orientation="vertical">
+
+    <cn.swsk.rgyxtqapp.custom.topbar
+        android:id="@+id/workInfoTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        custom:leftButtonBackground="#20000000"
+        custom:leftButtonSize="@dimen/btn_text_size"
+        custom:leftButtonText="@string/text_return"
+
+        custom:rightButtonBackground="#20000000"
+        custom:rightButtonSize="@dimen/btn_text_size"
+        custom:rightButtonText="提交"
+
+        custom:titleColor="#fff"
+        custom:titleSize="@dimen/lbl_title_text_size" />
+
+    <ScrollView
+        android:id="@+id/scrollView_showMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:stretchColumns="1">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_zp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="作业照片:"
+                        android:textColor="@color/colorFont"
+                android:textSize="18sp" />
+
+
+
+                    <cn.swsk.rgyxtqapp.custom.InnerGV2
+                        android:id="@+id/gvImage"
+                        android:cacheColorHint="@null"
+                        android:numColumns="4"
+                        android:verticalSpacing="1dp"
+                        android:horizontalSpacing="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+            </TableRow>
+
+            </TableLayout>
+
+            <!--<TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+
+            </TableLayout>-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="1"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_famc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="方案名称:"
+                            android:gravity="right"
+                            android:textColor="@color/colorFont"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_plan_name"
+                            android:layout_width="match_parent"
+                            android:gravity="start"
+                            android:layout_height="60dp"
+                            android:textColor="@color/colorFont"
+                            android:textSize="18sp"
+                            android:maxLines="2"
+                            android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:lines="2"
+                            android:enabled="true"
+                            android:ellipsize="end"/>
+
+                    <!--<Spinner
+                        android:id="@+id/spinner_famc"
+                        style="@style/form_spnr_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />-->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_zylx"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业类型:" />
+
+                    <!--<EditText
+                        android:id="@+id/et_zylx"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selector"
+                        android:gravity="center_vertical|right"
+                        android:inputType="text"
+                        android:text="增雨"
+                        android:textColor="@color/colorFont"
+                        android:textSize="18sp" />-->
+
+                    <Spinner
+                        android:id="@+id/spinner_zylx"
+                        style="@style/form_spnr_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_tab_row_base"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_hjdyl"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="火箭弹用量(枚):" />
+
+                    <EditText
+                        android:id="@+id/et_hjdyl"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="0"
+                        android:background="@color/color_txt_background" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_ytyl"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="烟条用量(条):" />
+
+                    <EditText
+                        android:text="0"
+                        android:id="@+id/et_ytly"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyrq"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业日期:" />
+
+                    <EditText
+                        android:id="@+id/et_zyrq"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:inputType="date"
+                        android:tag="@string/work_date" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zykssj"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="开始作业时间:" />
+
+                    <EditText
+                        android:id="@+id/et_zykssj"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:inputType="time"
+                        android:tag="@string/begin_work" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyjssj"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业结束时间:" />
+
+                    <EditText
+                        android:id="@+id/et_zyjssj"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:inputType="time"
+                        android:tag="@string/end_work" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyqtqsk"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业前天气情况:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_zyqtqqk"
+                        style="@style/form_spnr_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyhtqsk"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业后天气情况:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_zyhtqqk"
+                        style="@style/form_spnr_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zymj"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业面积(km²):" />
+
+                    <EditText
+                        android:id="@+id/et_zymj"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="time" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyxg"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业效果:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_zyxg"
+                        style="@style/form_spnr_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_dmfx"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="地面风向:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_dmfx"
+                        style="@style/form_spnr_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zybh"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业站点编号:" />
+
+                    <EditText
+                        android:id="@+id/et_zybh"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_gpsjd"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="GPS经度:" />
+
+                    <EditText
+                        android:id="@+id/et_gpsjd"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_gpswd"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="GPS纬度:" />
+
+                    <EditText
+                        android:id="@+id/et_gpswd"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_zyqjlx"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="作业器具类型:" />
+
+                    <EditText
+                        android:id="@+id/et_zyqjlx"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:text="BL-2" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:visibility="gone"
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_gsppdyl"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="高射炮弹用量(发):" />
+
+                    <EditText
+                        android:id="@+id/et_gsppdyl"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="0" />
+
+                </TableRow>
+
+                <TableRow
+                    android:visibility="gone"
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_qtyl"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="其他用量:" />
+
+                    <EditText
+                        android:id="@+id/et_qtyl"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="0" />
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_yj"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="仰角:" />
+
+                    <EditText
+                        android:id="@+id/et_yj"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="75" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_fw"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="方位:" />
+
+                    <EditText
+                        android:id="@+id/et_fw"
+                        style="@style/form_edit_base"
+                        android:inputType="number"
+
+                        android:layout_height="wrap_content"
+                         />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_ky"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="空域:" />
+
+                    <EditText
+                        android:id="@+id/et_ky"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_tbr"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="填报人:" />
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                    <EditText
+                        android:id="@+id/et_tbr"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:inputType="text" />
+                        <Button
+                            android:id="@+id/chooseTBR"
+                            android:text=">>"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_gray_right_radius_button"
+                            ></Button>
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_tbdw"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="填报单位:" />
+
+                    <Spinner
+                        android:id="@+id/et_tbdw"
+
+                        style="@style/form_spnr_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_tbdw"-->
+                        <!--style="@style/form_edit_base"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:enabled="false"-->
+                        <!--android:inputType="text" />-->
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_tbrq"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="填写日期:" />
+
+                    <EditText
+                        android:id="@+id/et_tbrq"
+                        style="@style/form_edit_base"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:inputType="text"
+                        android:tag="@string/write_date" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_tab_row_base">
+
+                    <TextView
+                        android:id="@+id/tv_bz"
+                        style="@style/form_tv_base"
+                        android:layout_height="wrap_content"
+                        android:text="备注:" />
+
+                    <EditText
+                        android:id="@+id/et_bz"
+                        style="@style/form_edit_base"
+                        android:singleLine="false"
+                        android:maxLines="10"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

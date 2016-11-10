@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+     <FrameLayout  
+        android:id="@+id/bmap_layout"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:orientation="vertical" >
+        
+         
+         <com.icanit.bdmapversion2.entity.MyMapView android:id="@+id/bmapsView"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:clickable="true" />
+         
+         <LinearLayout
+	        android:id="@+id/rl_1"
+	        android:layout_width="match_parent"
+	        android:layout_height="52dp"
+	        android:background="#86000000" >
+			
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="37dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="bottom"
+	            android:layout_marginLeft="7dp"
+	            android:paddingBottom="12dp"
+	            android:src="@android:drawable/ic_dialog_map" />
+	        
+	        <LinearLayout
+	            android:id="@+id/bmap_btn_manager"
+	            android:layout_width="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/map_pop_selector"
+	            android:gravity="bottom"
+	            android:orientation="horizontal"
+	            android:paddingBottom="12dp" >
+		       
+		        <TextView
+		            android:id="@+id/map_word"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"		           
+		            android:textColor="@android:color/white"
+		            android:text="@string/str_tv_map"
+		            android:textSize="18sp" />
+		
+		        <ImageView
+		            android:id="@+id/imageView2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="7dp"
+		            android:src="@android:drawable/arrow_down_float" />
+		        
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical" >
+		        
+	            <LinearLayout
+	                android:id="@+id/bmap_commu_select_rl"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:orientation="horizontal" >
+			        
+			        <Spinner
+			            android:id="@+id/spr_place_name"
+			            android:layout_width="fill_parent"
+			            android:layout_height="58dp"
+			            android:layout_weight="1"
+			            android:background="@drawable/map_commulist_selector"
+			            android:gravity="center" />
+	        
+			        <Button
+			            android:id="@+id/bmap_btn_getlist"
+			            android:layout_width="wrap_content"
+			            android:layout_height="fill_parent"
+			            android:background="@drawable/map_commulist_selector"
+			            android:paddingLeft="8dp"
+			            android:paddingRight="7dp"
+			            android:text="@string/str_btn_enter"
+			            android:textColor="@android:color/white"
+			            android:textSize="18sp" 
+			            android:visibility="gone"/>
+  	  
+	        	</LinearLayout>
+	        	<RadioGroup
+		            android:id="@+id/rg_views"
+		            android:layout_width="fill_parent"
+		            android:layout_height="fill_parent"
+		            android:orientation="horizontal"
+		            android:visibility="gone" >
+		
+		            <RadioButton
+		                android:id="@+id/rb_normal"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:checked="true"
+		                android:textColor="@android:color/white"
+		                android:text="@string/str_rb_normal" />
+		
+		            <RadioButton
+		                android:id="@+id/rb_satellite"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:textColor="@android:color/white"
+		                android:text="@string/str_rb_satellite" />
+		
+		            <RadioButton
+		                android:id="@+id/rb_terrain"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:textColor="@android:color/white"
+		                android:text="@string/str_rb_terrain" />
+	        	</RadioGroup>
+	            
+	        </LinearLayout>
+	             
+    	</LinearLayout>
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:id="@+id/bmap_rl_layout" >
+
+	        <TextView
+	            android:id="@+id/bmapTView"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:background="#86000000"
+	            android:ellipsize="marquee"
+	            android:focusable="true"
+	            android:focusableInTouchMode="true"
+	            android:gravity="center"
+	            android:marqueeRepeatLimit="marquee_forever"
+	            android:scrollHorizontally="true"
+	            android:singleLine="true"
+	            android:text="TextView"
+	            android:textColor="#ffffff"
+	            android:textSize="20sp"
+	            android:textStyle="bold" />
+
+	        <Button
+	            android:id="@+id/bmap_btn_loc"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginBottom="39dp"
+	            android:background="@drawable/map_pop_selector"
+	            android:text="@string/str_btn_loc"
+	            android:textColor="#000000"
+	            android:textSize="20sp" />
+
+	        <ProgressBar
+	            android:id="@+id/loading_progressbar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true" />
+ 
+	        <Button
+	            android:id="@+id/bmap_btn_reposition"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="39dp"
+	            android:background="#86000000"
+	            android:text="@string/str_btn_afresh"
+	            android:textColor="#FFFFFF"
+	            android:textSize="20sp"
+	            android:visibility="gone" />
+
+	    </RelativeLayout>
+
+	 </FrameLayout>
+	 
+</LinearLayout>

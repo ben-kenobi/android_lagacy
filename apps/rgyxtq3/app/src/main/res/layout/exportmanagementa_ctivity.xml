@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/normal_header"  android:id="@+id/lo01"/>
+
+    <RadioGroup
+        android:id="@+id/rg01"
+        android:layout_width="match_parent"
+        android:layout_below="@id/lo01"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <RadioButton
+            android:id="@+id/rb01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:linksClickable="false"
+            android:textColor="#000"
+            android:text="分发"/>
+        <RadioButton
+            android:id="@+id/rb02"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:layout_height="match_parent"
+            android:linksClickable="false"
+            android:text="移库"/>
+        <RadioButton
+            android:id="@+id/rb03"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:layout_height="match_parent"
+            android:linksClickable="false"
+            android:text="返回厂家"/>
+    </RadioGroup>
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="二维码扫描"
+        android:textColor="#fff"
+        android:layout_below="@id/rg01"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/selector_blue_button"/>
+
+    <!--<Button-->
+        <!--android:layout_marginBottom="@dimen/pagemarginV"-->
+        <!--android:id="@+id/draw"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/pagebuttonh"-->
+        <!--android:text="领    用"-->
+        <!--android:textColor="#fff"-->
+        <!--android:layout_marginLeft="@dimen/pagemarginH"-->
+        <!--android:layout_marginRight="@dimen/pagemarginH"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_below="@id/scan"-->
+        <!--android:background="@drawable/selector_blue_button"/>-->
+    <!--<Button-->
+        <!--android:layout_marginBottom="@dimen/pagemarginV"-->
+        <!--android:id="@+id/move"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/pagebuttonh"-->
+        <!--android:text="移库"-->
+        <!--android:textColor="#65c0f4"-->
+        <!--android:layout_marginLeft="@dimen/pagemarginH"-->
+        <!--android:layout_marginRight="@dimen/pagemarginH"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_below="@id/draw"-->
+        <!--android:background="@drawable/selector_white_radius_button"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:layout_marginBottom="@dimen/pagemarginV"-->
+        <!--android:id="@+id/returnback"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/pagebuttonh"-->
+        <!--android:text="返回厂家"-->
+        <!--android:textColor="#65c0f4"-->
+        <!--android:layout_marginLeft="@dimen/pagemarginH"-->
+        <!--android:layout_marginRight="@dimen/pagemarginH"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_below="@id/move"-->
+        <!--android:background="@drawable/selector_white_radius_button"-->
+        <!--/>-->
+
+
+    <Button
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagebuttonh"
+        android:text="保  存"
+        android:textColor="#fff"
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:textSize="18sp"
+        android:background="@drawable/selector_blue_button"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/pagemarginH"
+        android:layout_marginRight="@dimen/pagemarginH"
+        android:layout_above="@id/save"
+        android:layout_below="@id/scan"
+        android:layout_marginBottom="@dimen/pagemarginV"
+        android:background="@drawable/d_recbg"
+        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/item4lv_anquanitem" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_divider001"/>
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_divider001"
+            android:dividerHeight="1dp"
+            android:cacheColorHint="@null"
+            />
+    </LinearLayout>
+</RelativeLayout>

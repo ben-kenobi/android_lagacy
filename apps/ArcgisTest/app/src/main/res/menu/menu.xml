@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/World_Street_Map"
+            auto:showAsAction="never"
+            android:title="@string/StreetMapMenu" />
+        <item
+            android:id="@+id/World_Topo"
+            auto:showAsAction="never"
+            android:title="@string/TopoMenu" />
+        <item
+            android:id="@+id/Gray"
+            auto:showAsAction="never"
+            android:title="@string/GrayMenu"/>
+        <item
+            android:id="@+id/Ocean_Basemap"
+            auto:showAsAction="never"
+            android:title="@string/OceanMenu" />
+    <!--</group>-->
+
+
+    <!--<group android:checkableBehavior="single">-->
+        <item
+            android:id="@+id/Query_US"
+            auto:showAsAction="never"
+            android:title="@string/query_us" />
+        <item
+            android:id="@+id/Query_CA"
+            auto:showAsAction="never"
+            android:title="@string/query_ca" />
+        <item
+            android:id="@+id/Query_FR"
+            auto:showAsAction="never"
+            android:title="@string/query_fr" />
+        <item
+            android:id="@+id/Query_AU"
+            auto:showAsAction="never"
+            android:title="@string/query_au" />
+        <item
+            android:id="@+id/Query_BR"
+            auto:showAsAction="never"
+            android:title="@string/query_br" />
+    </group>
+
+</menu>

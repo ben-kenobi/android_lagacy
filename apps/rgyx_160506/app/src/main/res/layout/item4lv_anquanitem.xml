@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/tableitemh"
+    android:background="#fff5f5f5">
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv01"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:lines="1"-->
+        <!--android:textColor="#111"-->
+        <!--android:text="编号"-->
+        <!--android:textSize="@dimen/tableitemtxsize"-->
+        <!--style="@style/textView_single_line_marquee01"-->
+        <!--android:layout_height="match_parent"/>-->
+    <cn.swsk.rgyxtqapp.custom.MarqueeTextView
+        android:id="@+id/tv01"
+        android:layout_width="0dp"
+        android:layout_weight="1.8"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="#111"
+        android:text="编号"
+        android:textSize="@dimen/tableitemtxsize"
+        style="@style/textView_single_line_marquee01"
+        android:layout_height="match_parent"/>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider001"/>
+
+    <cn.swsk.rgyxtqapp.custom.MarqueeTextView
+        android:textColor="#111"
+        android:id="@+id/tv02"
+        android:text="批次"
+        android:layout_width="0dp"
+        android:lines="1"
+        android:textSize="@dimen/tableitemtxsize"
+        android:layout_weight="1"
+        style="@style/textView_single_line_marquee01"
+        android:gravity="center"
+
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider001"/>
+    <TextView
+        android:textColor="#111"
+        android:id="@+id/tv03"
+        android:layout_width="0dp"
+        android:text="生产日期"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="@dimen/tableitemtxsize"
+
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider001"/>
+    <TextView
+        android:id="@+id/tv04"
+        android:layout_width="0dp"
+        android:textColor="#111"
+        android:text="厂家"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="@dimen/tableitemtxsize"
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider001"/>
+    <TextView
+        android:id="@+id/tv05"
+        android:text="编辑"
+        android:textColor="#111"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="@dimen/tableitemtxsize"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

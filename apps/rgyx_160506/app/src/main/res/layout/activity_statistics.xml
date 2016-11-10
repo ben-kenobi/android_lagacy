@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+    <include
+        android:id="@+id/lo01"
+        layout="@layout/normal_header"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lo01"
+        android:fillViewport="true"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/d_recbg_bold"
+                android:orientation="vertical"
+                android:padding="1dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/date"
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="入库日期:"/>
+
+                    <TextView
+                        android:id="@+id/fromdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/tv02"
+                        android:clickable="true"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                        android:editable="true"
+                        android:gravity="right|center_vertical"
+                        android:onClick="onClick"
+                        android:text="2016-06-01"
+                        android:textColor="@color/color_lighterText"/>
+
+                    <TextView
+                        android:id="@+id/tv02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/todate"
+                        android:gravity="left|center_vertical"
+                        android:text="   到    "/>
+
+                    <TextView
+                        android:id="@+id/todate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                        android:editable="true"
+                        android:gravity="right|center_vertical"
+                        android:onClick="onClick"
+                        android:text="2016-06-01"
+                        android:textColor="@color/color_lighterText"/>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    android:id="@+id/statisticstype"
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="厂家名称:"/>
+
+                    <TextView
+                        android:id="@+id/reckonertv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pagebuttonh"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/pagemarginV"
+                android:layout_marginLeft="@dimen/pagemarginH"
+                android:layout_marginRight="@dimen/pagemarginH"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/selector_blue_button"
+                android:onClick="onClick"
+                android:text="查询"
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/save"
+                android:layout_marginBottom="@dimen/pagemarginV"
+                android:layout_marginLeft="@dimen/pagemarginH"
+                android:layout_marginRight="@dimen/pagemarginH"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_recbg"
+                android:orientation="vertical"
+                android:padding="1dp">
+                <!--<include layout="@layout/item4lv_statisticsitem"/>-->
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@color/color_divider001"/>-->
+                <!--<cn.swsk.rgyxtqapp.custom.InnerLV2-->
+                <!--android:id="@+id/lv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:divider="@color/color_divider001"-->
+                <!--android:dividerHeight="1dp"-->
+                <!--android:cacheColorHint="@null"-->
+                <!--/>-->
+
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="总数:"/>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="正常在库:"/>
+
+                    <TextView
+                        android:id="@+id/inbase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="故障在库:"/>
+
+                    <TextView
+                        android:id="@+id/malinbase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="目前领用:"/>
+
+                    <TextView
+                        android:id="@+id/draw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="移库:"/>
+
+                    <TextView
+                        android:id="@+id/movebase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="正常发射:"/>
+
+                    <TextView
+                        android:id="@+id/used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="故障损毁:"/>
+
+                    <TextView
+                        android:id="@+id/malfunc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="过期:"/>
+
+                    <TextView
+                        android:id="@+id/outdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+
+                <RelativeLayout
+                    style="@style/rl_row_style"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="退回厂家:"/>
+
+                    <TextView
+                        android:id="@+id/returnback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/color_lighterText"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

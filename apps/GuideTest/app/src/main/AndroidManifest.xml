@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="fj.swsk.cn.guidetest"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+<uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TestActivity">
+        </activity>
+        <activity android:name=".DetailActivity">
+        </activity>
+        <activity android:name=".ReadActivity" >
+
+        </activity>
+        <service android:name=".TestSer"  android:exported="true">
+
+            <intent-filter>
+                <action android:name="fj.swsk.cn.guidetest.TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </service>
+    </application>
+
+</manifest>

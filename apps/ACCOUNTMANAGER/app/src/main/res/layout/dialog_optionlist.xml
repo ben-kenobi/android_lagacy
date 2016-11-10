@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:background="@drawable/shape_extremely_low_radius_white"
+    android:orientation="vertical" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp" >
+
+ <com.yf.accountmanager.ui.AutoSplitTextView
+     android:id="@+id/title"
+     style="@style/moneyStyle"
+     android:layout_width="match_parent"
+     android:layout_height="45dp"
+     android:layout_toLeftOf="@id/dropdown"
+     android:background="@drawable/selector_golden_framelayout"
+     android:gravity="center_vertical"
+     android:paddingLeft="15dp"
+     android:text="请选择"
+     android:textAppearance="?android:attr/textAppearanceMedium"
+     android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="110dp"
+        style="@style/dropdown_tv_style"/>
+
+</RelativeLayout>
+       
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#3f3"
+        android:layout_height="1dp" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:cacheColorHint="@null"
+        android:listSelector="@drawable/selector_golden_framelayout" >
+
+    </ListView>
+
+</LinearLayout>

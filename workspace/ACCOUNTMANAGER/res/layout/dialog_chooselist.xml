@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:minHeight="400dp"
+    android:background="@drawable/shape_extremely_low_radius_white"
+    android:orientation="vertical" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_golden_framelayout"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+         style="@style/dropdown_tv_style"/>
+
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#3f3"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/gridView1"
+            style="@style/gvCommonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp" >
+
+        </GridView>
+
+        <ImageButton
+            android:id="@+id/remove"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:background="@drawable/selector_title_button_topcircle"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:scaleType="fitCenter"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

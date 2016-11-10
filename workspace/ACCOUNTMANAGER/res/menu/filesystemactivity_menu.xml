@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mark"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:showAsAction="never"
+        android:title="@string/mark"/>
+     <item
+        android:id="@+id/settings"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:showAsAction="never"
+        android:title="@string/settings"/>
+     <item
+        android:id="@+id/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="always"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/sort"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:showAsAction="always"
+        android:title="@string/sort">
+        <menu>
+            <item  android:id="@+id/byNameAsc" 
+                android:title="@string/byNameAsc"
+                />
+            <item  android:id="@+id/byNameDesc" 
+                android:title="@string/byNameDesc"/>
+            <item  android:id="@+id/bySizeAsc" 
+                android:title="@string/bySizeAsc"/>
+            <item  android:id="@+id/bySizeDesc" 
+                android:title="@string/bySizeDesc"/>
+            <item  android:id="@+id/byTimeAsc" 
+                android:title="@string/byTimeAsc"/>
+             <item  android:id="@+id/byTimeDesc" 
+                android:title="@string/byTimeDesc"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/screen"
+        android:icon="@android:drawable/ic_menu_view"
+        android:showAsAction="always"
+        android:title="@string/screen">
+        
+        <menu>
+            <item  android:id="@+id/allfile" 
+                android:title="@string/allfile"
+                />
+           <item  android:id="@+id/onlyfile" 
+                android:title="@string/onlyfile"
+                />
+             <item  android:id="@+id/onlydirectory" 
+                android:title="@string/onlydirectory"
+                />
+            <item  android:id="@+id/onlysystemfile" 
+                android:title="@string/onlysystemfile"
+                />
+             <item  android:id="@+id/onlywriteablefile" 
+                android:title="@string/onlywriteablefile"
+                />
+        </menu>
+        
+    </item>
+
+</menu>

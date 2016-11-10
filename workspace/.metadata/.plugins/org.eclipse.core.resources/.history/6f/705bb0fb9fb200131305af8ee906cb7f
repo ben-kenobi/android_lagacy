@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg"
+    android:orientation="vertical"
+    android:paddingBottom="12dp" >
+
+    <View style="@style/dividerViewStyle02" />
+
+    <View style="@style/shadowViewStyle00" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/background" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="12dp"
+         >
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            style="@style/moneyStyle"
+            android:text="@string/searchOptions" />
+    <View
+        style="@style/horizonDividerViewStyle01"
+       />
+    
+    
+ 
+  <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            style="@style/verticalParallelTextViewStyle06"
+            android:text="@string/searchType" />
+      
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                    <CheckedTextView
+                android:id="@+id/checkedTextView5"
+                style="@style/checkableTextStyle03"
+                android:layout_marginRight="30dp"
+                android:text="@string/file" />
+                
+                <CheckedTextView
+                    android:id="@+id/checkedTextView6"
+                    style="@style/checkableTextStyle03"
+                      android:layout_marginRight="25dp"
+                    android:text="@string/directory" />
+<CheckedTextView
+                    android:id="@+id/checkedTextView7"
+                    style="@style/checkableTextStyle03"
+                    android:text="@string/systemFile" />
+
+    </LinearLayout>
+       
+            
+            
+
+     <View style="@style/horizonDividerViewStyle01" />
+
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            style="@style/verticalParallelTextViewStyle06"
+            android:text="@string/more_" />
+
+  <CheckedTextView
+      android:id="@+id/checkedTextView8"
+      style="@style/checkableTextStyle03"
+      android:text="@string/fileSizeBetween" />
+<LinearLayout
+    android:id="@+id/linearLayout1"
+    android:baselineAligned="false"  
+    android:layout_width="match_parent"
+      android:layout_height="wrap_content" 
+      android:orientation="horizontal">
+  <RelativeLayout
+      android:layout_weight="1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+     >
+
+      <TextView
+          android:id="@+id/tv1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true" 
+          android:layout_centerVertical="true"
+          android:text="@string/greatThan" />
+      
+
+       <EditText
+           android:id="@+id/editText1"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/tv1"
+           style="@style/editText_Small_Style_1"
+             android:layout_toLeftOf="@+id/textView1"
+           />      
+
+           <TextView
+        android:id="@+id/textView1"
+        style="@style/dropDown_unit"
+        />
+                
+  </RelativeLayout>
+  
+   <RelativeLayout
+       android:layout_marginLeft="10dp"
+      android:layout_weight="1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+     >
+            <TextView
+          android:id="@+id/tv2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true" 
+          android:layout_centerVertical="true"
+          android:text="@string/lessThan" />
+      
+
+       <EditText
+           android:id="@+id/editText2"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/tv2"
+              style="@style/editText_Small_Style_1"
+             android:layout_toLeftOf="@+id/textView2"
+          	 />      
+
+           <TextView
+        android:id="@+id/textView2"
+        style="@style/dropDown_unit"
+       />
+       
+           </RelativeLayout>
+
+  </LinearLayout>
+  
+  <CheckedTextView
+      android:id="@+id/checkedTextView9"
+      style="@style/checkableTextStyle03"
+      android:text="@string/modifyTimeBetween" />
+
+ <LinearLayout 
+     android:id="@+id/linearLayout2"
+    android:baselineAligned="false"  
+    android:layout_width="match_parent"
+      android:layout_height="wrap_content" 
+      android:orientation="horizontal">
+  <RelativeLayout
+      android:layout_weight="1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+     >
+
+      <TextView
+          android:id="@+id/tv3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true" 
+          android:layout_centerVertical="true"
+          android:text="@string/greatThan" />
+      
+
+       <EditText
+           android:id="@+id/editText3"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/tv3"
+               style="@style/editText_Small_Style_1"
+             android:layout_toLeftOf="@+id/textView3"
+          />      
+
+           <TextView
+        android:id="@+id/textView3"
+       style="@style/dropDown_unit"
+      />
+                
+  </RelativeLayout>
+  
+   <RelativeLayout
+       android:layout_marginLeft="15dp"
+      android:layout_weight="1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+     >
+            <TextView
+          android:id="@+id/tv4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true" 
+          android:layout_centerVertical="true"
+          android:text="@string/lessThan" />
+      
+
+       <EditText
+           android:id="@+id/editText4"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/tv4"
+             style="@style/editText_Small_Style_1"
+             android:layout_toLeftOf="@+id/textView4"
+           />      
+
+           <TextView
+        android:id="@+id/textView4"
+       style="@style/dropDown_unit"
+        />
+       
+           </RelativeLayout>
+           </LinearLayout>
+
+  <View style="@style/horizonDividerViewStyle01" />
+  
+  
+           
+ 
+ 
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+           style="@style/verticalParallelTextViewStyle06"
+            android:text="@string/advanced_" />
+    
+   
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView1"
+                    style="@style/checkableTextStyle03"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/caseSensitive" />
+
+                   <CheckedTextView
+                    android:id="@+id/checkedTextView3"
+                    style="@style/checkableTextStyle03"
+                     android:layout_marginRight="15dp"
+                    android:text="@string/writeable" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView4"
+                    style="@style/checkableTextStyle03"
+                    android:text="@string/readable" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <CheckedTextView
+                    android:id="@+id/checkedTextView2"
+                    style="@style/checkableTextStyle03"
+                    android:text="@string/regularExpression" 
+                    android:layout_marginRight="15dp"/>
+
+             <TextView
+        android:id="@+id/textView4"
+       style="@style/dropDown_unit"
+        />
+
+            </LinearLayout>
+  </LinearLayout>
+
+  </ScrollView>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/buttonStyle_appv2_blue"
+        android:layout_width="260dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:text="@string/done"
+        android:textSize="@dimen/font_size_xl" />
+
+</LinearLayout>

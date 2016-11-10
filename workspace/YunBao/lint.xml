@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="Deprecated">
+        <ignore path="res\layout\address_add.xml" />
+    </issue>
+    <issue id="ShowToast">
+        <ignore path="src\com\what\yunbao\setting\SettingTabActivity.java" />
+    </issue>
+    <issue id="UseSparseArrays">
+        <ignore path="src\com\what\yunbao\address\AddressItemAdapter.java" />
+        <ignore path="src\com\what\yunbao\setting\SettingTabActivity.java" />
+    </issue>
+</lint>

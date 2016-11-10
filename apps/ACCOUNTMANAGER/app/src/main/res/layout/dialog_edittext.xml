@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="320dp"
+    android:background="@drawable/bg_shadow_radius"
+    android:padding="12dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_eee_radius"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp" >
+        
+        
+<RelativeLayout style="@style/rlRimEditTextStyle01" 
+     android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/editText1"
+                style="@style/registerEditTextStyle"
+                />
+
+            <requestFocus />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_alignRight="@id/editText1"
+                style="@style/textDisposerStyle" />
+
+        </RelativeLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginTop="10dp" >
+
+           <Button
+               android:id="@+id/positiveButton"
+               style="@style/buttonStyle_appv2_blue"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginRight="7dp"
+               android:layout_weight="1"
+               android:text="确定"
+               android:textSize="@dimen/font_size_xl" />
+
+           <Button
+               android:id="@+id/negativeButton"
+               style="@style/buttonStyle_appv2_white"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="7dp"
+               android:layout_weight="1"
+               android:text="取消"
+               android:textSize="@dimen/font_size_xl" />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

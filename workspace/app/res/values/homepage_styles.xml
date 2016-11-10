@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="linearLayoutStyle_hp">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/divider_transparent_6dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+     <style name="subtextView_hp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#ddd</item>
+        <item name="android:textSize">@dimen/font_size_mplus</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:text">@string/comingSoon</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="subtextView01_hp" parent="@style/subtextView_hp">
+        <item name="android:background">@drawable/selector_homepage_item01</item>
+    </style>
+    <style name="subtextView02_hp" parent="@style/subtextView_hp">
+        <item name="android:background">@drawable/selector_homepage_item02</item>
+    </style>
+    <style name="subtextView03_hp" parent="@style/subtextView_hp">
+        <item name="android:background">@drawable/selector_homepage_item03</item>
+        <item name="android:drawableTop">@android:drawable/ic_menu_gallery</item>
+    </style>
+     <style name="largeItemStyle_hp">
+         <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_homepage_mainitem</item>
+        <item name="android:foreground">@drawable/selector_homepage_largeblock</item>
+    </style>
+      <style name="largeItemStyle1_hp">
+         <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_homepage_mainitem1</item>
+        <item name="android:foreground">@drawable/selector_homepage_largeblock</item>
+    </style>
+    
+     <style name="iratingBarStyle" parent="@android:style/Widget.RatingBar">
+         <item name="android:progressDrawable">@drawable/layerlist_ratingbar_progress_drawable</item>
+         <item name="android:minHeight">30dp</item>
+         <item name="android:maxHeight">30dp</item>
+     </style>
+     
+       <style name="progressBarHorizontalStyle" >
+         <item name="android:progressDrawable">@drawable/layerlist_progress_bar</item>
+         <item name="android:minHeight">20dp</item>
+         <item name="android:maxHeight">30dp</item>
+         <item name="android:indeterminate">false</item>
+         <item name="android:indeterminateOnly">false</item>
+     </style>
+       <style name="progressBarHorizontalStyle_welcomePage" parent="@style/progressBarHorizontalStyle">
+           <item name="android:progressDrawable">@drawable/layerlist_customized_progress_bar</item>
+           <item name="android:layout_width">87dp</item>
+        <item name="android:layout_height">wrap_content</item>
+         <item name="android:layout_gravity">center_horizontal</item>
+         <item name="android:padding">3dp</item>
+     </style>
+   
+</resources>

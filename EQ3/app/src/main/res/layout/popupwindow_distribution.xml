@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#88000000"
+                android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/dismiss"
+        android:layout_width="@dimen/mapitemh"
+        android:layout_height="@dimen/mapitemh"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:background="@drawable/selector_lightblue_radius"
+        android:onClick="onClick"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/deletered"
+        />
+
+        <ListView
+        android:id="@+id/listView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mapitemmargin"
+        android:layout_below="@+id/dismiss"
+        style="@style/scrollStyle02"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="@drawable/divider_padding_left_gray"
+        android:background="@drawable/shape_white_radius_bg">
+        </ListView>
+
+
+
+</RelativeLayout>

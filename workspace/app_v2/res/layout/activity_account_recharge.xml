@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical" 
+     android:background="@color/lightgray">
+	 <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+         android:background="@drawable/top_bar_shape" 
+       >
+
+        <ImageButton
+            android:id="@+id/ib_account_recharge_back"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/onclick_button_selector"
+            android:src="@android:drawable/ic_menu_revert" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:textColor="@android:color/white"
+             android:textSize="21sp"
+             android:text="充值" />
+      
+    </RelativeLayout>
+    
+	 <LinearLayout
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content" 
+	     android:layout_marginLeft="16dp"
+	     android:layout_marginTop="12dp">
+
+	     <TextView
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textColor="@android:color/black"
+	         android:text="帐户余额：" />
+
+	     <TextView
+	         android:id="@+id/textView1"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         style="@style/moneyStyle"
+	         android:text="¥0" />
+	 </LinearLayout>
+	 <LinearLayout
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="16dp"
+	     android:layout_marginTop="7dp" >
+
+	     <TextView
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textColor="@android:color/black"
+	         android:text="充值余额：" />
+
+	     <EditText
+             android:id="@+id/editText1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center_vertical"
+             android:background="@android:drawable/edit_text"
+             android:textSize="14sp"
+             android:textColor="@android:color/black"
+             android:inputType="numberDecimal"
+             android:hint="输入要充值的余额" />
+	  </LinearLayout>
+	 
+	 <View android:layout_width="fill_parent"
+	       android:layout_height="0.1dp"
+	       android:background="@android:color/darker_gray"/>
+
+	 <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/choosePayWay"
+            android:textColor="#555"
+            android:textSize="@dimen/font_size_mplus" />
+<include layout="@layout/layout_payway_radiogroup"/>
+	 <Button
+	     android:id="@+id/button1"
+	     android:layout_width="280dp"
+	     android:layout_height="46dp"
+	     android:layout_gravity="center"
+	    android:background="@drawable/address_add_positive_selector"
+	     android:textColor="@android:color/white"
+	     android:layout_marginTop="36dp"
+	     android:textSize="19sp"
+	     android:text="充 值" />
+	 
+</LinearLayout>

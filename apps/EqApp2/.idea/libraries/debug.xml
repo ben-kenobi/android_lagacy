@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_0f707bda86c9ee45a2dec1c3360bca52c7a98a75.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/debug_967d576023ce9647940cb65171df181246a0691b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_4bcc0edfdda89a8ccfefd0863663bed7c9057596.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.esri.arcgis.android-arcgis-android-10.2.8_27822c89726ce6be5b1a8db6f0a2a1d863c12030.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_976f99dde1637fde2359df78a925e6821c194e32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-0.11.0_dcf570aac1b190a4bd4b1f3f57fb8f0e2fc2bdf0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/library-2.4.0_4ec80fb36b949e142cc7340897cb407096b811c8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/xUtils-2.6.14_766ef83577ea5c4f9723043ddd1c3c260d41d519.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/jcifs-1.3.17_85d26006ff337f2647898d7e80ef7511f7847162.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/jackson-mapper-1.9.5_a400aa728230ae9b683b3657c0e57b6e9001e702.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-0.11.0_7919412d5db83850cb034f3cad6163681f5ff9d4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/arcgis-android-app-toolkit_a5c76e5e6ae08bc60a3340074e5043a2d1b7f7ac.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_fe0aa882ed67d269c43943f236b9ffb98416ff73.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-0.11.0_dc47c463e2e910c2376cd1ffadd57b62f23e135d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_712b9f326495aceb0ce92c2aea5c9c029e971d6e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/arcgis-android-api_81c787a60bf808ea028229a4c48b4d87d7616fe5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-0.11.0_546713942f305a589e15bf2c7db1499a0cce145d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/jackson-core-1.9.5_cc340a4881d469688d8059ac4f3096fb7dcb1f8b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EqApp_/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-0.11.0_228c94e099dadbb3d730a111755e92a7a7dfd008.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

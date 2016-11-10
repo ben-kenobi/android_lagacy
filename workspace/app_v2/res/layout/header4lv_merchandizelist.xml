@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_button_white_radius"
+        >
+
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/horizontalParallelTextViewStyle"
+                android:drawableTop="@drawable/icon_marka_l"
+                android:text="分类" />
+	
+         <TextView
+                android:id="@+id/textView2"
+                style="@style/horizontalParallelTextViewStyle"
+                android:drawableTop="@drawable/icon_marka_l"
+                android:text="搜索" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/horizontalParallelTextViewStyle"
+                android:drawableTop="@drawable/selector_star_selection"
+                android:text="收藏" />
+	<TextView
+                android:id="@+id/textView4"
+                style="@style/horizontalParallelTextViewStyle"
+                android:drawableTop="@drawable/selector_recommend_selection"
+                android:text="74" />
+               
+        </LinearLayout>
+      
+	<RelativeLayout
+	    android:id="@+id/relativeLayout1"
+		android:layout_width="0dp"    
+		android:layout_height="match_parent"
+		 android:background="@drawable/selector_cart_button_right"
+	>
+	  
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_transparent_fg"
+            android:padding="3dp"
+           android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <EditText
+            android:id="@+id/editText1"
+            style="@style/editTextStyle_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/imageButton1"
+            android:background="@drawable/selector_edit_text"
+            android:ems="10"
+            android:imeOptions="actionSearch" />
+
+          <Button
+              android:id="@+id/button1"
+              style="@style/textDisposerStyle"
+              android:layout_alignParentRight="false"
+              android:layout_alignRight="@id/editText1" />
+        
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_white_top_radius"
+        android:orientation="vertical"
+        android:paddingLeft="6dp" >
+
+        <com.icanit.app_v2.ui.AlwaysFocusedTextView
+            android:id="@+id/textView5"
+            style="@style/textView_single_line_marquee00"
+            android:drawableLeft="@drawable/icon_direction_l"
+            android:text="福建省福州市鼓楼区蒙古营XXXX" />
+
+        <com.icanit.app_v2.ui.MarqueeTextView
+            android:id="@+id/textView6"
+            style="@style/textView_single_line_marquee00"
+            android:drawableLeft="@drawable/icon_direction_l"
+            android:text="送货时间：(10.0元起送)" />
+
+        <com.icanit.app_v2.ui.MarqueeTextView
+            android:id="@+id/textView7"
+            style="@style/textView_single_line_marquee00"
+            android:drawableLeft="@drawable/icon_direction_l"
+            android:text="送货距离：(雨天不送)" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#fff" >
+    </FrameLayout>
+
+</LinearLayout>

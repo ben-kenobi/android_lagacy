@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 取消按钮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:angle="270" android:startColor="#00BFFF" android:endColor="#00BFFF"/>
+           	<size android:height="36dp" android:width="125dp"/>
+            <corners android:radius="6dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape >
+            <gradient android:angle="270" android:startColor="@color/white" android:endColor="@color/lightgray"/>
+            <size android:height="36dp" android:width="125dp"/>
+            <corners android:radius="6dp"/>
+            
+        </shape>
+    </item>
+</selector>
