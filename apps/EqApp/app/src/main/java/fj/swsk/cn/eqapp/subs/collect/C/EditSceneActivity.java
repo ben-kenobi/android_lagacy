@@ -477,4 +477,11 @@ public class EditSceneActivity extends BaseTopbarActivity implements View.OnClic
     public void onItemClick(int pos) {
         level.setSelection(pos);
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        CommonUtils.log("---------------destroy "+this.getClass().getName());
+    }
 }

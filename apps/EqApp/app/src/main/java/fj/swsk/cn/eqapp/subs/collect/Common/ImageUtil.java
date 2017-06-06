@@ -41,7 +41,7 @@ public class ImageUtil {
 //			anim = AnimationUtils.loadAnimation(context,
 //					R.anim.loading_pic_rotation);
 //			imageView.setAnimation(anim);
-//			imageView.setBackgroundResource(R.drawable.shape_loading_pic);
+//			imageView.setBackgroundResource(R.drawable.shape_loatgding_pic);
 //		}
 		 imageView.setImageBitmap(null);
 //		anim.reset();
@@ -157,7 +157,9 @@ public class ImageUtil {
 
 	private static Bitmap resizeBitmap(Bitmap bitmap,ImageView container) {
 		Matrix matrix = new Matrix();
-		float fx = container.getWidth()/ (float) bitmap.getWidth();
+		float w = container.getWidth()>0?container.getWidth():160;
+//		CommonUtils.log("w="+w);
+		float fx = w/ (float) bitmap.getWidth();
 		matrix.setScale(fx, fx);
 		Bitmap bm = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(),
 				bitmap.getHeight(), matrix, true);

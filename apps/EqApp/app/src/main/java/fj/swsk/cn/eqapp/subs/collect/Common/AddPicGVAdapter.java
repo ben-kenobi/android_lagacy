@@ -1,9 +1,6 @@
 package fj.swsk.cn.eqapp.subs.collect.Common;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.media.ThumbnailUtils;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 import fj.swsk.cn.eqapp.R;
-import fj.swsk.cn.eqapp.conf.IConstants;
 import fj.swsk.cn.eqapp.util.CommonUtils;
 
 

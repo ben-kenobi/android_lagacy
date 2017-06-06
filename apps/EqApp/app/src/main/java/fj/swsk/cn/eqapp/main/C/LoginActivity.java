@@ -261,6 +261,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         if(v==btn_login){
             login();
         }else if (v.getId()==R.id.btn_settings){
+//            Uri uri = Uri.fromFile(getFilesDir());
+//            Intent intent = new Intent("com.yf.filesystem.FILESYSTEM");
+////            intent.setData(uri);
+//            intent.addCategory(Intent.CATEGORY_DEFAULT);
+//            intent.putExtra("directory",getFilesDir());
+//            startActivity(intent);
+//if (true)
+//            return ;
+
             setCheckNum++;
             if (setCheckNum >= 5) {
                 setCheckNum = 0;

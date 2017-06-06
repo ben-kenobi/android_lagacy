@@ -1398,10 +1398,6 @@ public class CustomizedDialog extends Dialog {
 		}
 
 
-
-
-
-
 	}
 
 }

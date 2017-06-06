@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:src="@mipmap/ic_download_misc_file_type"
+        android:src="@mipmap/video_flag"
         android:visibility="gone"
         />
 

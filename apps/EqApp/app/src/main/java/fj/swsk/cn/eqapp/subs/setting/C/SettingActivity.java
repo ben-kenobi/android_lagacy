@@ -16,6 +16,7 @@ import fj.swsk.cn.eqapp.main.C.BaseTopbarActivity;
 import fj.swsk.cn.eqapp.main.Common.PushUtils;
 import fj.swsk.cn.eqapp.main.Common.Topbar;
 import fj.swsk.cn.eqapp.main.Common.UpdateManager;
+import fj.swsk.cn.eqapp.subs.more.C.LoacalWebActivity;
 import fj.swsk.cn.eqapp.subs.setting.Common.SettingSectionAdap;
 import fj.swsk.cn.eqapp.subs.setting.M.SettingDatas;
 import fj.swsk.cn.eqapp.util.SharePrefUtil;
@@ -63,10 +64,16 @@ public class SettingActivity extends BaseTopbarActivity
         } else if (position == 9) {
             UpdateManager.check(this, true);
         }else if (position == 6){
-            Intent intent = new Intent();
-            intent.setClass(this, UseBrochure.class);
+//            Intent intent = new Intent();
+//            intent.setClass(this, UseBrochure.class);
+//            intent.putExtra("title","使用手册");
+//            startActivity(intent);
+
+            Intent intent = new Intent(this, LoacalWebActivity.class);
+            intent.putExtra("path","file:///android_asset/fzjc_brochure2.html");
             intent.putExtra("title","使用手册");
-            startActivity(intent);
+
+            this.startActivity(intent);
         }
     }
 

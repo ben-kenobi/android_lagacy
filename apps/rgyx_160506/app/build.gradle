@@ -29,8 +29,8 @@ android {
         applicationId "cn.swsk.rgyxtqapp"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 20
-        versionName "0.4.6.0"
+        versionCode 22
+        versionName "0.4.8.0"
         signingConfig signingConfigs.config
     }
     buildTypes {

@@ -1,7 +1,6 @@
 package fj.swsk.cn.eqapp.conf;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +9,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.StrictMode;
+import android.support.multidex.MultiDexApplication;
 
 import com.mozillaonline.providers.downloads.DownloadService;
 
@@ -28,7 +28,7 @@ import fj.swsk.cn.eqapp.util.CommonUtils;
 /**
  * Created by apple on 16/2/25.
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
 
     public T_Media curEdit;
     public Tscene curscene;

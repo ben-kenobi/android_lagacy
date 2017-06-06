@@ -15,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -68,11 +69,10 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
                 android.R.color.holo_green_light);
         swipeRefreshLayout.setSize(SwipeRefreshLayout.LARGE);
         swipeRefreshLayout.setDistanceToTriggerSync(20);
-        swipeRefreshLayout.setProgressViewOffset(false, 0, 200);
-        swipeRefreshLayout.setProgressBackgroundColor(R.color.lighter_gray);
-        swipeRefreshLayout.setProgressViewEndTarget(true, 100);
+        swipeRefreshLayout.setProgressViewOffset(false, 0, 0);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.lighter_gray);
+        swipeRefreshLayout.setProgressViewEndTarget(false, 120);
         swipeRefreshLayout.setOnRefreshListener(this);
-
         recyclerView = (RecyclerView) findViewById(R.id.pinnedlv);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -152,12 +152,7 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
             }
         });
 
-        swipeRefreshLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(true);
-            }
-        });
+
         onRefresh();
     }
 
@@ -176,7 +171,7 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
                 if (msg.what == 4) {
                     Toast.makeText(ContactsActivity.this, "同步服务器成功", Toast.LENGTH_SHORT).show();
                 }
-                swipeRefreshLayout.setRefreshing(false);
+//                swipeRefreshLayout.setRefreshing(false);
                 return;
             }
 
@@ -380,7 +375,6 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
                             db.endTransaction();
                             db.close();
                         }
-                        swipeRefreshLayout.setRefreshing(false);
                     }
                 }
             }else{
@@ -390,6 +384,15 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
             return true;
         } catch (Exception e) {
             return  false;
+        }finally {
+            IConstants.MAIN_HANDLER.post(new Runnable() {
+                @Override
+                public void run() {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+            });
+
         }
     }
     /**
@@ -397,6 +400,10 @@ public class ContactsActivity extends BaseTopbarActivity implements SwipeRefresh
      */
     @Override
     public void onRefresh() {
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+        swipeRefreshLayout.setRefreshing(true);
+
         IConstants.THREAD_POOL.submit(new Runnable() {
             public void run() {
                 synchronizeContacts();

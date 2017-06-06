@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.text.TextUtils;
@@ -13,10 +14,14 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import fj.swsk.cn.eqapp.util.CommonUtils;
+import fj.swsk.cn.eqapp.util.IOUtils;
 
 /**
  * Created by Administrator on 2016/3/10.
@@ -67,13 +72,33 @@ public class ImgPicker2 implements AdapterView.OnItemClickListener{
 
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        CommonUtils.log("onactivityResult  ----"+this.getClass().getName());
+        CommonUtils.log("data="+data.getParcelableExtra("data"));
+        CommonUtils.log("filePath="+data.getParcelableExtra("filePath"));
         if (resultCode == 0) {
-            mFile=null;
+            mFile = null;
             return;
         }
         switch (requestCode) {
             case 3:
-                addBM();
+                try {
+                    Bitmap bm = data.getParcelableExtra("data");
+                    if(bm!=null) {
+                        OutputStream os = new FileOutputStream(mFile);
+                        boolean b  = bm.compress(Bitmap.CompressFormat.PNG, 100, os);
+                        os.close();
+                    }else{
+                        String path = data.getStringExtra("filePath");
+                        if(!TextUtils.isEmpty(path)){
+                            IOUtils.copy(new FileInputStream(path),new FileOutputStream(mFile));
+
+                        }
+                    }
+
+                    addBM();
+                }catch (Exception e){
+                e.printStackTrace();
+            }
                 break;
             case 4:
 
@@ -137,20 +162,24 @@ public class ImgPicker2 implements AdapterView.OnItemClickListener{
         } catch (Exception e) {
             CommonUtils.toast("调用摄像头失败");
         }
+        try {
+            if (output == null) return;
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//            intent.putExtra("camerasensortype", 2); // 调用摄像头
+//            intent.putExtra("autofocus", true); // 自动对焦
+//            intent.putExtra("fullScreen", false); // 全屏
+//            intent.putExtra("showActionIcons", false);
 
-        if (output == null) return;
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra("camerasensortype", 2); // 调用摄像头
-        intent.putExtra("autofocus", true); // 自动对焦
-        intent.putExtra("fullScreen", false); // 全屏
-        intent.putExtra("showActionIcons", false);
+            // 指定调用相机拍照后照片的存储路径
 
-        // 指定调用相机拍照后照片的存储路径
-
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(output));
-        mContext.startActivityForResult(intent, 3);
-        CommonUtils.log(output.getAbsolutePath() + "======");
-        mFile=output;
+//            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(output));
+            mContext.startActivityForResult(intent, 3);
+            CommonUtils.log(output.getAbsolutePath() + "======");
+            mFile = output;
+        }catch(Exception e){
+            e.printStackTrace();
+            CommonUtils.log("----------------");
+        }
 
     }
     // 调用系统相机

@@ -41,19 +41,16 @@ public class EmergencyPrescript extends BaseTopbarActivity implements AdapterVie
         EQInfo info = EQInfo.getIns();
         if(info==null||!info.hasLayer()){
             lv.setVisibility(View.GONE);
-        }else{
-            int idx = getIntent().getIntExtra("type",0);
+        }else {
+            int idx = getIntent().getIntExtra("type", 0);
             lv.setVisibility(View.VISIBLE);
             List<DocFile> list = new ArrayList<>();
-            list.add(DocFile.getByPrefix(prefixes[idx],prefixenames[idx],info));
+            list.add(DocFile.getByPrefix(prefixes[idx], prefixenames[idx], info));
 
             lv.setAdapter(adapt = new EmergencyAdapter(this, list));
             adapt.mListener = this;
             lv.setOnItemClickListener(this);
         }
-
-
-
     }
 
     @Override
